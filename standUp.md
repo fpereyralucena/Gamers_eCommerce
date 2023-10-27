@@ -2,7 +2,7 @@
 
 ## Fecha
 
-2023-10-26
+2023-10-27
 
 ## Hora
 
@@ -10,23 +10,27 @@
 
 ## Participantes
 
-* [Tu nombre]
-* [Nombre del equipo]
+* Francisco
+* Milagros
+* Pato
+* Lucas
+* Max
 
 ## Progreso desde la última reunión
 
-* [Nombre del equipo miembro]  *[Qué hice ayer]* [Qué voy a hacer hoy]* [Hay algún obstáculo que me impida avanzar?]
+* [Nombre del miembro]  *[Qué hice en la semana]* [Qué voy a hacer el finde]* [Hay algún obstáculo que me impida avanzar?]
+* Francisco || *Configurar Github y Jira* || *Revisar las tareas del resto de los miembros* || *No* ||
 
 ## Bloqueos
 
-* [Nombre del equipo miembro]
+* [Nombre del miembro]
   * [Bloqueo 1]
   * [Bloqueo 2]
   * [Bloqueo 3]
 
 ## Siguientes pasos
 
-* [Nombre del equipo miembro]
+* [Nombre del  miembro]
   * [Paso 1]
   * [Paso 2]
   * [Paso 3]
