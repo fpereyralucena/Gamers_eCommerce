@@ -6,7 +6,7 @@
 
 ## Hora
 
-13:00:00 PST
+14:00:00 GMT
 
 ## Participantes
 
