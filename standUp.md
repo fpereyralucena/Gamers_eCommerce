@@ -14,6 +14,7 @@
 * Milagros
 * Pato
 * Lucas
+* Wanda
 * Max
 
 ## Progreso desde la última reunión
