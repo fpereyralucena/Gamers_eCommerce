@@ -12,11 +12,11 @@
 5. [Link text](https://website-name.com)
 
 ### **Wireframes**
-![Home](./home.png)
-![Detalle del Producto](./detalle_producto.png)
-![Carrito](./carrito.png)
-![Form de Registro](./registrarse.png)
-![Login](./login.png)
+![Home](./wireframes/home.png)
+![Detalle del Producto](./wireframes/detalle_producto.png)
+![Carrito](./wireframes/carrito.png)
+![Form de Registro](./wireframes/registrarse.png)
+![Login](./wireframes/login.png)
 
 
 ### Colaboradores
