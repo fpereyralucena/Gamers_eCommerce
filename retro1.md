@@ -5,7 +5,7 @@
 ### Participantes
 
 - Francisco Pereyra Lucena
-- [Nombre del Miembro del Equipo 2]
+- Lucas Herbon
 - [Nombre del Miembro del Equipo 3]
 - ...
 
