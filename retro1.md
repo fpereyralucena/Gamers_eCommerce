@@ -23,12 +23,13 @@
 
 - [Aspecto a mejorar 1]
   - ¿Cuál fue el desafío y cómo podemos abordarlo?
-  - La coordinación del equipo. Debemos establecer una reunion semanal.
+  - _La coordinación del equipo. Debemos establecer una reunion semanal._
 - [Aspecto a mejorar 2]
   - ¿Qué podemos hacer para evitar problemas similares en el futuro?
-- ... - Mejorar la motivación y el compromiso. Debemos establecer metas y objetivos en conjunto.
+- ... - _Mejorar la motivación y el compromiso. Debemos establecer metas y objetivos en conjunto._
 - [Aspecto a mejorar 3]
-- Dividir tareas
+- _Dividir tareas_
+
 ## Acciones Tomadas (Acciones concretas a tomar)
 
 - Establecer una reunion semanal a las 20 hs.
@@ -48,7 +49,6 @@
   - ¿Algún miembro del equipo ayudó significativamente a otros?
 - ... _No._ M: No coincido con la respuesta anterior, Fran ayudó a todos
   
-
 ## Conclusiones y Reflexiones
 
 - ¿Qué lecciones hemos aprendido en este Sprint?
