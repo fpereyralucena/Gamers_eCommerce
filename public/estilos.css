@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #4a4453;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#231751;
+    /* Updated background color */
+    color: aliceblue;
+    padding: 2rem;
+
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    background-color:#AFA8BA;
+
+}
+
+.IngresaTitulo {
+    color: #231751;
+    font-size: medium;
+}
+
+form {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 4px 8px rgba(35, 23, 81, 0.1);
+    /* Adjust the values based on your preference */
+    padding: 20px;
+    /* Add padding to make the shadow more visible */
+    background-color: white;
+    border-radius: 1rem;
+
+}
+
+
+form div {
+    color: #231751;
+}
+
+input {
+
+    border-color: #231751;
+    border-radius: 15px;
+    padding: 0.5rem;
+}
+
+.botonSubmit {
+    background-color: #231751;
+    color: aliceblue;
+    flex-grow: 1;
+    align-self: stretch;
+
+}
+
+
+footer {
+    color: aliceblue;
+    display: flex;
+    background-color:#231751;
+    justify-content: space-between;
+    padding: 2rem;
+    
+
+}
+
+ul {
+    list-style: none;
+    font-size: small;
+    display:flex;
+    gap: 1rem;
+
+}
+
+a {
+    color: #AFA8BA;
+}
