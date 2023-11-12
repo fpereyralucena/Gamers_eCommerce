@@ -76,6 +76,10 @@ input {
 
 }
 
+.logo{
+    width: 5%;
+    filter: invert(100%)
+}
 
 footer {
     color: aliceblue;
