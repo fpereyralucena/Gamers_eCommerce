@@ -73,7 +73,13 @@ input {
     color: aliceblue;
     flex-grow: 1;
     align-self: stretch;
+}
 
+.botonReset {
+    background-color: #b50a0a;
+    color: aliceblue;
+    flex-grow: 1;
+    align-self: stretch;
 }
 
 .logo{

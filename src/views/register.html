@@ -30,13 +30,26 @@
     <main>
 
         <form>
-            <h2 class="IngresaTitulo"> Ingresá a tu cuenta </h2>
-            <input type="email" placeholder="minombre@dominio.com">
-            <input type="password">
-            <input class="botonSubmit" type="submit">
+
+            <h2 class="IngresaTitulo"> Registrate </h2>
+
+            <label for="ingresarNombres">Nombres</label>
+            <input type="text" placeholder="Gabriel Omar" id="ingresarNombres">
+
+            <label for="ingresarApellidos">Apellidos</label>
+            <input type="text" placeholder="Batistuta" id="ingresarApellidos">
+
+            <label for="ingresaEmail">Email</label>
+            <input type="email" placeholder="elBati.Gol@mail.com" id="ingresaEmail">
+
+            <label for="ingresaClave">Clave</label>
+            <input type="password" id="ingresaClave">
+
             <div>
-                Olvidé mi contraseña
+                <button type="submit" class="botonSubmit">Aceptar</button>
+                <button type="reset" class="botonReset">Borrar</button>
             </div>
+
         </form>
 
 
