@@ -20,6 +20,11 @@ app.get('/register', (req, res) => {
     
 })
   
+app.get('/detail', (req, res) => {
+  res.sendFile (views + "detail.html")
+  
+})
+
 app.listen(port, () => {
   console.log(`Example app listening on port http://localhost:${port}`)
 })

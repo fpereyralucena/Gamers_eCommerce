@@ -1,0 +1,37 @@
+# Stand Up Meeting Log
+
+## Fecha
+
+2023-11-13
+
+## Hora
+
+14:00:00 GMT
+
+## Participantes
+
+* Francisco
+* Milagros
+* Pato
+* Lucas
+* Wanda
+* Max
+
+## Progreso desde la última reunión
+
+* [Nombre del miembro]  *[Qué hice en la semana]* [Qué voy a hacer el finde]* [Hay algún obstáculo que me impida avanzar?]
+* Francisco || *Cargar las stories del sprint 2* || *Resolver las stories del detalle de producto* || *No* ||
+
+## Bloqueos
+
+* [Nombre del miembro]
+  * [Bloqueo 1]
+  * [Bloqueo 2]
+  * [Bloqueo 3]
+
+## Siguientes pasos
+
+* [Nombre del  miembro]
+  * [Paso 1]
+  * [Paso 2]
+  * [Paso 3]
