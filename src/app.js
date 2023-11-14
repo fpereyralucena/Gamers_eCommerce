@@ -25,10 +25,11 @@ app.get('/detail', (req, res) => {
   
 })
 
-app.get('/offer', (req, res) => {
-  res.sendFile (views + "offer.html")
+app.get('/shopping-cart', (req, res) => {
+  res.sendFile (views + "shopping-cart.html")
   
 })
+
 
 app.listen(port, () => {
   console.log(`Example app listening on port http://localhost:${port}`)
