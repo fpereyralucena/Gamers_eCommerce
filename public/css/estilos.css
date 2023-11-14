@@ -4,6 +4,7 @@
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -112,4 +113,28 @@ a {
 h1 a {
     text-decoration: none;
     color: white;
+}
+
+h1 {
+    text-align: center;
+}
+
+.contenedor-ofertas{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.offer-text{
+    color: greenyellow;
+}
+
+.img {
+    padding: 10px;
+    margin: auto;
+    box-shadow: #231751;
 }

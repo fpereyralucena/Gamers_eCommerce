@@ -1,4 +1,4 @@
 main h2 {
-    justify-content: flex-start;
-    display: inline;
+    flex-wrap: wrap;
+   
 }
