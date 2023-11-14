@@ -108,3 +108,8 @@ ul {
 a {
     color: #AFA8BA;
 }
+
+h1 a {
+    text-decoration: none;
+    color: white;
+}
