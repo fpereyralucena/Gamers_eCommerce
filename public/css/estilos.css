@@ -120,21 +120,36 @@ h1 {
 }
 
 .contenedor-ofertas{
-    flex-grow: 1;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
 }
 
 .offer-text{
-    color: greenyellow;
+    color: rgb(58, 225, 43);
 }
 
-.img {
-    padding: 10px;
-    margin: auto;
-    box-shadow: #231751;
+.product-card {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    overflow: hidden;
+    cursor: default;
+    transition: all 400ms ease;
+    padding-bottom: 10px;
+}
+.product-card:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3%);
+}
+
+.product-card img {
+    width: 80%;
 }
