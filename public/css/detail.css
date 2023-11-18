@@ -1,40 +1,69 @@
 
-article {
-    background-color: lightgrey;
-    width: 30%;
-    height: 30%;
-    border: 15px solid black;
-    padding: 50px;
-    margin: 20px;
-    text-align: center;
-    
+
+.product-image-container{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  flex-shrink: 2;
+}
+
+
+
+  .product-image img {
+    width:99%;
+    box-shadow:2px 2px 2px 1px rgba(0, 0, 0, 0.3) ;
   }
+
+.product-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin:5px auto;
+
+}
+
+.product-size{
+  display:inline;
+}
+
+.product-quantity {
+  width:30vw;
+  margin:1px 0px 10px 0px;
+}
+
+ button {
+  border-radius: 10px;
+  background-color: #0275d8;
+  color:#fff;
+  padding:5px;
+}
 /* Style the list */
-ul.breadcrumb {
+ul.bread-crumb {
     padding: 10px 16px;
     list-style: none;;
   }
   
   /* Display list items side by side */
-  ul.breadcrumb li {
+  ul.bread-crumb li {
     display: inline;
   }
   
   /* Add a slash symbol (/) before/behind each list item */
-  ul.breadcrumb li+li:before {
+  ul.bread-crumb li+li:before {
     padding: 8px;
     color: #fff;
     content: "/\00a0";
   }
   
   /* Add a color to all links inside the list */
-  ul.breadcrumb li a {
+  ul.bread-crumb li a {
     color: #0275d8;
     text-decoration: none;
   }
   
   /* Add a color on mouse-over */
-  ul.breadcrumb li a:hover {
+  ul.bread-crumb li a:hover {
     color: #01447e;
     text-decoration: underline;
   }

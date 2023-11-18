@@ -3,12 +3,12 @@
 * {
     font-family: 'Roboto', sans-serif;
     margin: 0;
-    padding: 0;
+    /* padding: 0; */
     box-sizing: border-box;
 }
 
 body {
-    color: #4a4453;
+    /* color: #4a4453; */
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -18,7 +18,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color:#231751;
+    background-color: #231751;
     /* Updated background color */
     color: aliceblue;
     padding: 2rem;
@@ -32,7 +32,7 @@ main {
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
-    background-color:#AFA8BA;
+    background-color: #AFA8BA;
     padding: 10px;
 
 }
@@ -43,10 +43,9 @@ main {
 }
 
 form {
-
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    /* flex-direction: column; */
+    /* justify-content: center; */
     align-items: center;
     gap: 1rem;
     box-shadow: 0 4px 8px rgba(35, 23, 81, 0.1);
@@ -55,7 +54,7 @@ form {
     /* Add padding to make the shadow more visible */
     background-color: white;
     border-radius: 1rem;
-
+    flex-wrap: wrap;
 }
 
 
@@ -84,17 +83,20 @@ input {
     align-self: stretch;
 }
 
-.logo{
+.logo {
     width: 6vw;
     filter: invert(100%);
 }
 
 footer {
     color: aliceblue;
-    background-color:#231751;
+    background-color: #231751;
     justify-content: space-between;
     padding: 2rem;
     font-weight: 200;
+    width: 99%;
+    display: flex;
+    flex-wrap: wrap;
 
 
 }
@@ -102,9 +104,9 @@ footer {
 ul {
     list-style: none;
     font-size: small;
-    display:flex;
+    display: flex;
     gap: 1rem;
-
+    flex-wrap: wrap;
 }
 
 a {
@@ -120,14 +122,14 @@ h1 {
     text-align: center;
 }
 
-.contenedor-ofertas{
+.contenedor-ofertas {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 
-.offer-text{
+.offer-text {
     color: rgb(58, 225, 43);
 }
 
@@ -146,6 +148,7 @@ h1 {
     transition: all 400ms ease;
     padding-bottom: 10px;
 }
+
 .product-card:hover {
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
     transform: translateY(-3%);
@@ -153,4 +156,47 @@ h1 {
 
 .product-card img {
     width: 80%;
+}
+
+
+.gallery {
+    display: flex;
+    overflow-x: scroll;
+}
+
+.gallery-item {
+    position: relative;
+    margin-right: 10px;
+}
+
+.gallery-item img {
+    width: 300px;
+    height: 300px;
+}
+
+.item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s;
+    flex-wrap: wrap;
+}
+
+.gallery-item:hover .item-overlay {
+    opacity: 1;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
 }
