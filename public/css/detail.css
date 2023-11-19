@@ -78,7 +78,8 @@ ul.bread-crumb {
     text-decoration: underline;
   }
 
-  gallery {
+
+  .gallery {
     display: flex;
     overflow-x: scroll;
 }
