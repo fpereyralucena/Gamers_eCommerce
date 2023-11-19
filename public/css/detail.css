@@ -1,18 +1,26 @@
+main{
+  display: block;
+  text-align: center;
+}
+.general-product-page{
+  display:flex;
+  flex-direction: row;
 
+}
 
 .product-image-container{
   display:flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  flex-shrink: 2;
+  flex-shrink: 1;
 }
 
 
 
   .product-image img {
-    width:99%;
-    box-shadow:2px 2px 2px 1px rgba(0, 0, 0, 0.3) ;
+    width: 50%;
+    box-shadow:2px 2px 2px 1px rgba(0, 0, 0, 0.3);
   }
 
 .product-description {
@@ -41,12 +49,14 @@
 /* Style the list */
 ul.bread-crumb {
     padding: 10px 16px;
-    list-style: none;;
+    list-style: none;
+    
   }
   
   /* Display list items side by side */
   ul.bread-crumb li {
     display: inline;
+    
   }
   
   /* Add a slash symbol (/) before/behind each list item */
@@ -68,4 +78,44 @@ ul.bread-crumb {
     text-decoration: underline;
   }
 
- 
+  gallery {
+    display: flex;
+    overflow-x: scroll;
+}
+
+.gallery-item {
+    position: relative;
+    margin-right: 10px;
+}
+
+.gallery-item img {
+    width: 60%;
+    /* height: 300px; */
+}
+
+.item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+    /* height: 100%; */
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s;
+    flex-wrap: wrap;
+}
+
+.gallery-item:hover .item-overlay {
+    opacity: 1;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
