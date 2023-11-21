@@ -1,15 +1,16 @@
-main{
+main {
   display: block;
   text-align: center;
 }
-.general-product-page{
-  display:flex;
+
+.general-product-page {
+  display: flex;
   flex-direction: row;
 
 }
 
-.product-image-container{
-  display:flex;
+.product-image-container {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
@@ -18,105 +19,105 @@ main{
 
 
 
-  .product-image img {
-    width: 50%;
-    box-shadow:2px 2px 2px 1px rgba(0, 0, 0, 0.3);
-  }
+.product-image img {
+  width: 70%;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+}
 
 .product-description {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin:5px auto;
-
+  width: 20%;
 }
 
-.product-size{
-  display:inline;
+.product-size {
+  display: inline;
 }
 
 .product-quantity {
-  width:30vw;
-  margin:1px 0px 10px 0px;
-}
-
- button {
-  border-radius: 10px;
-  background-color: #0275d8;
-  color:#fff;
-  padding:5px;
-}
-/* Style the list */
-ul.bread-crumb {
-    padding: 10px 16px;
-    list-style: none;
-    
-  }
-  
-  /* Display list items side by side */
-  ul.bread-crumb li {
-    display: inline;
-    
-  }
-  
-  /* Add a slash symbol (/) before/behind each list item */
-  ul.bread-crumb li+li:before {
-    padding: 8px;
-    color: #fff;
-    content: "/\00a0";
-  }
-  
-  /* Add a color to all links inside the list */
-  ul.bread-crumb li a {
-    color: #0275d8;
-    text-decoration: none;
-  }
-  
-  /* Add a color on mouse-over */
-  ul.bread-crumb li a:hover {
-    color: #01447e;
-    text-decoration: underline;
-  }
-
-
-  .gallery {
-    display: flex;
-    overflow-x: scroll;
-}
-
-.gallery-item {
-    position: relative;
-    margin-right: 10px;
-}
-
-.gallery-item img {
-    width: 60%;
-    /* height: 300px; */
-}
-
-.item-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 20%;
-    /* height: 100%; */
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    opacity: 0;
-    transition: opacity 0.3s;
-    flex-wrap: wrap;
-}
-
-.gallery-item:hover .item-overlay {
-    opacity: 1;
+  width: 30vw;
+  margin: 1px 0px 10px 0px;
 }
 
 button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    cursor: pointer;
+  border-radius: 10px;
+  background-color: #0275d8;
+  color: #fff;
+  padding: 5px;
+}
+
+/* Style the list */
+ul.bread-crumb {
+  padding: 10px 16px;
+  list-style: none;
+
+}
+
+/* Display list items side by side */
+ul.bread-crumb li {
+  display: inline;
+
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.bread-crumb li+li:before {
+  padding: 8px;
+  color: #fff;
+  content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+ul.bread-crumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.bread-crumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+
+
+.gallery {
+  display: flex;
+  overflow-x: scroll;
+}
+
+.gallery-item {
+  position: relative;
+  margin-right: 10px;
+}
+
+.gallery-item img {
+  width: 60%;
+  /* height: 300px; */
+}
+
+.item-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20%;
+  /* height: 100%; */
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s;
+  flex-wrap: wrap;
+}
+
+.gallery-item:hover .item-overlay {
+  opacity: 1;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
 }
