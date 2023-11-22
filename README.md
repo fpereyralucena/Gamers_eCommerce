@@ -7,10 +7,10 @@
 ### **Benchmarking sites:**
 
 1. [Nike](https://www.nike.com/)
-2. [adidas](https://www.adidas.com/)
-3. [musterbrand](https://musterbrand.com/)
-4. [beaths](https://www.beaths.com/)
-5. [drkn](https://drkn.com/)
+2. [Adidas](https://www.adidas.com/)
+3. [Musterbrand](https://musterbrand.com/)
+4. [BEATHS](https://www.beaths.com/)
+5. [DRKN](https://drkn.com/)
 
 ### **Style**
 
