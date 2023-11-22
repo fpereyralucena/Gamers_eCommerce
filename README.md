@@ -7,7 +7,7 @@
 ### **Benchmarking sites:**
 
 1. [Nike](https://www.nike.com/)
-2. [adidas](https://www.adidas.com.ar/)
+2. [adidas](https://www.adidas.com/)
 3. [musterbrand](https://musterbrand.com/)
 4. [beaths](https://www.beaths.com/)
 5. [drkn](https://drkn.com/)
