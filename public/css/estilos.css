@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+@import url("header.css");
+
 
 * {
     font-family: 'Roboto', sans-serif;
@@ -14,16 +16,11 @@ body {
     height: 100vh;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #231751;
-    /* Updated background color */
-    color: aliceblue;
-    padding: 2rem;
 
+.hidden {
+    display: none;
 }
+
 
 main {
     flex-grow: 1;
@@ -55,6 +52,12 @@ form {
     background-color: white;
     border-radius: 1rem;
     flex-wrap: wrap;
+}
+
+.crearCuenta {
+    color: #231751;
+   
+
 }
 
 
