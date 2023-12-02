@@ -51,6 +51,7 @@ button {
 ul.bread-crumb {
   padding: 10px 16px;
   list-style: none;
+  margin-left: 1vw;
 
 }
 
@@ -99,8 +100,8 @@ ul.bread-crumb li a:hover {
   position: absolute;
   top: 0;
   left: 0;
-  width: 20%;
-  /* height: 100%; */
+  width: 100%;
+  height: 100%;
   background: rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
@@ -114,6 +115,9 @@ ul.bread-crumb li a:hover {
 
 .gallery-item:hover .item-overlay {
   opacity: 1;
+  margin:0 1vw;
+  padding:1hv 1vw;
+  width:10vw;
 }
 
 button {

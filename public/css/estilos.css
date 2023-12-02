@@ -5,7 +5,7 @@
 * {
     font-family: 'Roboto', sans-serif;
     margin: 0;
-    /* padding: 0; */
+    padding: 0.1vh 0.1vw;
     box-sizing: border-box;
 }
 
@@ -159,4 +159,17 @@ h1 {
 
 .product-card img {
     width: 80%;
+}
+
+
+@media  (max-width: 360px) {
+.product-card {
+    width:70%
+}
+}
+
+@media  (max-width: 700px) {
+    .product-card {
+        width:35%
+    }
 }
