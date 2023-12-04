@@ -44,14 +44,15 @@ button {
   border-radius: 10px;
   background-color: #0275d8;
   color: #fff;
-  padding: 5px;
+  padding: 1vh 1vw;
+  margin: 1vh 1vw;
 }
 
 /* Style the list */
 ul.bread-crumb {
+  margin: 1vh 1vw;
   padding: 10px 16px;
   list-style: none;
-  margin-left: 1vw;
 
 }
 
@@ -118,6 +119,13 @@ ul.bread-crumb li a:hover {
   margin:0 1vw;
   padding:1hv 1vw;
   width:10vw;
+}
+
+div.gallery {
+  margin: 1vh 1vw;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 button {
