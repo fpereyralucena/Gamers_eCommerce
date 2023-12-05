@@ -15,50 +15,50 @@
 <body>
 
     <header>
-        <section class ="primerElemento">
-        <a href="/">
-            <img class="logo" src="\img\logo.png" alt="Logo">
-        </a>
+        <section class="primerElemento">
+            <a href="/">
+                <img class="logo" src="\img\logo.png" alt="Logo">
+            </a>
         </section>
-        <section class ="segundoElemento">
-        <h1> Gamers Costumes </h1>
+        <section class="segundoElemento">
+            <h1> Gamers Costumes </h1>
         </section>
 
-     <section class ="tercerElemento">
-        <nav>
-            <ul>
-            <li>
-              <a href="/login">
-                👤 Mi cuenta 
-              </a>
-            </li>
-            <li>
-                <a href="/shopping-cart">
-                    Carrito
-                </a>
-            </li>
-          </ul>
+        <section class="tercerElemento">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="/login">
+                            👤 Mi cuenta
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/shopping-cart">
+                            Carrito
+                        </a>
+                    </li>
+                </ul>
 
-          <ul class = "hidden">
-            <li>
-              
-                👩🏻‍🦱 Milagros 
-              
-            </li>
-            <li>
-              
-                 Log out
-              
-            </li>
-          </ul>
-        </nav>
-     </section>
+                <ul class="hidden">
+                    <li>
+
+                        👩🏻‍🦱 Milagros
+
+                    </li>
+                    <li>
+
+                        Log out
+
+                    </li>
+                </ul>
+            </nav>
+        </section>
 
         <div class="hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" width="49.34" height="28" viewBox="0 0 28 24">
-            <path fill="currentColor"
-                d="M2.61 0h22.431a2.61 2.61 0 1 1 0 5.22H2.61a2.61 2.61 0 1 1 0-5.22zm0 9.39h22.431a2.61 2.61 0 1 1 0 5.22H2.61a2.61 2.61 0 1 1 0-5.22zm0 9.391h22.431a2.61 2.61 0 1 1 0 5.22H2.61a2.61 2.61 0 1 1 0-5.22z" />
-        </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="49.34" height="28" viewBox="0 0 28 24">
+                <path fill="currentColor"
+                    d="M2.61 0h22.431a2.61 2.61 0 1 1 0 5.22H2.61a2.61 2.61 0 1 1 0-5.22zm0 9.39h22.431a2.61 2.61 0 1 1 0 5.22H2.61a2.61 2.61 0 1 1 0-5.22zm0 9.391h22.431a2.61 2.61 0 1 1 0 5.22H2.61a2.61 2.61 0 1 1 0-5.22z" />
+            </svg>
         </div>
     </header>
 
@@ -66,6 +66,99 @@
     <main>
 
         <h2>Mi carrito</h2>
+
+        <ul class="bread-crumb">
+            <li><a href="/">inicio</a></li>
+            <li><a href="#">Carrito</a></li>
+        </ul>
+
+        <section class="general-product-page">
+            <section class="product-image-container">
+
+                <div class="product-image"><img src="\img\D_NQ_NP_821275-MLA49620450567_042022-O.webp"
+                        alt="buzo mario bros">
+                        
+                    </section>
+                    <section class="product-description">
+                        <div>Remera manga corta estampada 100% algodón</div>
+                        <div class="product-price">$1000.00</div>
+                        <form>
+                        <div><label for="quantity">Cantidad :</label>
+                            <select id="quantity" name="quantity">
+                        </div>
+    
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        </select><br>
+                        <button type="submit">Agregar</button>
+                    </form>                    
+                    </section>
+                    <section class="product-description-2">
+                        <div>Codigo de descuento</div>
+                            <div class="product-price"></div>
+                            <label for="codigo"></label>
+                            <input type="text" placeholder="Ingrese cupon de descuento">
+                            <button type="submit"> Validar</button>
+                            <div class="text-code">Subtotal</div>
+                            <div class="text-code">Envio</div>
+                            <div class="text-code">Total</div>
+                            <button type="submit">Comprar</button>
+                    </section>
+        </section>
+        
+            <section class="relatedProducts">
+                <h2>Recomendado para vos:</h2>
+                <div class="related-products-container">
+
+                    <h1></h1>
+                    <div class="gallery">
+                        <div class="gallery-item">
+                            <img src="\img\D_NQ_NP_821275-MLA49620450567_042022-O.webp" alt="Product 1">
+                            <div class="item-overlay">
+                                <h2>Remera Mario Bros</h2>
+                                <p>Manga corta 100% algodón estampada</p>
+                                <a href='/detail'><button type="button">Ver</button></a>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="\img\D_NQ_NP_821275-MLA49620450567_042022-O.webp" alt="Product 1">
+                            <div class="item-overlay">
+                                <h2>Remera Mario Bros</h2>
+                                <p>Manga corta 100% algodón estampada</p>
+                                <a href='/detail'><button type="button">Ver</button></a>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="\img\D_NQ_NP_821275-MLA49620450567_042022-O.webp" alt="Product 1">
+                            <div class="item-overlay">
+                                <h2>Remera Mario Bros</h2>
+                                <p>Manga corta 100% algodón estampada</p>
+                                <a href='/detail'><button type="button">Ver</button></a>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="\img\D_NQ_NP_821275-MLA49620450567_042022-O.webp" alt="Product 1">
+                            <div class="item-overlay">
+                                <h2>Remera Mario Bros</h2>
+                                <p>Manga corta 100% algodón estampada</p>
+                                <a href='/detail'><button type="button">Ver</button></a>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="\img\D_NQ_NP_821275-MLA49620450567_042022-O.webp" alt="Product 1">
+                            <div class="item-overlay">
+                                <h2>Remera Mario Bros</h2>
+                                <p>Manga corta 100% algodón estampada</p>
+                                <a href='/detail'><button type="button">Ver</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
 
     </main>
 

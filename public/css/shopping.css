@@ -1,4 +1,128 @@
+main {
+    display: block;
+    text-align: center;
+  }
+
 main h2 {
     flex-wrap: wrap;
-   
+   justify-content: left;
 }
+
+.text-code {
+    text-align: left;
+    margin: 5%;
+}
+
+.general-product-page {
+    display: flex;
+    flex-direction: row;
+  
+  }
+  
+  .product-image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    flex-shrink: 1;
+  }
+  
+  .product-image img {
+    width: 70%;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+  }
+  
+  .product-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+  }
+
+  .product-description-2 {
+    position: relative;
+    left: 450px;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+  }
+  
+  .product-size {
+    display: inline;
+  }
+  
+  .product-quantity {
+    width: 30vw;
+    margin: 1px 0px 10px 0px;
+  }
+
+ul.bread-crumb {
+    margin: 1vh 1vw;
+    padding: 10px 16px;
+    list-style: none;
+  }
+
+  ul.bread-crumb li {
+    display: inline;
+  
+  }
+
+  ul.bread-crumb li+li:before {
+    padding: 8px;
+    color: #fff;
+    content: "/\00a0";
+  }
+
+  ul.bread-crumb li a {
+    color: #0275d8;
+    text-decoration: none;
+  }
+
+  ul.bread-crumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+  }
+
+  .gallery {
+    display: flex;
+    overflow-x: scroll;
+  }
+  
+  .gallery-item {
+    position: relative;
+  }
+  
+  .gallery-item img {
+    width: 60%;
+  }
+
+  .item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s;
+    flex-wrap: wrap;
+  }
+  
+  .gallery-item:hover .item-overlay {
+    opacity: 1;
+    margin:0 1vw;
+    padding:1hv 1vw;
+    width:10vw;
+  }
+  
+  div.gallery {
+    margin: 1vh 1vw;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
