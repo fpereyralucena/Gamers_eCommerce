@@ -20,17 +20,17 @@
 
 ### **Wireframes**
 
-![Home](./wireframes/home.png)
-![Detalle del Producto](./wireframes/detalle_producto.png)
-![Carrito](./wireframes/carrito.png)
-![Form de Registro](./wireframes/registrarse.png)
-![Login](./wireframes/login.png)
+![Home](./Documentacion/wireframes/home.png)
+![Detalle del Producto](./Documentacion/wireframes/detalle_producto.png)
+![Carrito](./Documentacion/wireframes/carrito.png)
+![Form de Registro](./Documentacion/wireframes/registrarse.png)
+![Login](./Documentacion/wireframes/login.png)
 
 ### **Retrospectives**
 
-![Retro1](./retro1.md)
-![Retro2](./retro2.md)
-![Retro3](./retro3.md)
+![Retro1](./Documentacion/retro1.md)
+![Retro2](./Documentacion/retro2.md)
+![Retro3](./Documentacion/retro3.md)
 
 ### Colaboradores
 

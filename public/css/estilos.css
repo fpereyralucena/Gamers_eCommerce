@@ -5,9 +5,10 @@
 * {
     font-family: 'Roboto', sans-serif;
     margin: 0;
-    /* padding: 0; */
+    padding: 0;
     box-sizing: border-box;
 }
+
 
 body {
     /* color: #4a4453; */
@@ -97,7 +98,7 @@ footer {
     justify-content: space-between;
     padding: 2rem;
     font-weight: 200;
-    width: 99%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
 
@@ -159,4 +160,17 @@ h1 {
 
 .product-card img {
     width: 80%;
+}
+
+
+@media  (max-width: 360px) {
+.product-card {
+    width:70%
+}
+}
+
+@media  (max-width: 700px) {
+    .product-card {
+        width:35%
+    }
 }

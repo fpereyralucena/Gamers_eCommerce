@@ -62,14 +62,12 @@
 
     <main>
 
-        <form>
-            <h2 class="IngresaTitulo"> Ingresá a tu cuenta </h2>
-            <input type="email" placeholder="minombre@dominio.com">
-            <input type="password">
-            <input class="botonSubmit" type="submit">
-            <div>
-                <a href="/recover-pass">Olvidé mi contraseña</a>
-            </div>
+        <form action="/recuperar-contrasena" method="post">
+            <h2>Recuperar Contraseña</h2>
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Agregue un password válido">
+    
+            <button class="botonSubmit type="submit">Recuperar Contraseña</button>
         </form>
 
         <div>
