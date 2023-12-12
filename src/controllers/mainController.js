@@ -21,6 +21,12 @@ let mainController = {
     },
     shoppingCart: (req, res) => {
         res.render('shopping-cart')
+    },
+    facebook: (req, res) => {
+        res.redirect('https://www.facebook.com')
+    },
+    instagram: (req, res) => {
+        res.redirect('https://www.instagram.com')
     }
 }
 

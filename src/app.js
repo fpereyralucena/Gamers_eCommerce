@@ -11,10 +11,12 @@ app.set('views', path.resolve(__dirname, "views"));
 app.use('/', mainRouter);
 app.use('/login', mainRouter);
 app.use('/recover-pass', mainRouter);
-app.use('/recuperar-contrasena', mainRouter)
-app.use('/register', mainRouter)
-app.use('/detail', mainRouter)
-app.use('/shopping-cart', mainRouter)
+app.use('/recuperar-contrasena', mainRouter);
+app.use('/register', mainRouter);
+app.use('/detail', mainRouter);
+app.use('/shopping-cart', mainRouter);
+app.use('/www.facebook.com', mainRouter);
+app.use("/www.instagram.com", mainRouter);
 app.listen(port, () => {
   console.log(`Example app listening on port http://localhost:${port}`)
 })
