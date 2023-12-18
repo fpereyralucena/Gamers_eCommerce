@@ -27,6 +27,12 @@ let mainController = {
     },
     instagram: (req, res) => {
         res.redirect('https://www.instagram.com')
+    },
+    createProduct: (req, res) => {
+        res.render('create-product')
+    },
+    editProduct: (req, res) => {
+        res.render('edit-product')
     }
 }
 

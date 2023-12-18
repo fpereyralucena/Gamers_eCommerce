@@ -11,6 +11,8 @@ router.get('/detail/:id', mainController.detail );
 router.get('/shopping-cart', mainController.shoppingCart);
 router.get('/www.facebook.com', mainController.facebook);
 router.get('/www.instagram.com', mainController.instagram);
+router.get("/create-product", mainController.createProduct)
+router.get("/edit-product", mainController.editProduct)
 
 module.exports = router;
   

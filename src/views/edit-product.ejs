@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('partials/head', { customCSS: "create-product.css" }) %>
+
+<body>
+
+    <%- include('partials/header') %>
+
+<main>
+
+				<h2 class="products-title">Editar producto</h2>
+			</div>
+			<form action="" method="POST" class="form">
+				<div class="product-detail">
+					<div class="title-detail">
+						<label for="name" class="a">Nuevo nombre del producto:</label>
+						<input type="text" id="name" name="name" placeholder="Nombre del producto" class="form-input">
+					</div>
+					<div class="title-detail">
+						<label for="price" class="a">Nuevo precio del producto:</label>
+						<input type="text" id="price" name="price" placeholder="Ej: 10000$" class="form-input">
+					</div>
+					<div class="title-detail">
+						<label for="discount" class="a">Descuento:</label>
+						<input type="text" id="discount" name="discount" placeholder="Ej: 15%" class="form-input">
+					</div>
+					<div class="title-detail">
+						<label for="description" class="a">Descipción:</label>
+						<textarea name="description" id="description" class="form-input"></textarea>
+					</div>
+                    <div class="title-detail">
+                        <label for="image" class="a">Nueva imagen del producto:</label>
+                        <input type="file" id="image" name="image" class="form-input">
+                    </div>
+                    <div class="title-detail">
+						<label for="category" class="a">Categoría:</label>
+						<select name="category" id="category" class="form-input">
+							<option>Elige una opción</option>
+							<option value="in-sale">NADA POR AHORA</option>
+							<option value="visited">nada por ahora</option>
+						</select>
+					</div>
+					<div class="save-product">
+						<button type="submit" class="save-buttom">Guardar producto</button>
+					</div>
+			</form>
+
+</main>
+
+<%- include ('partials/footer')%>
+
+</body>
+
+</html>

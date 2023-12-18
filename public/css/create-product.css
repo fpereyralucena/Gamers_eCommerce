@@ -1,0 +1,50 @@
+.form {
+    width: 80%;
+    height: 600px;
+    margin-bottom: 40px;
+}
+
+.products-title {
+    text-align: center;
+}
+
+.product-detail {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.title-detail {
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.form-input {
+    display: flex;
+    width: 80%;
+    height: 100%;
+}
+
+.save-product {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.save-buttom {
+    background-color: #231751;
+    color: aliceblue;
+    width: 50%;
+    height: 150%;
+    border-radius: 10px;
+    border-color: transparent;
+}
+
+.save-buttom:hover {
+    background-color: aliceblue;
+    color: #231751;
+    border-color: #231751;
+}
