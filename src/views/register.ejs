@@ -9,9 +9,9 @@
 
     <main>
 
-        <form>
+        <form class="formRegister">
 
-            <h2 class="IngresaTitulo"> Registrate </h2>
+            <h2 class="ingresaTitulo"> Registrate </h2>
 
             <label for="ingresarNombres">Nombres</label>
             <input type="text" placeholder="Gabriel Omar" id="ingresarNombres">
@@ -19,13 +19,16 @@
             <label for="ingresarApellidos">Apellidos</label>
             <input type="text" placeholder="Batistuta" id="ingresarApellidos">
 
+            <label for="nacimiento">Fecha de nacimiento</label>
+            <input type="date" placeholder="20/11/2001" id="nacimiento">
+
             <label for="ingresaEmail">Email</label>
             <input type="email" placeholder="elBati.Gol@mail.com" id="ingresaEmail">
 
             <label for="ingresaClave">Clave</label>
             <input type="password" id="ingresaClave">
 
-            <div>
+            <div class="buttonsRegister">
                 <button type="submit" class="botonSubmit">Aceptar</button>
                 <button type="reset" class="botonReset">Borrar</button>
             </div>

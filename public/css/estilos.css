@@ -35,24 +35,22 @@ main {
 
 }
 
-.IngresaTitulo {
+.ingresaTitulo {
     color: #231751;
-    font-size: medium;
+    font-size: 20px;
 }
 
 form {
     display: flex;
-     flex-direction: column; 
+    flex-direction: column; 
     justify-content: center; 
     align-items: center;
-    gap: 1rem;
     box-shadow: 0 4px 8px rgba(35, 23, 81, 0.1);
     /* Adjust the values based on your preference */
     padding: 20px;
     /* Add padding to make the shadow more visible */
     background-color: white;
-    border-radius: 1rem;
-    flex-wrap: wrap;
+    border-radius: 15px;
 }
 
 .crearCuenta {
@@ -66,25 +64,57 @@ form div {
     color: #231751;
 }
 
-input {
+.formRegister {
+    min-width: 300px;
+}
 
+.formRegister label {
+    align-self: flex-start;
+    margin: 10px 0 5px 15px;
+}
+
+input {
     border-color: #231751;
-    border-radius: 15px;
-    padding: 0.5rem;
+    border-radius: 10px;
+    padding: 5px;
+    width: 95%;
+}
+
+.buttonsRegister{
+    margin-top: 20px;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+
 }
 
 .botonSubmit {
+    width: 45%;
     background-color: #231751;
     color: aliceblue;
-    flex-grow: 1;
-    align-self: stretch;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 .botonReset {
+    width: 45%;
     background-color: #b50a0a;
     color: aliceblue;
-    flex-grow: 1;
-    align-self: stretch;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.formLogin label {
+    align-self: flex-start;
+    margin: 15px 0 10px 15px;
+}
+
+.buttonLogin {
+    margin: 10px 0;
+}
+
+.crearCuentaDiv {
+    margin: 10px 0;
 }
 
 .logo {
@@ -169,8 +199,12 @@ h1 {
 }
 }
 
-@media  (max-width: 700px) {
+@media  (min-width: 700px) {
     .product-card {
         width:35%
+    }
+
+    .ingresaTitulo {
+        font-size: 25px;
     }
 }

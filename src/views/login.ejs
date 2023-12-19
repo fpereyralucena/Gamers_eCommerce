@@ -10,17 +10,23 @@
 
     <main>
 
-        <form>
-            <h2 class="IngresaTitulo"> Ingresá a tu cuenta </h2>
-            <input type="email" placeholder="minombre@dominio.com">
-            <input type="password">
-            <input class="botonSubmit" type="submit">
+        <form class="formLogin">
+            <h2 class="ingresaTitulo"> Ingresá a tu cuenta </h2>
+
+            <label for="usuario">Usuario o email</label>
+            <input type="email" placeholder="minombre@dominio.com" id="usuario" name="usuario">
+
+            <label for="passwordUsuario">Ingresa la clave</label>
+            <input type="password" id="passwordUsuario" name="passwordUsuario">
+
+            <input class="botonSubmit buttonLogin" type="submit">
+
             <div>
                 <a href="/recover-pass">Olvidé mi contraseña</a>
             </div>
         </form>
 
-        <div>
+        <div class="crearCuentaDiv">
             No estoy registrado:
              <a class=" crearCuenta" href = "/register"> crear una nueva cuenta </a>
         </div>
