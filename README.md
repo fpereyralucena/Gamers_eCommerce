@@ -4,6 +4,8 @@
 
 **En nuestro sitio podrán encontrar indumentaria divertida y con mucha onda con diseños Gamer. Por eso le apuntamos como público a todas aquellas personas aficionadas _(geeks y nerds)_ aficionadas al mundo Gamer, ya sea actual o vintage y también a todos los que alguna vez lo fueron y quieran conectarse con su niño interior.**
 
+### **JIRA:**
+(https://grupo-uno.atlassian.net/jira/software/projects/GU/)
 ### **Benchmarking sites:**
 
 1. [Nike](https://www.nike.com/)
