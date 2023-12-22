@@ -6,6 +6,7 @@
 
 - Francisco Pereyra Lucena
 - Lucas Herbon
+- Lucas Medina
 - [Nombre del Miembro del Equipo 3]
 - ...
 
