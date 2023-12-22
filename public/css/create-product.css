@@ -32,13 +32,13 @@
     display: flex;
     justify-content: center;
     text-align: center;
+    height: 35px;
 }
 
 .save-buttom {
     background-color: #231751;
     color: aliceblue;
-    width: 50%;
-    height: 150%;
+    width: 75%;
     border-radius: 10px;
     border-color: transparent;
 }
