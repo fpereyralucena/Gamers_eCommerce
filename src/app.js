@@ -15,6 +15,8 @@ app.use('/recuperar-contrasena', mainRouter);
 app.use('/register', mainRouter);
 app.use('/detail', mainRouter);
 app.use('/shopping-cart', mainRouter);
+app.use("/create-product", mainRouter);
+app.use("/edit-product", mainRouter);
 app.use('/www.facebook.com', mainRouter);
 app.use("/www.instagram.com", mainRouter);
 app.listen(port, () => {
