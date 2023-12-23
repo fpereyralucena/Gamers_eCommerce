@@ -131,7 +131,7 @@ ul.bread-crumb li a:hover {
   flex-wrap: wrap;
 }
 
-.gallery-item:hover .item-overlay {
+.item-overlay:hover{
   opacity: 1;
   margin: 0 1vw;
   padding: 1hv 1vw;
