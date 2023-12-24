@@ -1,5 +1,5 @@
 
-let ussersController = {
+let usersController = {
 
     login: (req, res) => {
         res.render('login')
@@ -19,4 +19,4 @@ let ussersController = {
 
 };
 
-module.exports = ussersController;
+module.exports = usersController;
