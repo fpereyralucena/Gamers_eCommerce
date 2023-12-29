@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "name": "Nombre de usuario",
+        "password": "contraseña",
+        "profile-image": "default-image.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Nombre de usuario",
+        "password": "contraseña",
+        "profile-image": "default-image.jpg"
+    }
+]
