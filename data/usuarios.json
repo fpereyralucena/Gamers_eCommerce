@@ -2,13 +2,37 @@
     {
         "id": 1,
         "name": "Nombre de usuario",
+        "lastName": "Apellido del usuario",
+        "email": "email@email.com",
         "password": "contraseña",
+        "category": "comprador o vendedor",
         "profile-image": "default-image.jpg"
     },
     {
         "id": 2,
         "name": "Nombre de usuario",
+        "lastName": "Apellido del usuario",
+        "email": "email@email.com",
         "password": "contraseña",
+        "category": "comprador o vendedor",
+        "profile-image": "default-image.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Nombre de usuario",
+        "lastName": "Apellido del usuario",
+        "email": "email@email.com",
+        "password": "contraseña",
+        "category": "comprador o vendedor",
+        "profile-image": "default-image.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Nombre de usuario",
+        "lastName": "Apellido del usuario",
+        "email": "email@email.com",
+        "password": "contraseña",
+        "category": "comprador o vendedor",
         "profile-image": "default-image.jpg"
     }
 ]

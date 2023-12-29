@@ -2,33 +2,41 @@
     {
         "id": 1,
         "name": "Remera Mario Bros",
-        "price": 1000,
-        "discount": 0,
         "description": "Remera con estampado de Mario Bros",
+        "category": "",
+        "waist": "XL",
+        "price": 1000,
+        "discount": 25,
         "image": "D_NQ_NP_821275-MLA49620450567_042022-O.webp"
     },
     {
         "id": 2,
         "name": "Remera Mario Bros",
-        "price": 1000,
-        "discount": 0,
         "description": "Remera con estampado de Mario Bros",
+        "category": "",
+        "waist": "XL",
+        "price": 1000,
+        "discount": 25,
         "image": "D_NQ_NP_821275-MLA49620450567_042022-O.webp"
     },
     {
         "id": 3,
         "name": "Remera Mario Bros",
-        "price": 1000,
-        "discount": 0,
         "description": "Remera con estampado de Mario Bros",
+        "category": "",
+        "waist": "XL",
+        "price": 1000,
+        "discount": 25,
         "image": "D_NQ_NP_821275-MLA49620450567_042022-O.webp"
     },
     {
         "id": 4,
         "name": "Remera Mario Bros",
-        "price": 1000,
-        "discount": 0,
         "description": "Remera con estampado de Mario Bros",
+        "category": "",
+        "waist": "XL",
+        "price": 1000,
+        "discount": 25,
         "image": "D_NQ_NP_821275-MLA49620450567_042022-O.webp"
     }
 ]
