@@ -8,11 +8,11 @@ header {
     padding: 2rem;
 }
 
-.gamerscostumes {
-    position: relative;
-    left: 70px;
+.centrar-header {
+    width: 25%;
 }
 
-
-
-    
+ul {
+    display: flex;
+    justify-content: end;
+}

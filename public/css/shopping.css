@@ -144,3 +144,8 @@ div.gallery {
   align-items: center;
   overflow: hidden;
 }
+
+.codigo-descuento {
+  display: flex;
+ justify-content: center;
+}
