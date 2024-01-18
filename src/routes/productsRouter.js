@@ -4,9 +4,11 @@ const productsController = require('../controllers/productsController.js');
 
 router.get('/detail/:id', productsController.detail );
 
-router.get('/shopping-cart', productsController.shoppingCart);
+router.get('/shopping-cart',productsController.shoppingCart);
 
-router.get("/create-product", productsController.createProduct);
+router.get("/create-product", productsController.create);
+
+router.post("/create-product", productsController.processCreate);
 
 router.get("/edit-product", productsController.editProduct);
 

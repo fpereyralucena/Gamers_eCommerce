@@ -1,0 +1,42 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john.doe@example.com",
+        "password": "hashed_password_here",
+        "roles": ["customer"],
+        "profileImage": "profile_image_url_here"
+      },
+      {
+        "id": 2,
+        "firstName": "Jane",
+        "lastName": "Smith",
+        "email": "jane.smith@example.com",
+        "password": "hashed_password_here",
+        "roles": ["customer", "admin"],
+        "profileImage": "profile_image_url_here"
+      },
+      {
+        "id": 3,
+        "firstName": "Mike",
+        "lastName": "Johnson",
+        "email": "mike.johnson@example.com",
+        "password": "hashed_password_here",
+        "roles": ["customer"],
+        "profileImage": "profile_image_url_here"
+      },
+      {
+        "id": 4,
+        "firstName": "Emily",
+        "lastName": "Williams",
+        "email": "emily.williams@example.com",
+        "password": "hashed_password_here",
+        "roles": ["customer"],
+        "profileImage": "profile_image_url_here"
+      }
+     
+    ]
+  }
+  

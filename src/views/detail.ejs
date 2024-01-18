@@ -14,19 +14,20 @@
             <li><a href="#">ropa</a></li>
             <li><a href="#">remeras</a></li>
             <li><a href="#">manga corta</a></li>
-            <li>Mario Bros</li>
+            <li><%= product.title %></li>
         </ul>
         <section class="general-product-page">
             <section class="product-image-container">
 
-                <div class="product-image"><img src="\img\D_NQ_NP_821275-MLA49620450567_042022-O.webp"
-                        alt="buzo mario bros">
+                <div class="product-image"><img src="/img/<%= product.image %>"
+                        alt="<%= product.description %>">
                         
                     </section>
                     <section class="product-description">
-                        <div>Remera manga corta estampada 100% algodón</div>
-                        <div class="product-price">$1000.00</div>
+                        <div><%= product.description %></div>
+                        <div class="product-price"><%= product.price %></div>
                         <form>
+                          
                             <div> <input type="radio" id="small" name="size" value="small">
                                 <label for="small">Small</label>
                             </div>
@@ -70,7 +71,7 @@
                     <div class="gallery-item">
                         <img src="\img\D_NQ_NP_821275-MLA49620450567_042022-O.webp" alt="Product 1">
                         <div class="item-overlay">
-                            <h2>Remera Mario Bros</h2>
+                            <h2><%= product.title %></h2>
                             <p>Manga corta 100% algodón estampada</p>
                             <a href='/products/detail'><button type="button">Ver</button></a>
                         </div>

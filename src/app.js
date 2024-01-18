@@ -10,6 +10,8 @@ const usersRouter = require('./routes/usersRouter');
 app.use(express.static("public"));
 app.set('view engine', 'ejs'); // set up ejs for templating
 app.set('views', path.resolve(__dirname, "views"));
+app.use(express.json());             // for application/json
+app.use(express.urlencoded({ extended: false }));      // for application/x-www-form-urlencoded
 
 
 app.use('/', mainRouter);
