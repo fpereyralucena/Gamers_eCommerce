@@ -33,7 +33,7 @@ let productsController = {
 			discount: req.body.discount,
 			category: req.body.category,
 			description: req.body.description,
-			image: "" }
+			image: req.file.filename}
 
 		products.push(newProduct);
 		

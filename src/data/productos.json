@@ -1,78 +1,168 @@
 [
-  {
-    "id": 1,
-    "title": "Mario Bros T-Shirt",
-    "description": "Classic Mario Bros logo T-shirt",
-    "price": 19.99,
-    "size": [
-      "S",
-      "M",
-      "L",
-      "XL"
-    ],
-    "stock": {
-      "S": 50,
-      "M": 75,
-      "L": 100,
-      "XL": 50
-    },
-    "image": "mario_bros_tshirt_image_url_here"
+ {
+  "id": 1,
+  "title": "Mario Bros T-Shirt",
+  "description": "Classic Mario Bros logo T-shirt",
+  "price": 19.99,
+  "size": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "stock": {
+   "S": 50,
+   "M": 75,
+   "L": 100,
+   "XL": 50
   },
-  {
-    "id": 2,
-    "title": "Sonic the Hedgehog T-Shirt",
-    "description": "Sonic the Hedgehog themed T-shirt",
-    "price": 22.99,
-    "size": [
-      "S",
-      "M",
-      "L",
-      "XL"
-    ],
-    "stock": {
-      "S": 40,
-      "M": 60,
-      "L": 80,
-      "XL": 40
-    },
-    "image": "sonic_tshirt_image_url_here"
+  "image": "mario_bros_tshirt_image_url_here"
+ },
+ {
+  "id": 2,
+  "title": "Sonic the Hedgehog T-Shirt",
+  "description": "Sonic the Hedgehog themed T-shirt",
+  "price": 22.99,
+  "size": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "stock": {
+   "S": 40,
+   "M": 60,
+   "L": 80,
+   "XL": 40
   },
-  {
-    "id": 3,
-    "title": "Legend of Zelda T-Shirt",
-    "description": "Triforce logo Legend of Zelda T-shirt",
-    "price": 24.99,
-    "size": [
-      "S",
-      "M",
-      "L",
-      "XL"
-    ],
-    "stock": {
-      "S": 30,
-      "M": 50,
-      "L": 70,
-      "XL": 30
-    },
-    "image": "zelda.jpg"
+  "image": "sonic_tshirt_image_url_here"
+ },
+ {
+  "id": 3,
+  "title": "Legend of Zelda T-Shirt",
+  "description": "Triforce logo Legend of Zelda T-shirt",
+  "price": 24.99,
+  "size": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "stock": {
+   "S": 30,
+   "M": 50,
+   "L": 70,
+   "XL": 30
   },
-  {
-    "id": 4,
-    "title": "Pokémon Pikachu T-Shirt",
-    "description": "Cute Pikachu Pokemon T-shirt",
-    "price": 18.99,
-    "size": [
-      "S",
-      "M",
-      "L",
-      "XL"
-    ],
-    "stock": {
-      "S": 60,
-      "M": 80,
-      "L": 100,
-      "XL": 60
-    },
-    "image": "pikachu_tshirt_image_url_here"
-  }
+  "image": "zelda.jpg"
+ },
+ {
+  "id": 4,
+  "title": "Pokémon Pikachu T-Shirt",
+  "description": "Cute Pikachu Pokemon T-shirt",
+  "price": 18.99,
+  "size": [
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "stock": {
+   "S": 60,
+   "M": 80,
+   "L": 100,
+   "XL": 60
+  },
+  "image": "pikachu_tshirt_image_url_here"
+ },
+ {
+  "id": 5,
+  "name": "Remera Sonic 3",
+  "price": "9999",
+  "discount": "11",
+  "category": "Elige una opción",
+  "description": "Remera Sonic 3",
+  "image": ""
+ },
+ {
+  "id": 6,
+  "name": "producto nuevo",
+  "price": "123",
+  "discount": "11",
+  "category": "Elige una opción",
+  "description": "Producto nuevo",
+  "image": "default.png"
+ },
+ {
+  "id": 7,
+  "name": "producto nuevo",
+  "price": "123",
+  "discount": "12",
+  "category": "Elige una opción",
+  "description": "",
+  "image": "default-image.png"
+ },
+ {
+  "id": 8,
+  "name": "producto nuevo",
+  "price": "123",
+  "discount": "12",
+  "category": "Elige una opción",
+  "description": "",
+  "image": "Finance_stockwatchlist_up_green_72x72[1].png"
+ },
+ {
+  "id": 9,
+  "name": "producto nuevo",
+  "price": "123",
+  "discount": "12",
+  "category": "Elige una opción",
+  "description": "",
+  "image": "Finance_stockwatchlist_up_green_72x72[1].png"
+ },
+ {
+  "id": 10,
+  "name": "producto nuevo",
+  "price": "123",
+  "discount": "12",
+  "category": "Elige una opción",
+  "description": "",
+  "image": "Finance_stockwatchlist_up_green_72x72[1].png"
+ },
+ {
+  "id": 11,
+  "name": "producto nuevo",
+  "price": "123",
+  "discount": "12",
+  "category": "Elige una opción",
+  "description": "",
+  "image": "AAehR3S[1].png"
+ },
+ {
+  "id": 12,
+  "name": "producto nuevo",
+  "price": "123",
+  "discount": "12",
+  "category": "Elige una opción",
+  "description": "",
+  "image": "image-1705691271007-589541016"
+ },
+ {
+  "id": 13,
+  "name": "producto nuevo",
+  "price": "123",
+  "discount": "12",
+  "category": "Elige una opción",
+  "description": "",
+  "image": "image-1705691533873-NaN"
+ },
+ {
+  "id": 14,
+  "name": "producto nuevo",
+  "price": "123",
+  "discount": "12",
+  "category": "Elige una opción",
+  "description": "",
+  "image": "image-1705691605233-.png"
+ }
 ]
