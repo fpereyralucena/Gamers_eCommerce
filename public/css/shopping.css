@@ -131,11 +131,9 @@ ul.bread-crumb li a:hover {
   flex-wrap: wrap;
 }
 
-.item-overlay:hover{
+.item-overlay:hover {
   opacity: 1;
-  margin: 0 1vw;
-  padding: 1hv 1vw;
-  width: 10vw;
+  width: 100%;
 }
 
 div.gallery {
@@ -147,5 +145,5 @@ div.gallery {
 
 .codigo-descuento {
   display: flex;
- justify-content: center;
+  justify-content: center;
 }
