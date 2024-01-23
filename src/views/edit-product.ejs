@@ -11,27 +11,28 @@
 
 				<h2 class="products-title">Editar producto</h2>
 			
-			<form action="" method="POST" class="form" enctype="multipart/form-data">
+			<form action="edit-product" method="POST" class="form" enctype="multipart/form-data">
 				<div class="product-detail">
 					<div class="title-detail">
-						<label for="name" class="a">Nuevo nombre del producto:</label>
-						<input type="text" id="name" name="name" placeholder="Nombre del producto" class="form-input">
+						<label for="name" class="a">Nombre del producto:</label>
+						<input type="text" id="name" name="name" value="<%= product.title %>" placeholder="<%= product.name %>" class="form-input">
 					</div>
 					<div class="title-detail">
-						<label for="price" class="a">Nuevo precio del producto:</label>
-						<input type="text" id="price" name="price" placeholder="Ej: 10000$" class="form-input">
+						<label for="price" class="a">Precio del producto:</label>
+						<input type="text" id="price" name="price" placeholder="Ej: 10000$" value="<%= product.price %>" placeholder="<%= product.price %>"class="form-input" >
 					</div>
 					<div class="title-detail">
 						<label for="discount" class="a">Descuento:</label>
-						<input type="text" id="discount" name="discount" placeholder="Ej: 15%" class="form-input">
+						<input type="text" id="discount" name="discount" value="<%= product.discount %>" placeholder="<%= product.discount %>" class="form-input">
 					</div>
 					<div class="title-detail">
-						<label for="description" class="a">Descipción:</label>
-						<textarea name="description" id="description" class="form-input"></textarea>
+						<label for="description" class="a">Descripción:</label>
+						<textarea name="description" id="description" value="<%= product.description %>"  class="form-input"><%= product.description %></textarea>
 					</div>
                     <div class="title-detail">
-                        <label for="image" class="a">Nueva imagen del producto:</label>
-                        <input type="file" id="image" name="image" class="form-input">
+                        <label for="image" class="a">Imagen del producto:</label>
+                        <input type="file" id="image" name="image"  class="form-input" placeholder="<%= product.image %>">
+					
                     </div>
                     <div class="title-detail">
 						<label for="category" class="a">Categoría:</label>
