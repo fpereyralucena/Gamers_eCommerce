@@ -15,6 +15,10 @@ let usersController = {
 
    register: (req, res) => {
        res.render('register')
+   },
+
+   detail: (req, res) => {
+    res.render("detail")
    }
 
 };
