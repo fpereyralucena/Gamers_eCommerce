@@ -24,7 +24,7 @@
                         </div>
                         <div class="title-detail">
                             <label for="discount" class="a">Descuento:</label>
-                            <input type="text" id="discount" name="discount" placeholder="Ej: 15%" class="form-input">
+                            <input type="number" id="discount" name="discount" placeholder="Ej: 15%" class="form-input">
                         </div>
                         <div class="title-detail">
                             <label for="description" class="a">Descripción:</label>
@@ -34,6 +34,21 @@
                             <label for="image" class="a">Imagen del producto:</label>
                             <input type="file" id="image" name="image" accept="image/png, image/jpeg" class="form-input">
                         </div>
+
+                       
+                        <div class="title-detail">
+
+    
+                            S:
+                            <input type="number" min="0" max="99" maxlength="2" id="stockS" name="stockS" >
+                            M:
+                            <input type="number" min="0" max="99" maxlength="2" id="stockM" name="stockM" >
+                            L:
+                            <input type="number" min="0" max="99" maxlength="2" id="stockL" name="stockL" >
+                            XL:
+                            <input type="number" min="0" max="99" maxlength="2" id="stockXL" name="stockXL" >
+                        </div>
+
                         <div class="title-detail">
                             <label for="category" class="a">Categoría:</label>
                             <select name="category" id="category" class="form-input">

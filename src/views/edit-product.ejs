@@ -11,11 +11,11 @@
 
 				<h2 class="products-title">Editar producto</h2>
 			
-			<form action="edit-product/<%= product.id %>" method="POST" class="form" enctype="multipart/form-data">
+			<form action="./<%= product.id %>" method="POST" class="form" enctype="multipart/form-data">
 				<div class="product-detail">
 					<div class="title-detail">
 						<label for="name" class="a">Nombre del producto:</label>
-						<input type="text" id="name" name="name" value="<%= product.title %>" placeholder="<%= product.name %>" class="form-input">
+						<input type="text" id="title" name="title" value="<%= product.title %>" placeholder="<%= product.title %>" class="form-input">
 					</div>
 					<div class="title-detail">
 						<label for="price" class="a">Precio del producto:</label>
@@ -34,6 +34,25 @@
                         <input type="file" id="image" name="image"  class="form-input" placeholder="<%= product.image %>">
 					
                     </div>
+					
+					<div class="title-detail">
+						Stock:
+						<table>
+							
+							<tr>
+								<th>S</th>
+								<td><input type="number" min="0" max="99" maxlength="2" id="stock-s" name="stock-s" value="<%=product.stock.S%>" ></td>
+								<th>M</th>
+								<td><input type="number" min="0" max="99" maxlength="2" id="stock-m" name="stock-m" value="<%=product.stock.M%>" ></td>					
+								<th>L</th>
+								<td><input type="number" min="0" max="99" maxlength="2" id="stock-l" name="stock-l" value="<%=product.stock.L%>" ></td>
+								<th>M</th>
+								<td><input type="number" min="0" max="99" maxlength="2" id="stock-xl" name="stock-xl" value="<%=product.stock.XL%>" ></td>
+							</tr>
+						</table>
+					
+						
+					</div>
                     <div class="title-detail">
 						<label for="category" class="a">Categoría:</label>
 						<select name="category" id="category" class="form-input">

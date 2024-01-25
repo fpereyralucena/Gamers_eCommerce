@@ -1,12 +1,28 @@
 const fs = require('fs');
 const path = require('path');
 const usersFilePath = path.join(__dirname, '../data/usuarios.json');
+const bcrypt = require('bcrypt');
+
+function validatePassword (password, hash){
+    return bcrypt.compareSync(password, hash)
+}
 
 let usersController = {
 
     login: (req, res) => {
         res.render('login')
    },
+
+   loginValidation: (req, res) => {
+    let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+    let user = users.find(register => register.email == req.body.usuario)
+    if (!user){res.send("usuario no encontrado")}
+    if (validatePassword(req.body.passwordUsuario, user.password)){
+        res.send("usuario encontrado y pass correcto")
+    }
+    else {res.send("password no coincide")}
+    },
+   
 
    recoverPass: (req, res) => {
         res.render('recover-pass')
@@ -22,15 +38,14 @@ let usersController = {
 
    processRegistration: (req, res) => {
     let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-    console.log(req.body)
     const newUser = 
         {id: users[users.length -1].id + 1,
         firstName: req.body.first_name,
         lastName: req.body.last_name,
         email: req.body.email,
-        password: req.body.password, //HASHED PASSWORD MISSING
+        password: bcrypt.hashSync(req.body.password, 10),
         roles: ["customer"], // SECURITY PROBLEM: DIFFERENT NOT ACCESIBLE FILE SHOULD BE REQUIRED
-        profileImage:  'default-Image.jpg'}
+        profileImage:  req.body.image ? req.body.image : 'default-Image.jpg'}
 
     users.push(newUser);
     

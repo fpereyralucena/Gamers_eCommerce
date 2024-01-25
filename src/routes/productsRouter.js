@@ -27,6 +27,6 @@ router.get("/create-product", productsController.create);
 router.post("/create-product", upload.single('image'), productsController.processCreate);
 
 router.get("/edit-product/:id", productsController.editProduct);
-router.post("/edit-product/:id", productsController.processEditProduct);
+router.post("/edit-product/:id", upload.single('image'), productsController.processEditProduct);
 
 module.exports = router;

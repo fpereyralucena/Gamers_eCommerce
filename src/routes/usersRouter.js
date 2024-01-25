@@ -18,6 +18,7 @@ const storage = multer.diskStorage({
   const upload = multer({ storage: storage })
 
 router.get('/login', usersController.login);
+router.post('/login', usersController.loginValidation);
 
 router.get('/recover-pass', usersController.recoverPass);
 

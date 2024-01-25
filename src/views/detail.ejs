@@ -24,35 +24,37 @@
                         
                     </section>
                     <section class="product-description">
-                        <div><%= product.description %></div>
-                        <div class="product-price"><%= product.price %></div>
+                        
                         <form>
-                          
-                            <div> <input type="radio" id="small" name="size" value="small">
-                                <label for="small">Small</label>
-                            </div>
-        
-                            <div><input type="radio" id="medium" name="size" value="medium">
-                                <label for="medium">Medium</label>
-                            </div>
-        
-                            <div><input type="radio" id="large" name="size" value="large">
-                                <label for="large">Large</label>
-                            </div>
-        
-                            <div> <input type="radio" id="extra-large" name="size" value="extra-large">
-                                <label for="extra-large">Extra Large</label>
-                            </div>
-        
-                            <div><label for="quantity">Cantidad :</label>
-                                <select id="quantity" name="quantity">
-                            </div>
-        
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
+                        <div class="product-name"><%= product.name %></div>
+                        <div class="product-description"><%= product.description %></div>
+                        
+                        <div class="product-price">$ <%= product.price %></div>
+                            <table> 
+                                <tr>
+            
+                                    <th><label for="small">Small</label></th>
+                                    <td><input type="number" name="smallQ"min="0" max="<%= product.stock.S%>" value="0"></td>
+                                </tr>
+                                <tr>
+                                    
+                                    <th><label for="medium"> Medium</label></th>
+                                    <td><input type="number" name="mediumQ" min="0" max="<%= product.stock.M%>" value="0"></td>
+                                </tr>
+                                <tr> 
+                                    
+                                    <th><label for="large">Large</label></th>
+                                    <td><input type="number" name="largeQ" min="0" max="<%= product.stock.L%>" value="0"></td>
+                                </tr>
+                                <tr>
+                                    
+                                    <th><label for="Xlarge">XLarge</label></th>
+                                    <td><input type="number" name="XlargeQ" min="0" max="<%= product.stock.XL%>" value="0"></td>
+                                </tr>
+                                
+                            </table>
+                                                                 
+                            
                             </select><br>
                             <button type="submit">Agregar al carrito</button>
                         </form>

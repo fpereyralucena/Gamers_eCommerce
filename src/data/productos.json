@@ -3,7 +3,7 @@
   "id": 1,
   "title": "Mario Bros T-Shirt",
   "description": "Classic Mario Bros logo T-shirt",
-  "price": 19.99,
+  "price": 19,
   "size": [
    "S",
    "M",
@@ -12,17 +12,17 @@
   ],
   "stock": {
    "S": 50,
-   "M": 75,
-   "L": 100,
-   "XL": 50
+   "M": 75
   },
-  "image": "mario_bros_tshirt_image_url_here"
+  "image": "image-1706149897995-.png",
+  "discount": 10,
+  "category": "Elige una opción"
  },
  {
   "id": 2,
-  "title": "Sonic the Hedgehog T-Shirt",
+  "title": "Remera Sonic",
   "description": "Sonic the Hedgehog themed T-shirt",
-  "price": 22.99,
+  "price": 21,
   "size": [
    "S",
    "M",
@@ -35,7 +35,9 @@
    "L": 80,
    "XL": 40
   },
-  "image": "sonic_tshirt_image_url_here"
+  "image": "image-1706139530783-.jpg",
+  "discount": 10,
+  "category": "Elige una opción"
  },
  {
   "id": 3,
@@ -164,5 +166,148 @@
   "category": "Elige una opción",
   "description": "",
   "image": "image-1705691605233-.png"
+ },
+ {
+  "id": 15,
+  "price": "10000",
+  "discount": "10",
+  "category": "Elige una opción",
+  "description": "Remera blanca, cuello redondo 100% algodón",
+  "image": "image-1706151553741-.jpg"
+ },
+ {
+  "id": 16,
+  "name": "Remera Street Figther",
+  "price": "10000",
+  "discount": "10",
+  "category": "Elige una opción",
+  "description": "Remera manga corta, cuello redondo 100% algodón",
+  "image": "image-1706151757348-.jpg",
+  "stock": {
+   "S": "15",
+   "M": "25",
+   "L": "51",
+   "XL": "65"
+  }
+ },
+ {
+  "id": 17,
+  "name": "Remera Street Figther",
+  "price": "10000",
+  "discount": "10",
+  "category": "Elige una opción",
+  "description": "Remera manga corta, cuello redondo 100% algodón",
+  "image": "image-1706151827590-.jpg",
+  "stock": {
+   "S": "15",
+   "M": "25",
+   "L": "51",
+   "XL": "65"
+  }
+ },
+ {
+  "id": 18,
+  "name": "Remera Street Figther",
+  "price": "10000",
+  "discount": "10",
+  "category": "Elige una opción",
+  "description": "Remera manga corta, cuello redondo 100% algodón",
+  "image": "image-1706151836462-.jpg",
+  "stock": {
+   "S": "15",
+   "M": "25",
+   "L": "51",
+   "XL": "65"
+  }
+ },
+ {
+  "id": 19,
+  "name": "Remera Street Figther",
+  "price": "10000",
+  "discount": "10",
+  "category": "Elige una opción",
+  "description": "",
+  "image": "image-1706151851661-.jpg",
+  "stock": {
+   "S": "15",
+   "M": "25",
+   "L": "51",
+   "XL": "65"
+  }
+ },
+ {
+  "id": 20,
+  "name": "Remera Street Figther",
+  "price": "10000",
+  "discount": "10",
+  "category": "Elige una opción",
+  "description": "",
+  "image": "image-1706151861786-.jpg",
+  "stock": {
+   "S": "15",
+   "M": "25",
+   "L": "51",
+   "XL": "65"
+  }
+ },
+ {
+  "id": 21,
+  "name": "Remera Street Figther",
+  "price": "10000",
+  "discount": "10",
+  "category": "Elige una opción",
+  "description": "",
+  "image": "image-1706151877105-.jpg",
+  "stock": {
+   "S": "15",
+   "M": "25",
+   "L": "51",
+   "XL": "65"
+  }
+ },
+ {
+  "id": 22,
+  "name": "Remera Street Figther",
+  "price": "10000",
+  "discount": "10",
+  "category": "Elige una opción",
+  "description": "",
+  "image": "image-1706151940009-.jpg",
+  "stock": {
+   "S": "15",
+   "M": "25",
+   "L": "51",
+   "XL": "65"
+  }
+ },
+ {
+  "id": 23,
+  "name": "Remera Street Figther",
+  "price": "10000",
+  "discount": "10",
+  "category": "Elige una opción",
+  "description": "",
+  "image": "image-1706151962474-.jpg",
+  "stock": {
+   "S": "15",
+   "M": "25",
+   "L": "51",
+   "XL": "65"
+  }
+ },
+ {
+  "id": 24,
+  "name": "Remera Street Figther",
+  "price": "10000",
+  "discount": "10",
+  "category": "Elige una opción",
+  "description": "",
+  "image": "image-1706151972255-.jpg",
+  "stock": {
+   "S": "15",
+   "M": "25",
+   "L": "51",
+   "XL": "65"
+  }
  }
 ]

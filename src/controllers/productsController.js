@@ -18,7 +18,6 @@ let productsController = {
     },
 
     create: (req, res) => {
-		
 		res.render('product-create-form')
     },
 
@@ -27,17 +26,22 @@ let productsController = {
 		console.log(req.body)
 		const newProduct = {
 			id: products[products.length - 1].id + 1,
-			name: req.body.title,
+			name: req.body.name,
 			price: req.body.price,
 			discount: req.body.discount,
 			category: req.body.category,
 			description: req.body.description,
-			image: req.file.filename}
-
+			image: req.file.filename,
+			stock: 
+			{S : req.body.stockS,
+			M : req.body.stockM ,
+			L : req.body.stockL ,
+			XL : req.body.stockXL}}
+			
 		products.push(newProduct);
 		
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-		res.send("Producto Creado Correctamente");
+		res.redirect("/products/detail/"+newProduct.id);
 			
 
 	},
@@ -60,12 +64,16 @@ let productsController = {
 		}
 		products.forEach(product => {
 			if (product.id === id) {
-				product.title = req.body.title || product.price;
+				product.title = req.body.title || product.title;
 				product.price = parseInt(req.body.price) || product.price;
 				product.discount = parseInt(req.body.discount) || product.discount;
 				product.category = req.body.category || product.category;
 				product.description = req.body.description || product.description;
 				product.image = req.file ? req.file.filename : product.image;
+				product.stock.S = req.body.stockS || product.stock.S;
+				product.stock.M = req.body.stockM || product.stock.M;
+				product.stock.L = req.body.stockL || product.stockL;
+				product.stock.XL = req.body.stockXL || product.stockXL;
 			}
 	
 		});

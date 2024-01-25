@@ -64,5 +64,27 @@
    "customer"
   ],
   "profileImage": "default-Image.jpg"
+ },
+ {
+  "id": 8,
+  "firstName": "francisco",
+  "lastName": "pereyra lucena",
+  "email": "fpereyralucena@hotmail.com",
+  "password": "p8ATNBjjZW5pGmg",
+  "roles": [
+   "customer"
+  ],
+  "profileImage": "default-Image.jpg"
+ },
+ {
+  "id": 9,
+  "firstName": "Gabriel Omar",
+  "lastName": "Batistuta",
+  "email": "elBati.gol@email.com",
+  "password": "$2b$10$2CKvEh3VggkmuHtycJtiLOzXdproEREszJhtHS60kKoHQC/GTEtBW",
+  "roles": [
+   "customer"
+  ],
+  "profileImage": "1614738417560 (1).jpeg"
  }
 ]
