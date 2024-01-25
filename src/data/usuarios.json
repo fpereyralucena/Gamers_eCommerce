@@ -86,5 +86,16 @@
    "customer"
   ],
   "profileImage": "1614738417560 (1).jpeg"
+ },
+ {
+  "id": 10,
+  "firstName": "francisco",
+  "lastName": "pereyra lucena",
+  "email": "fpereyralucena@emilio.com",
+  "password": "$2b$10$srqL7V.MVbXPhr0tbrPQIOyEjo8H8EA8is4gh.6mh/jHIGUZngPKq",
+  "roles": [
+   "customer"
+  ],
+  "profileImage": "default-Image.jpg"
  }
 ]

@@ -3,6 +3,7 @@ const path = require('path');
 const usersFilePath = path.join(__dirname, '../data/usuarios.json');
 const bcrypt = require('bcrypt');
 
+
 function validatePassword (password, hash){
     return bcrypt.compareSync(password, hash)
 }
@@ -18,7 +19,10 @@ let usersController = {
     let user = users.find(register => register.email == req.body.usuario)
     if (!user){res.send("usuario no encontrado")}
     if (validatePassword(req.body.passwordUsuario, user.password)){
-        res.send("usuario encontrado y pass correcto")
+        delete user.password;
+        res.session.userLogged = user;
+        return res.render('userProfile', {user: req.session.userLogged})
+
     }
     else {res.send("password no coincide")}
     },
@@ -46,11 +50,19 @@ let usersController = {
         password: bcrypt.hashSync(req.body.password, 10),
         roles: ["customer"], // SECURITY PROBLEM: DIFFERENT NOT ACCESIBLE FILE SHOULD BE REQUIRED
         profileImage:  req.body.image ? req.body.image : 'default-Image.jpg'}
-
-    users.push(newUser);
     
-    fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
-    res.send("Usuario Creado Correctamente");
+    if (users.find(register => register.email == newUser.email )){
+        return res.send("Ese email ya se encuentra registrado")
+    }
+    
+        users.push(newUser);
+        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
+       return res.send("Usuario Creado Correctamente");
+    
+   },
+
+   profile: (req, res) => {
+    return res.render('userProfile', {user: req.session.userLogged})
    }
 
 };
