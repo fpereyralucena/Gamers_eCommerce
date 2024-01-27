@@ -128,16 +128,21 @@ footer {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-
-
 }
 
-ul {
+.cosas-footer {
+    width: 100%;
+    margin: 1%;
+    padding: 1%;
+}
+
+.ul-header {
     list-style: none;
     font-size: small;
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 a {

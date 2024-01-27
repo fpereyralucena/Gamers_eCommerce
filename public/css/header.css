@@ -16,3 +16,15 @@ ul {
     display: flex;
     justify-content: end;
 }
+
+.boton-header{
+    width: 110%;
+    height: 120%;
+    border-radius: 5px;
+    border-color: transparent;
+    background-color: white;
+}
+
+.color-link{
+    color: #231751;
+}
