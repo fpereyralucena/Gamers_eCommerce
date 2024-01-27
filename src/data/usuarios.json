@@ -97,5 +97,16 @@
    "customer"
   ],
   "profileImage": "default-Image.jpg"
+ },
+ {
+  "id": 11,
+  "firstName": "aaa",
+  "lastName": "aaa",
+  "email": "aa@qq.com",
+  "password": "$2b$10$xPIzzXQpxzLNad6WklvrHuFPQWPfqhOSNWuFn0LnlUHJSzMz953U.",
+  "roles": [
+   "customer"
+  ],
+  "profileImage": "default-Image.jpg"
  }
 ]

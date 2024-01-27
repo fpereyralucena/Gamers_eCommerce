@@ -4,7 +4,7 @@ const usersController = require('../controllers/usersController');
 const multer  = require('multer');
 const path = require('path');
 const guestMiddleware = require('../middlewares/guestMiddleware');
-const authMiddleware = require('../middlewares/guestMiddleware');
+//const authMiddleware = require('../middlewares/guestMiddleware');
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -29,6 +29,7 @@ router.post('/recuperar-contrasena', usersController.recoverMessage);
 router.get('/register',guestMiddleware, usersController.register);
 router.post('/register', upload.single('image'),usersController.processRegistration);
 
-router.get('/profile', authMiddleware, usersController.profile);
+router.get('/profile', usersController.profile);
+router.get('/logout', usersController.logout)
 
 module.exports = router;

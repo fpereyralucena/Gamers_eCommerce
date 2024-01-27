@@ -20,8 +20,8 @@ let usersController = {
     if (!user){res.send("usuario no encontrado")}
     if (validatePassword(req.body.passwordUsuario, user.password)){
         delete user.password;
-        res.session.userLogged = user;
-        return res.render('userProfile', {user: req.session.userLogged})
+        req.session.userLogged = user;
+        res.redirect('/users/profile');
 
     }
     else {res.send("password no coincide")}
@@ -62,7 +62,15 @@ let usersController = {
    },
 
    profile: (req, res) => {
+    console.log("Estas en profile");
+    console.log(req.session)
     return res.render('userProfile', {user: req.session.userLogged})
+   },
+
+   logout: (req, res) => {
+    delete req.session.userLogged;
+    return res.redirect('../')
+
    }
 
 };
