@@ -309,5 +309,19 @@
    "L": "51",
    "XL": "65"
   }
+ },
+ {
+  "id": 25,
+  "name": "Remera Street Figther",
+  "price": 10000,
+  "discount": 10,
+  "category": "Elige una opción",
+  "description": "Remera algodón street figther",
+  "image": "image-1706326554060-.jpeg",
+  "stock": {
+   "S": "15",
+   "M": "25"
+  },
+  "title": "Remera Street Figther"
  }
 ]

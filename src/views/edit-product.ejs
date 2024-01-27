@@ -15,7 +15,7 @@
 				<div class="product-detail">
 					<div class="title-detail">
 						<label for="name" class="a">Nombre del producto:</label>
-						<input type="text" id="title" name="title" value="<%= product.title %>" placeholder="<%= product.title %>" class="form-input">
+						<input type="text" id="title" name="title" value="<%= product.name %>" placeholder="<%= product.title %>" class="form-input">
 					</div>
 					<div class="title-detail">
 						<label for="price" class="a">Precio del producto:</label>
@@ -30,8 +30,17 @@
 						<textarea name="description" id="description" value="<%= product.description %>"  class="form-input"><%= product.description %></textarea>
 					</div>
                     <div class="title-detail">
-                        <label for="image" class="a">Imagen del producto:</label>
-                        <input type="file" id="image" name="image"  class="form-input" placeholder="<%= product.image %>">
+						<table>
+							<tr>
+								<th><label for="image" class="a">Imagen del producto:</label></th>
+								<td><img class="thumbnail" src="/img/uploads/<%= product.image %>"></td>
+								
+							</tr>
+							<tr>
+								<th><input type="file" id="image" name="image"  class="form-input" placeholder="<%= product.image %>"></th>
+							</tr>
+						</table>
+                    
 					
                     </div>
 					

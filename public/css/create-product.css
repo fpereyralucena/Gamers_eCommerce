@@ -21,6 +21,14 @@
     margin: 20px;
 }
 
+.thumbnail {
+    width:20dvh;
+}
+
+img {
+    width: 40%;
+}
+
 .form-input {
     display: flex;
     width: 80%;
