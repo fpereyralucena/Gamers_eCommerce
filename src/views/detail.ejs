@@ -34,22 +34,22 @@
                                 <tr>
             
                                     <th><label for="small">Small</label></th>
-                                    <td><input type="number" name="smallQ"min="0" max="<%= product.stock.S%>" value="0"></td>
+                                    <td><input type="number" id="small" title="small" placeholder="0" name="smallQ" min="0" max="<%= product.stock.S%>" value="0"></td>
                                 </tr>
                                 <tr>
                                     
                                     <th><label for="medium"> Medium</label></th>
-                                    <td><input type="number" name="mediumQ" min="0" max="<%= product.stock.M%>" value="0"></td>
+                                    <td><input type="number" name="mediumQ" id="medium" title="medium" placeholder="0" name="mediumQ" max="<%= product.stock.M%>" value="0"></td>
                                 </tr>
                                 <tr> 
                                     
                                     <th><label for="large">Large</label></th>
-                                    <td><input type="number" name="largeQ" min="0" max="<%= product.stock.L%>" value="0"></td>
+                                    <td><input type="number" name="largeQ" placeholder="0" id="large" title="large" name="largeQ" min="0" max="<%= product.stock.L%>" value="0"></td>
                                 </tr>
                                 <tr>
                                     
                                     <th><label for="Xlarge">XLarge</label></th>
-                                    <td><input type="number" name="XlargeQ" min="0" max="<%= product.stock.XL%>" value="0"></td>
+                                    <td><input type="number" name="XlargeQ" id="Xlarge" title="XLarge" name="XlargeQ" min="0" placeholder="0" max="<%= product.stock.XL%>" value="0"></td>
                                 </tr>
                                 
                             </table>
