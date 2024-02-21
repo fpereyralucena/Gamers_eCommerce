@@ -6,6 +6,7 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true,
             autoIncrement: true,
             type: DataTypes.INTEGER,
+            allowNull: false
         },
         name: {
             type: DataTypes.VARCHAR(55),
