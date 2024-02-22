@@ -27,7 +27,8 @@ module.exports = (sequelize, DataTypes) => {
 
     };
     const config = {
-        tablename: "products"
+        tableName: "products",
+        timestamps: false,
     }
     const products = sequelize.define(name, constructor, config);
     return products
