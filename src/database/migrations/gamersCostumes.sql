@@ -22,7 +22,7 @@ CREATE TABLE `products` (
    `id` INT NOT NULL AUTO_INCREMENT,
    `name` VARCHAR(55) NOT NULL,
    `price` DECIMAL NOT NULL,
-   `category` VARCHAR(55) NOT NULL,
+   `discount` DECIMAL,
    `image` VARCHAR(500),
    PRIMARY KEY (`id`)
 );
