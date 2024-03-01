@@ -1,7 +1,7 @@
 
 module.exports = (sequelize, DataTypes) => {
 
-    const name = "users";
+    const name = "Users";
     const constructor = {
         id: {
             primaryKey: true,
@@ -10,19 +10,19 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         firstName: {
-            type: DataTypes.VARCHAR(255),
+            type: DataTypes.STRING(255),
             allowNull: false
         },
         lastName: {
-            type: DataTypes.VARCHAR(255),
+            type: DataTypes.STRING(255),
             allowNull: false
         },
         email: {
-            type: DataTypes.VARCHAR(55),
+            type: DataTypes.STRING(55),
             allowNull: false
         },
         password: {
-            type: DataTypes.VARCHAR(255),
+            type: DataTypes.STRING(255),
             allowNull: false
         },
         userEspecify_id: {

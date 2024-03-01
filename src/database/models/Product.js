@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
    
-    const name = "products";
+    const name = "Product";
     const constructor = {
         id: {
             primaryKey: true,
@@ -9,19 +9,19 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         name: {
-            type: DataTypes.VARCHAR(55),
+            type: DataTypes.STRING(55),
             allowNull: false
         },
         price: {
             type: DataTypes.DECIMAL(10, 0),
             allowNull: false,
         },
-        description: {
-            type: DataTypes.TEXT,
-            allowNull: false,
-        },
+        // description: {
+        //     type: DataTypes.TEXT,
+        //     allowNull: false,
+        // },
         image: {
-            type: DataTypes.VARCHAR(50),
+            type: DataTypes.STRING(50),
             allowNull: true,
         }
 
@@ -30,8 +30,8 @@ module.exports = (sequelize, DataTypes) => {
         tableName: "products",
         timestamps: false,
     }
-    const products = sequelize.define(name, constructor, config);
-    return products
+    const Product = sequelize.define(name, constructor, config);
+    return Product
 }
 
 

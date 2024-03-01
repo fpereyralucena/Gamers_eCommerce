@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         userRol: {
-            type: DataTypes.VARCHAR(50),
+            type: DataTypes.STRING(50),
             allowNull: false
         }
     };

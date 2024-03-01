@@ -3,6 +3,7 @@ const app = express()
 const path = require('path');
 const port = 3000;
 const session = require('express-session');
+const db = require('./database/models');
 
 
 const mainRouter = require('./routes/mainRouter');
