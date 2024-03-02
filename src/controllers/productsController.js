@@ -2,9 +2,11 @@ const db  = require('../database/models');
 const productsController = {
 	index:  (req, res) => {
 		db.Product.findAll()
-			.then((data)=> res.json((data)))
-		
-		
+			.then((data)=> res.render((data)))
+	},
+	detail: (req, res) => {
+		db.Product.findByPk(req.params.id)
+			.then((data)=>res.render('detail', {product: data}))
 	}
 };
 	// findByPk: (req, res) => {
