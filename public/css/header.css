@@ -28,3 +28,8 @@ ul {
 .color-link{
     color: #231751;
 }
+
+.navegation-input{
+    width: 100%;
+    height: 35px;
+}

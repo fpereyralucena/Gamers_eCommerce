@@ -19,18 +19,19 @@
         <section class="general-product-page">
             <section class="product-image-container">
 
-                <div class="product-image"><img src="/img/uploads/<%= product.image %>"
-                        alt="<%= product.description %>">
+                <div class="product-image"><img src="/img/<%= product.image %>"
+                        alt="<%= product.name %>">
                         
                     </section>
                     <section class="product-description">
                         
                         <form>
                         <div class="product-name"><%= product.name %></div>
-                        <!-- <div class="product-description"><%= product.description %></div> -->
                         
                         <div class="product-price">$ <%= product.price %></div>
-                           
+                        
+                        <br>
+                        <div class="offer-text"><%= product.discount %>% de Descuento</div>
                                                                  
                             
                             </select><br>
@@ -46,14 +47,13 @@
             <h2>Recomendado para vos:</h2>
             <div class="related-products-container">
 
-                <h1></h1>
                 <div class="gallery">
                     <div class="gallery-item">
                         <img src="\img\remeraMdeMario.webp" alt="Product 1">
                         <div class="item-overlay">
                             <h2>Remera Mario Bros</h2>
                             <p>Manga corta 100% algodón estampada</p>
-                            <a href='/detail'><button type="button">Ver</button></a>
+                            <a href='/products/detail/<%= product.id %>'><button type="button">Ver</button></a>
                         </div>
                     </div>
                     <div class="gallery-item">
@@ -61,7 +61,7 @@
                         <div class="item-overlay">
                             <h2>Remera Mario Bros</h2>
                             <p>Manga corta 100% algodón estampada</p>
-                            <a href='/detail'><button type="button">Ver</button></a>
+                            <a href='/products/detail/<%= product.id %>'><button type="button">Ver</button></a>
                         </div>
                     </div>
                     <div class="gallery-item">
@@ -69,7 +69,7 @@
                         <div class="item-overlay">
                             <h2>Remera Mario Bros</h2>
                             <p>Manga corta 100% algodón estampada</p>
-                            <a href='/detail'><button type="button">Ver</button></a>
+                            <a href='/products/detail/<%= product.id %>'><button type="button">Ver</button></a>
                         </div>
                     </div>
                     <div class="gallery-item">
@@ -77,7 +77,7 @@
                         <div class="item-overlay">
                             <h2>Remera Mario Bros</h2>
                             <p>Manga corta 100% algodón estampada</p>
-                            <a href='/detail'><button type="button">Ver</button></a>
+                            <a href='/products/detail/<%= product.id %>'><button type="button">Ver</button></a>
                         </div>
                     </div>
                     <div class="gallery-item">
@@ -85,7 +85,7 @@
                         <div class="item-overlay">
                             <h2>Remera Mario Bros</h2>
                             <p>Manga corta 100% algodón estampada</p>
-                            <a href='/detail'><button type="button">Ver</button></a>
+                            <a href='/products/detail/<%= product.id %>'><button type="button">Ver</button></a>
                         </div>
                     </div>
                 </div>

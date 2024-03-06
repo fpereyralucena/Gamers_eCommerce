@@ -92,7 +92,7 @@ ul.bread-crumb li a:hover {
 
 .gallery-item {
   position: relative;
-  margin-right: 10px;
+  /* margin-right: 10px; */
 }
 
 .gallery-item img {
@@ -119,9 +119,7 @@ ul.bread-crumb li a:hover {
 
 .gallery-item:hover .item-overlay {
   opacity: 1;
-  margin:0 1vw;
-  padding:1hv 1vw;
-  width:10vw;
+  width:100%;
 }
 
 div.gallery {
