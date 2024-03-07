@@ -1,13 +1,13 @@
 -- users --
-INSERT INTO gamercostumes.users (id, firstName, lastName, password, email, userEspecify_id) VALUES
+INSERT INTO gamerCostumes.users (id, firstName, lastName, password, email, userEspecify_id) VALUES
 (1, "Admin", "Admin", "QWERTY", "admin@gamerscostumes.com"), (2, "Lucas", "Herbon", "PATO123", "lucas@gmail.com")
 
 -- roles --
-INSERT INTO cristyledb.roles (id, userRol) VALUES
+INSERT INTO gamerCostumes.roles (id, userRol) VALUES
 (1, "Admin"), (2, "customer");
 
 -- products --
-INSERT INTO cristyleDB.products (id, name, price, discount, image) VALUES 
+INSERT INTO gamerCostumes.products (id, name, price, discount, image) VALUES 
 (1, "Remera Mario Hongos", 10000, 10, "marioHongos.png"),
 (1, "Remera Sonic", 10000, 10, "sonicShirt.jpg"),
 (1, "Remera Street Fighter II", 10000, 10, "street2.jpg"),

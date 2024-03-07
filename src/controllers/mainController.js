@@ -1,4 +1,5 @@
 const db = require('../database/models')
+
 let mainController = {
 
     index: (req, res) => {
