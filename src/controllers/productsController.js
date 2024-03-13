@@ -9,8 +9,11 @@ const productsController = {
 	},
 
 	detail: (req, res) => {
+		let guardar = []
+		db.Product.findAll()
+			.then((data)=> guardar = ((data)))
 		db.Product.findByPk(req.params.id)
-			.then((data)=>res.render('detail', {product: data}))
+			.then((data)=>res.render('detail', {product: data, allProducts: guardar}))
 	},
 
 	create: (req, res) => {
@@ -27,7 +30,7 @@ const productsController = {
 			name: req.body.name,
 			price: req.body.price,
 			discount: req.body.discount,
-			//image: req.file.filename,
+			image: req.file.filename,
 			})
 		.then(() => {
 		return res.send("Producto creado con exito!!!");
@@ -48,6 +51,9 @@ editProduct: (req, res) => {
 	})
 },
 
+shoppingCart: (req, res) => {
+	res.render('shopping-cart')
+},
 
 };
 

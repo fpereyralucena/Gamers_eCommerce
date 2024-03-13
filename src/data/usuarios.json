@@ -108,5 +108,16 @@
    "customer"
   ],
   "profileImage": "default-Image.jpg"
+ },
+ {
+  "id": 12,
+  "firstName": "Lucas",
+  "lastName": "Herbon",
+  "email": "luher@hotmail.com",
+  "password": "$2b$10$n.l29g76FyAjy6.Z8BO9.eoddgcIeT8hcY8wZYAk3VgblLpW/kfNK",
+  "roles": [
+   "customer"
+  ],
+  "profileImage": "default-Image.jpg"
  }
 ]

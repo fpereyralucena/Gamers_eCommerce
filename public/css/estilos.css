@@ -197,6 +197,11 @@ h1 {
     font-size: 24px;
 }
 
+.product-card2 a {
+    display: flex;
+    justify-content: center;
+}
+
 .product-card2:hover {
     box-shadow: 5px 5px 25px rgba(0, 0, 0, 1);
 }
