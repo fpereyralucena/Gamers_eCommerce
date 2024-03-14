@@ -1,327 +1,57 @@
-[
- {
-  "id": 1,
-  "title": "Mario Bros T-Shirt",
-  "description": "Classic Mario Bros logo T-shirt",
-  "price": 19,
-  "size": [
-   "S",
-   "M",
-   "L",
-   "XL"
-  ],
-  "stock": {
-   "S": 50,
-   "M": 75
-  },
-  "image": "image-1706149897995-.png",
-  "discount": 10,
-  "category": "Elige una opción"
- },
- {
-  "id": 2,
-  "title": "Remera Sonic",
-  "description": "Sonic the Hedgehog themed T-shirt",
-  "price": 21,
-  "size": [
-   "S",
-   "M",
-   "L",
-   "XL"
-  ],
-  "stock": {
-   "S": 40,
-   "M": 60,
-   "L": 80,
-   "XL": 40
-  },
-  "image": "image-1706139530783-.jpg",
-  "discount": 10,
-  "category": "Elige una opción"
- },
- {
-  "id": 3,
-  "title": "Legend of Zelda T-Shirt",
-  "description": "Triforce logo Legend of Zelda T-shirt",
-  "price": 24.99,
-  "size": [
-   "S",
-   "M",
-   "L",
-   "XL"
-  ],
-  "stock": {
-   "S": 30,
-   "M": 50,
-   "L": 70,
-   "XL": 30
-  },
-  "image": "zelda.jpg"
- },
- {
-  "id": 4,
-  "title": "Pokémon Pikachu T-Shirt",
-  "description": "Cute Pikachu Pokemon T-shirt",
-  "price": 18.99,
-  "size": [
-   "S",
-   "M",
-   "L",
-   "XL"
-  ],
-  "stock": {
-   "S": 60,
-   "M": 80,
-   "L": 100,
-   "XL": 60
-  },
-  "image": "pikachu_tshirt_image_url_here"
- },
- {
-  "id": 5,
-  "name": "Remera Sonic 3",
-  "price": "9999",
-  "discount": "11",
-  "category": "Elige una opción",
-  "description": "Remera Sonic 3",
-  "image": ""
- },
- {
-  "id": 6,
-  "name": "producto nuevo",
-  "price": "123",
-  "discount": "11",
-  "category": "Elige una opción",
-  "description": "Producto nuevo",
-  "image": "default.png"
- },
- {
-  "id": 7,
-  "name": "producto nuevo",
-  "price": "123",
-  "discount": "12",
-  "category": "Elige una opción",
-  "description": "",
-  "image": "default-image.png"
- },
- {
-  "id": 8,
-  "name": "producto nuevo",
-  "price": "123",
-  "discount": "12",
-  "category": "Elige una opción",
-  "description": "",
-  "image": "Finance_stockwatchlist_up_green_72x72[1].png"
- },
- {
-  "id": 9,
-  "name": "producto nuevo",
-  "price": "123",
-  "discount": "12",
-  "category": "Elige una opción",
-  "description": "",
-  "image": "Finance_stockwatchlist_up_green_72x72[1].png"
- },
- {
-  "id": 10,
-  "name": "producto nuevo",
-  "price": "123",
-  "discount": "12",
-  "category": "Elige una opción",
-  "description": "",
-  "image": "Finance_stockwatchlist_up_green_72x72[1].png"
- },
- {
-  "id": 11,
-  "name": "producto nuevo",
-  "price": "123",
-  "discount": "12",
-  "category": "Elige una opción",
-  "description": "",
-  "image": "AAehR3S[1].png"
- },
- {
-  "id": 12,
-  "name": "producto nuevo",
-  "price": "123",
-  "discount": "12",
-  "category": "Elige una opción",
-  "description": "",
-  "image": "image-1705691271007-589541016"
- },
- {
-  "id": 13,
-  "name": "producto nuevo",
-  "price": "123",
-  "discount": "12",
-  "category": "Elige una opción",
-  "description": "",
-  "image": "image-1705691533873-NaN"
- },
- {
-  "id": 14,
-  "name": "producto nuevo",
-  "price": "123",
-  "discount": "12",
-  "category": "Elige una opción",
-  "description": "",
-  "image": "image-1705691605233-.png"
- },
- {
-  "id": 15,
-  "price": "10000",
-  "discount": "10",
-  "category": "Elige una opción",
-  "description": "Remera blanca, cuello redondo 100% algodón",
-  "image": "image-1706151553741-.jpg"
- },
- {
-  "id": 16,
-  "name": "Remera Street Figther",
-  "price": "10000",
-  "discount": "10",
-  "category": "Elige una opción",
-  "description": "Remera manga corta, cuello redondo 100% algodón",
-  "image": "image-1706151757348-.jpg",
-  "stock": {
-   "S": "15",
-   "M": "25",
-   "L": "51",
-   "XL": "65"
-  }
- },
- {
-  "id": 17,
-  "name": "Remera Street Figther",
-  "price": "10000",
-  "discount": "10",
-  "category": "Elige una opción",
-  "description": "Remera manga corta, cuello redondo 100% algodón",
-  "image": "image-1706151827590-.jpg",
-  "stock": {
-   "S": "15",
-   "M": "25",
-   "L": "51",
-   "XL": "65"
-  }
- },
- {
-  "id": 18,
-  "name": "Remera Street Figther",
-  "price": "10000",
-  "discount": "10",
-  "category": "Elige una opción",
-  "description": "Remera manga corta, cuello redondo 100% algodón",
-  "image": "image-1706151836462-.jpg",
-  "stock": {
-   "S": "15",
-   "M": "25",
-   "L": "51",
-   "XL": "65"
-  }
- },
- {
-  "id": 19,
-  "name": "Remera Street Figther",
-  "price": "10000",
-  "discount": "10",
-  "category": "Elige una opción",
-  "description": "",
-  "image": "image-1706151851661-.jpg",
-  "stock": {
-   "S": "15",
-   "M": "25",
-   "L": "51",
-   "XL": "65"
-  }
- },
- {
-  "id": 20,
-  "name": "Remera Street Figther",
-  "price": "10000",
-  "discount": "10",
-  "category": "Elige una opción",
-  "description": "",
-  "image": "image-1706151861786-.jpg",
-  "stock": {
-   "S": "15",
-   "M": "25",
-   "L": "51",
-   "XL": "65"
-  }
- },
- {
-  "id": 21,
-  "name": "Remera Street Figther",
-  "price": "10000",
-  "discount": "10",
-  "category": "Elige una opción",
-  "description": "",
-  "image": "image-1706151877105-.jpg",
-  "stock": {
-   "S": "15",
-   "M": "25",
-   "L": "51",
-   "XL": "65"
-  }
- },
- {
-  "id": 22,
-  "name": "Remera Street Figther",
-  "price": "10000",
-  "discount": "10",
-  "category": "Elige una opción",
-  "description": "",
-  "image": "image-1706151940009-.jpg",
-  "stock": {
-   "S": "15",
-   "M": "25",
-   "L": "51",
-   "XL": "65"
-  }
- },
- {
-  "id": 23,
-  "name": "Remera Street Figther",
-  "price": "10000",
-  "discount": "10",
-  "category": "Elige una opción",
-  "description": "",
-  "image": "image-1706151962474-.jpg",
-  "stock": {
-   "S": "15",
-   "M": "25",
-   "L": "51",
-   "XL": "65"
-  }
- },
- {
-  "id": 24,
-  "name": "Remera Street Figther",
-  "price": "10000",
-  "discount": "10",
-  "category": "Elige una opción",
-  "description": "",
-  "image": "image-1706151972255-.jpg",
-  "stock": {
-   "S": "15",
-   "M": "25",
-   "L": "51",
-   "XL": "65"
-  }
- },
- {
-  "id": 25,
-  "name": "Remera Street Figther",
-  "price": 10000,
-  "discount": 10,
-  "category": "Elige una opción",
-  "description": "Remera algodón street figther",
-  "image": "image-1706326554060-.jpeg",
-  "stock": {
-   "S": "15",
-   "M": "25"
-  },
-  "title": "Remera Street Figther"
- }
+[{
+    "id": 1,
+    "name": "Remera Mario Hongos",
+    "price": 10000,
+    "discount": 10,
+    "image": "marioHongos.png"
+},
+{
+    "id": 2,
+    "name": "Remera Sonic",
+    "price": 10000,
+    "discount": 10,
+    "image": "sonicShirt.jpg"
+},
+{
+    "id": 3,
+    "name": "Remera Street Fighter II",
+    "price": 10000,
+    "discount": 10,
+    "image": "street2.jpg"
+},
+{
+    "id": 4,
+    "name": "Remera Street Fighter characters",
+    "price": 10000,
+    "discount": 10,
+    "image": "characterStreet.jpeg"
+},
+{
+    "id": 5,
+    "name": "Mortal Kombat",
+    "price": 10000,
+    "discount": 10,
+    "image": "mortalKombat.jpg"
+},
+{
+    "id": 6,
+    "name": "Mortal Kombat 2",
+    "price": 10000,
+    "discount": 10,
+    "image": ""
+},
+{
+    "id": 7,
+    "name": "Remera Trifuerza Zelda",
+    "price": 5000,
+    "discount": 25,
+    "image": "zelda.jpg"
+},
+{
+    "id": 8,
+    "name": "Remera Trifuerza Zelda",
+    "price": 5000,
+    "discount": 25,
+    "image": "remeraMdeMario.webp"
+}
 ]

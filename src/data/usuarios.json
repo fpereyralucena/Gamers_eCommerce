@@ -1,123 +1,18 @@
 [
  {
-  "id": 1,
-  "firstName": "John",
-  "lastName": "Doe",
-  "email": "john.doe@example.com",
-  "password": "hashed_password_here",
-  "roles": [
-   "customer"
-  ],
-  "profileImage": "profile_image_url_here"
+    "id": 1,
+    "firstName": "Admin",
+    "lastName": "Admin",
+    "password": "QWERTY",
+    "email": "admin@gamerscostumes.com",
+    "userEspecify_id": 1
  },
  {
-  "id": 2,
-  "firstName": "Jane",
-  "lastName": "Smith",
-  "email": "jane.smith@example.com",
-  "password": "hashed_password_here",
-  "roles": [
-   "customer",
-   "admin"
-  ],
-  "profileImage": "profile_image_url_here"
- },
- {
-  "id": 3,
-  "firstName": "Mike",
-  "lastName": "Johnson",
-  "email": "mike.johnson@example.com",
-  "password": "hashed_password_here",
-  "roles": [
-   "customer"
-  ],
-  "profileImage": "profile_image_url_here"
- },
- {
-  "id": 4,
-  "firstName": "Emily",
-  "lastName": "Williams",
-  "email": "emily.williams@example.com",
-  "password": "hashed_password_here",
-  "roles": [
-   "customer"
-  ],
-  "profileImage": "profile_image_url_here"
- },
- {
-  "id": 5,
-  "roles": [
-   "customer"
-  ],
-  "profileImage": "default-Image.jpg"
- },
- {
-  "id": 6,
-  "roles": [
-   "customer"
-  ],
-  "profileImage": "default-Image.jpg"
- },
- {
-  "id": 7,
-  "roles": [
-   "customer"
-  ],
-  "profileImage": "default-Image.jpg"
- },
- {
-  "id": 8,
-  "firstName": "francisco",
-  "lastName": "pereyra lucena",
-  "email": "fpereyralucena@hotmail.com",
-  "password": "p8ATNBjjZW5pGmg",
-  "roles": [
-   "customer"
-  ],
-  "profileImage": "default-Image.jpg"
- },
- {
-  "id": 9,
-  "firstName": "Gabriel Omar",
-  "lastName": "Batistuta",
-  "email": "elBati.gol@email.com",
-  "password": "$2b$10$2CKvEh3VggkmuHtycJtiLOzXdproEREszJhtHS60kKoHQC/GTEtBW",
-  "roles": [
-   "customer"
-  ],
-  "profileImage": "1614738417560 (1).jpeg"
- },
- {
-  "id": 10,
-  "firstName": "francisco",
-  "lastName": "pereyra lucena",
-  "email": "fpereyralucena@emilio.com",
-  "password": "$2b$10$srqL7V.MVbXPhr0tbrPQIOyEjo8H8EA8is4gh.6mh/jHIGUZngPKq",
-  "roles": [
-   "customer"
-  ],
-  "profileImage": "default-Image.jpg"
- },
- {
-  "id": 11,
-  "firstName": "aaa",
-  "lastName": "aaa",
-  "email": "aa@qq.com",
-  "password": "$2b$10$xPIzzXQpxzLNad6WklvrHuFPQWPfqhOSNWuFn0LnlUHJSzMz953U.",
-  "roles": [
-   "customer"
-  ],
-  "profileImage": "default-Image.jpg"
- },
- {
-  "id": 12,
-  "firstName": "Lucas",
-  "lastName": "Herbon",
-  "email": "luher@hotmail.com",
-  "password": "$2b$10$n.l29g76FyAjy6.Z8BO9.eoddgcIeT8hcY8wZYAk3VgblLpW/kfNK",
-  "roles": [
-   "customer"
-  ],
-  "profileImage": "default-Image.jpg"
+    "id": 2,
+    "firstName": "Lucas",
+    "lastName": "Herbon",
+    "password": "PATO123",
+    "email": "lucas@gmail.com",
+    "userEspecify_id": 2
  }
 ]
