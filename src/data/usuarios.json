@@ -1,18 +1,29 @@
 [
  {
-    "id": 1,
-    "firstName": "Admin",
-    "lastName": "Admin",
-    "password": "QWERTY",
-    "email": "admin@gamerscostumes.com",
-    "userEspecify_id": 1
+  "id": 1,
+  "firstName": "Admin",
+  "lastName": "Admin",
+  "password": "QWERTY",
+  "email": "admin@gamerscostumes.com",
+  "userEspecify_id": 1
  },
  {
-    "id": 2,
-    "firstName": "Lucas",
-    "lastName": "Herbon",
-    "password": "PATO123",
-    "email": "lucas@gmail.com",
-    "userEspecify_id": 2
+  "id": 2,
+  "firstName": "Lucas",
+  "lastName": "Herbon",
+  "password": "PATO123",
+  "email": "lucas@gmail.com",
+  "userEspecify_id": 2
+ },
+ {
+  "id": 3,
+  "firstName": "gamers",
+  "lastName": "costumes",
+  "email": "gamers@ar.ibm.com",
+  "password": "$2b$10$/iZYoUwsFuMP/OKsHIGnS.FLoEQuesQlDnRDnErLKkq707yGDE.i.",
+  "roles": [
+   "customer"
+  ],
+  "profileImage": "merlo morro.jpg"
  }
 ]

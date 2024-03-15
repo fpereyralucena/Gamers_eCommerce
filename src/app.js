@@ -9,6 +9,7 @@ const db = require('./database/models');
 const mainRouter = require('./routes/mainRouter');
 const productsRouter = require('./routes/productsRouter');
 const usersRouter = require('./routes/usersRouter');
+const userMiddleware = require("./middlewares/userMiddleware");
 
 app.use(session({
   secret : "Esto es un secreto, secretísimo",
@@ -21,7 +22,7 @@ app.set('view engine', 'ejs'); // set up ejs for templating
 app.set('views', path.resolve(__dirname, "views"));
 app.use(express.json());             // for application/json
 app.use(express.urlencoded({ extended: false }));      // for application/x-www-form-urlencoded
-
+app.use(userMiddleware)
 
 app.use('/', mainRouter);
 app.use('/www.facebook.com', mainRouter);
