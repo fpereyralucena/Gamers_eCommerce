@@ -45,42 +45,46 @@
 
         <section class="relatedProducts">
             <h2>Recomendado para vos:</h2>
+                <%
+                    var randomIndex = Math.floor(Math.random() * allProducts.length);
+                    var randomProduct = allProducts[randomIndex];
+                %>
             <div class="related-products-container">
 
                 <div class="gallery">
                     <div class="gallery-item">
-                        <img src="\img\uploads/<%= (allProducts)[7].image %>" alt="Product 1">
+                        <img src="\img\uploads/<%= randomProduct.image %>" alt="Product 1">
                         <div class="item-overlay">
-                            <h2><%= (allProducts)[7].name %></h2>
-                            <a href='/products/detail/<%= (allProducts)[7].id %>'><button type="button">Ver</button></a>
+                            <h2><%= randomProduct.name %></h2>
+                            <a href='/products/detail/<%= randomProduct.id %>'><button type="button">Ver</button></a>
                         </div>
                     </div>
                     <div class="gallery-item">
-                        <img src="\img\uploads/<%= (allProducts)[7].image %>" alt="Product 1">
+                        <img src="\img\uploads/<%= randomProduct.image %>" alt="Product 1">
                         <div class="item-overlay">
-                            <h2><%= (allProducts)[7].name %></h2>
-                            <a href='/products/detail/<%= (allProducts)[7].id %>'><button type="button">Ver</button></a>
+                            <h2><%= randomProduct.name %></h2>
+                            <a href='/products/detail/<%= randomProduct.id %>'><button type="button">Ver</button></a>
                         </div>
                     </div>
                     <div class="gallery-item">
-                        <img src="\img\uploads/<%= (allProducts)[7].image %>" alt="Product 1">
+                        <img src="\img\uploads/<%= randomProduct.image %>" alt="Product 1">
                         <div class="item-overlay">
-                            <h2><%= (allProducts)[7].name %></h2>
-                            <a href='/products/detail/<%= (allProducts)[7].id %>'><button type="button">Ver</button></a>
+                            <h2><%= randomProduct.name %></h2>
+                            <a href='/products/detail/<%= randomProduct.id %>'><button type="button">Ver</button></a>
                         </div>
                     </div>
                     <div class="gallery-item">
-                        <img src="\img\uploads/<%= (allProducts)[7].image %>" alt="Product 1">
+                        <img src="\img\uploads/<%= randomProduct.image %>" alt="Product 1">
                         <div class="item-overlay">
-                            <h2><%= (allProducts)[7].name %></h2>
-                            <a href='/products/detail/<%= (allProducts)[7].id %>'><button type="button">Ver</button></a>
+                            <h2><%= randomProduct.name %></h2>
+                            <a href='/products/detail/<%= randomProduct.id %>'><button type="button">Ver</button></a>
                         </div>
                     </div>
                     <div class="gallery-item">
-                        <img src="\img\uploads/<%= (allProducts)[7].image %>" alt="Product 1">
+                        <img src="\img\uploads/<%= randomProduct.image %>" alt="Product 1">
                         <div class="item-overlay">
-                            <h2><%= (allProducts)[7].name %></h2>
-                            <a href='/products/detail/<%= (allProducts)[7].id %>'><button type="button">Ver</button></a>
+                            <h2><%= randomProduct.name %></h2>
+                            <a href='/products/detail/<%= randomProduct.id %>'><button type="button">Ver</button></a>
                         </div>
                     </div>
                 </div>

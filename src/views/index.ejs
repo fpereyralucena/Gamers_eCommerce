@@ -10,16 +10,22 @@
             <main>
                 <%- include('partials/publicidad') %>
 
+                <% //randomizar el producto destacado
+                    var randomIndex = Math.floor(Math.random() * products.length);
+                    var randomProduct = products[randomIndex];
+                %>
+
                     <h1>Destacados</h1>
 
-                    <section class="contenedor-ofertas">
+                    <section class="contenedor-ofertas2">
 
                         <article class="product-card2">
-                            <a href="/products/detail/<%= (products)[3].id %>"><img src="/img/uploads/<%= (products)[3].image %>" alt="destacada de character select Street fighter"
-                                class="outstanding"> </a>
-                                <div>
-                                    <h3 class="outstanding-text"><%=(products)[3].name %></h3>
-                                </div>
+                            <a href="/products/detail/<%= randomProduct.id %>">
+                                <img src="/img/uploads/<%= randomProduct.image %>" alt="Imagen destacada de <%= randomProduct.name %>" class="outstanding2">
+                              </a>
+                              <div>
+                                <h3 class="outstanding-text"><%= randomProduct.name %></h3>
+                              </div>
                             </article>
                         </section>
 

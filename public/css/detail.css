@@ -19,8 +19,6 @@ main {
   margin:0 auto;
 }
 
-
-
 .product-image img {
   width: 40vw;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
@@ -96,8 +94,8 @@ ul.bread-crumb li a:hover {
 }
 
 .gallery-item img {
-  width: 60%;
-  /* height: 300px; */
+  width: 80%;
+  height: 20vw;
 }
 
 .item-overlay {
@@ -123,8 +121,9 @@ ul.bread-crumb li a:hover {
 }
 
 div.gallery {
+  display: flex;
   margin: 1vh 1vw;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   overflow: hidden;
 }
