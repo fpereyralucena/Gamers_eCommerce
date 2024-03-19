@@ -12,20 +12,42 @@ header {
     width: 25%;
 }
 
-ul {
+.ul-header {
     display: flex;
-    justify-content: end;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.ul-header li {
+    width: 30%;
 }
 
 .boton-header{
-    width: 110%;
-    height: 120%;
+    width: 100%;
+    padding: 0 5%;
+    /* height: 120%; */
     border-radius: 5px;
     border-color: transparent;
-    background-color: white;
+    background-color: rgb(24, 112, 228);
+    animation-name: brillo;
+    animation-duration: .8s;
+    animation-iteration-count: infinite;
 }
 
-.color-link{
+@keyframes brillo {
+    from {
+      box-shadow: 0 0 1px #fff;
+    }
+    to {
+      box-shadow: 0 0 5px #fff;
+    }
+  }
+
+.text-link{
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
     color: #231751;
 }
 

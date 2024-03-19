@@ -137,14 +137,14 @@ footer {
     padding: 1%;
 }
 
-.ul-header {
+/* .ul-header {
     list-style: none;
     font-size: small;
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
     justify-content: flex-end;
-}
+} */
 
 a {
     color: #AFA8BA;
