@@ -49,19 +49,32 @@ const usersController = {
     if (user === null) {
         res.send("usuario ya existe")
     }else{
+        let user = {
+            firstName: req.body.first_name,
+            lastName: req.body.last_name,
+            bday: req.body.bday,
+            email: req.body.email,
+            password: bcrypt.hashSync(req.body.password, 10),
+            userEspecify_id: [2],}
+
         db.Users.create({
-        firstName: req.body.first_name,
-        lastName: req.body.last_name,
-        email: req.body.email,
-        password: bcrypt.hashSync(req.body.password, 10),
-        userEspecify_id: [2],
-        })}
-        res.redirect('/users/profile');
+            firstName: req.body.first_name,
+            lastName: req.body.last_name,
+            email: req.body.email,
+            password: bcrypt.hashSync(req.body.password, 10),
+            userEspecify_id: [2],
+        })
+    }
+        req.session.userLogged = user
+        console.log(user)
+        res.render('userProfile', {user: user});
    },
 
    profile: (req, res) => {
-    console.log("Estas en profile");
-    console.log(req.session)
+    if (req.session.length > 0) {
+        console.log("Estas en profile");
+        console.log( req.session)
+    }
     return res.render('userProfile', {user: req.session.userLogged})
    },
 

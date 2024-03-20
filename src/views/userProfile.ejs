@@ -9,13 +9,14 @@
 
 
     <main>
-        <table>
-            <tr><th>Nombre</th><td><%=user.firstName%></td></tr>
-            <tr><th>Apellido</th><td><%=user.lastName%></td></tr>
-            <tr><th>Email</th><td><%=user.email%></td></tr>
+        <ul>
+            <li>Nombre: <%= user.firstName %></li>
+            <li>Apellido: <%= user.lastName %></li>
+            <li>Email: <%= user.email %></li>
+        </ul>
             
             <a href="/users/logout"><button type="button" class="botonSubmit buttonLogin">Cerrar Sesión</button></a>
-        </table>
+
         
     </main>
     <%- include ('partials/footer')%>

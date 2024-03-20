@@ -25,6 +25,10 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING(255),
             allowNull: false
         },
+        /* image: {
+            type: DataTypes.STRING(50),
+            allowNull: true,
+        }, */
         userEspecify_id: {
             foreignKey: true,
             type: DataTypes.INTEGER,
