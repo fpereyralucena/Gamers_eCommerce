@@ -114,6 +114,12 @@ input {
     margin: 10px 0;
 }
 
+.errors{
+    color:#b50a0a;
+    font-weight: bold;
+    font-style: italic;
+}
+
 .logo {
     width: 6vw;
     filter: invert(100%);

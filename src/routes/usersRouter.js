@@ -4,7 +4,14 @@ const usersController = require('../controllers/usersController');
 const multer  = require('multer');
 const path = require('path');
 const guestMiddleware = require('../middlewares/guestMiddleware');
-//const authMiddleware = require('../middlewares/guestMiddleware');
+const authMiddleware = require('../middlewares/authMiddleware');
+const {body} = require('express-validator');
+const validations = [
+  body('first_name').notEmpty().withMessage("Ingrese un nombre"),
+  body('last_name').notEmpty().withMessage("Ingrese un apellido"),
+  body('email').notEmpty().withMessage("Ingrese un correo válido"),
+  body('password').notEmpty().withMessage("Ingrese una contraseña"),
+];
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -27,7 +34,7 @@ router.get('/recover-pass', usersController.recoverPass);
 router.post('/recuperar-contrasena', usersController.recoverMessage);
 
 router.get('/register',guestMiddleware, usersController.register);
-router.post('/register', upload.single('image'),usersController.processRegistration);
+router.post('/register', upload.single('image'),validations, usersController.processRegistration);
 
 router.get('/profile', usersController.profile);
 router.get('/logout', usersController.logout)

@@ -15,13 +15,15 @@ app.use(session({
   secret : "Esto es un secreto, secretísimo",
   resave: false,
   saveUninitialized: false
-}))
+}));
+
+
 
 app.use(express.static("public"));
 app.set('view engine', 'ejs'); // set up ejs for templating
 app.set('views', path.resolve(__dirname, "views"));
 app.use(express.json());             // for application/json
-app.use(express.urlencoded({ extended: false }));      // for application/x-www-form-urlencoded
+app.use(express.urlencoded({ extended: false }));      // permite recibir la información enviada por post desde un formulario en req.body
 app.use(userMiddleware)
 
 app.use('/', mainRouter);
