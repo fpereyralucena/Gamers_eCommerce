@@ -1,24 +1,19 @@
 const express = require('express')
 const app = express()
 const path = require('path');
-const port = 3001;
+const port = process.env.port || 3000;
 const session = require('express-session');
 const db = require('./database/models');
-
 
 const mainRouter = require('./routes/mainRouter');
 const productsRouter = require('./routes/productsRouter');
 const usersRouter = require('./routes/usersRouter');
-
-
 
 app.use(session({
   secret : "Esto es un secreto, secretísimo",
   resave: false,
   saveUninitialized: false
 }));
-
-
 
 app.use(express.static("public"));
 app.set('view engine', 'ejs'); // set up ejs for templating
