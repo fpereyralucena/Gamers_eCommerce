@@ -14,39 +14,29 @@
       <h2 class="ingresaTitulo"> Registrate </h2>
 
       <label for="ingresarNombres">Nombres *</label>
-      <input type="text" 
-      inputmode="latin-name" 
-      placeholder="Gabriel Omar" 
-      name="first_name" 
-      id="ingresarNombres"
-      value="<%= locals.oldData ? oldData.first_name : null %>" 
-      required>
+      <input type="text" inputmode="latin-name" placeholder="Gabriel Omar" name="first_name" id="ingresarNombres" value="<%= locals.oldData ? locals.oldData.first_name : "" %>" required>
       <% if (locals.errors && errors.first_name) { %>
       <li class="errors"><%= errors.first_name.msg %></li>
       <% } %>
 
       <label for="ingresarApellidos">Apellidos * </label>
-      <input type="text" inputmode="latin-name" placeholder="Batistuta" name="last_name" id="ingresarApellidos"  value="<%= locals.oldData ? oldData.last_name : null %>" required>
+      <input type="text" inputmode="latin-name" placeholder="Batistuta" name="last_name" id="ingresarApellidos" value="<%= locals.oldData ? locals.oldData.last_name : "" %>" required>
       <% if (locals.errors && errors.last_name) { %>
       <li class="errors"><%= errors.last_name.msg %></li>
       <% } %>
       <label for="nacimiento">Fecha de nacimiento *</label>
-      <input type="date" placeholder="20/11/2001" id="bday" name="bday" autocomplete="bday" value="" required>
+      <input type="date" placeholder="20/11/2001" id="bday" name="bday" autocomplete="bday" value="<%= locals.oldData ? locals.oldData.bday : "" %>" required>
 
       <label for="ingresaEmail">Email *</label>
-      <input type="email" placeholder="elBati.Gol@mail.com" id="email" name="email" autocomplete="email" pattern=".+@*.com" size="30" value="<%= locals.oldData ? oldData.email : null %>" required>
+      <input type="email" placeholder="elBati.Gol@mail.com" id="email" name="email" autocomplete="email" pattern=".+@*.com" size="30" value="<%= locals.oldData ? locals.oldData.password : ""  %>" required>
       <% if (locals.errors && errors.email) { %>
       <li class="errors"><%= errors.email.msg %></li>
       <% } %>
-      <label for="password">Contraseña *</label>
-      <input type="password" autocomplete="new-password" name="password" id="password" minlength="8" title="Ingrese una clave alfanumérica de al menos 8 digitos" required value="<%= locals.oldData ? oldData.password : null %>">
+      <label for="ingresaClave">Contraseña *</label>
+      <input type="password" id="ingresaClave" autocomplete="new-password" name="password" id="password" minlength="8" title="Ingrese una clave hexadecimal de al menos 8 digitos" required value="<%= oldData ? oldData.password : "" =%>">
       <% if (locals.errors && errors.password) { %>
       <li class="errors"><%= errors.password.msg %></li>
-      <% } %>
-      <label for="password">Repita la Contraseña *</label>
-      <input type="password" autocomplete="off" name="password2" id="password2" minlength="8" title="Ambas claves deben coincidir" required value="<%= locals.oldData ? oldData.password2 : null %>">
-      <% if (locals.passwordMissmatch) { %>
-      <li class="errors"><%= passwordMissmatch %></li>
+
       <% } %>
 
       <!-- <label for="image">Subir imagen de perfil</label>
