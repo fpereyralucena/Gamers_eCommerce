@@ -1,10 +1,10 @@
 
 module.exports = {
   "development": {
-    "username": "root",
-    "password": "root",
+    "username": "broker",
+    "password": "Playground123",
     "database": "gamersCostumes",
-    "host": "127.0.0.1",
+    "host": "gamer-costume.mysql.database.azure.com",
     "dialect": "mysql"
   },
   "test": {

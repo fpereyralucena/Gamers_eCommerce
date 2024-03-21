@@ -27,6 +27,7 @@
     "sequelize": "^6.36.0"
   },
   "devDependencies": {
+    "ejs-lint": "^2.0.0",
     "eslint": "^8.55.0"
   }
 }

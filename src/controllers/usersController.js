@@ -48,11 +48,25 @@ const usersController = {
 
     processRegistration: async (req, res) => {
         const resultValidation = validationResult(req);
-        if (resultValidation.errors.length > 0) {
+        let oldData = req.body
+        
+        
+        
+        function checkPasswords () {
+            if (req.body.password !== req.body.password2) 
+            return "Las contraseñas no coinciden"
+            else return null
+        }
+
+        let passwordMissmatch = checkPasswords()
+              
+        
+        if (resultValidation.errors.length > 0 || passwordMissmatch) {
             return res.render('register', {
-                errors: resultValidation.mapped(),
+                errors: resultValidation.mapped(), oldData, passwordMissmatch
             })
         }
+        
         let user = await db.Users.findOne({
             where: { email: req.body.email }
         });
@@ -62,7 +76,7 @@ const usersController = {
                     msg: "El correo ya habia sido registrado anteriormente"
                 }
             }
-            return res.render('register', { errors })
+            return res.render('register', { errors , oldData })
         }
         else {
              user = {
@@ -87,9 +101,7 @@ const usersController = {
         if (user) {
             res.render('userProfile', { user: user })
         }
-        else {
-            res.send("El proceso falló, la variable user está vacia")
-        }
+        
         ;
     },
 
