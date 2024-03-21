@@ -2,5 +2,7 @@
     "appService.zipIgnorePattern": [
         "node_modules{,/**}",
         ".vscode{,/**}"
-    ]
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/5f785db7-a4f1-4dfa-a5c1-4e01964d4105/resourceGroups/nuevo2/providers/Microsoft.Web/sites/gamerscostumes",
+    "appService.deploySubpath": "."
 }

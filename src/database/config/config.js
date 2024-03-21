@@ -1,11 +1,13 @@
 
 module.exports = {
   "development": {
-    "username": "broker",
-    "password": "Playground123",
+    "username": process.env.DB_USER,
+    "password":  process.env.DB_PASSWORD,
     "database": "gamersCostumes",
-    "host": "gamer-costume.mysql.database.azure.com",
+    "host": process.env.DB_HOST,
     "dialect": "mysql"
+   
+
   },
   "test": {
     "username": "root",
