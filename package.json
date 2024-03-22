@@ -4,8 +4,7 @@
   "description": "Indumentaria para gamers",
   "main": "app.js",
   "scripts": {
-    "test": "nodemon --env-file=.env ./src/app.js",
-    "start": "nodemon --env-file=.env ./src/app.js"
+    "start": "node  ./src/app.js"
   },
   "repository": {
     "type": "git",
