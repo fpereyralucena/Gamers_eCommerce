@@ -20,13 +20,8 @@ const productsController = {
 		res.render('product-create-form')
     },
 
-	processCreate: (req, res) => {
-		db.Product.create({
-        //let products = db.Product.findAll()
-		//	.then((data)=> (data));
-
-		//console.log(products)
-			
+	processCreate: async (req, res) => {
+		await db.Product.create({
 			name: req.body.name,
 			price: req.body.price,
 			discount: req.body.discount,
@@ -40,39 +35,32 @@ const productsController = {
 	},
 
 
-editProduct: (req, res) => {
+editProduct:async (req, res) => {
 	
 	let product_id = parseInt(req.params.id);
-	let promProduct = db.Product.findByPk(product_id);
+	let promProduct =await db.Product.findByPk(product_id);
 
 	Promise.all([promProduct])
 	.then(([Product]) => {
 		return res.render(path.resolve(__dirname, '..', 'views', 'edit-product'), {product:Product})
 	})
 },
-
-shoppingCart: (req, res) => {
-	res.render('shopping-cart')
+shoppingCart: (req,res) => {
+	res.render('shopping-cart', {shoppingList: req.session.shoppingList})
 },
+
+shoppingCartAdd: async(req, res) => {
+	let product_id = parseInt(req.body.productId)
+	let promProduct = await db.Product.findByPk(product_id);
+	console.log("shopping cart")
+	req.session.shoppingList= [req.session.shoppingList, ...promProduct]
+	console.log(req.session.shoppingList)
+
+	res.render('shopping-cart', {shoppingList: req.session.shoppingList})
+}
 
 };
 
-
-
-	// findByPk: (req, res) => {
-	// 	const {id} = req.params;
-	// 	db.Products.findByPk(id)
-	// 		.then((product)=>{return res.json({data: id, product})})
-	// 		.catch((err) => {console.log(err)});
-	// },
-	// findOne: async (req, res) => {
-	// 	try {
-	// 		const {id} = req.params;
-	// 		const products = await db.Products.findOne({where: {id:id}})
-	// 		res.json({products})
-	// 	}
-	// 	catch (error){res.send(error)}
-	// }
 
 
 module.exports = productsController;

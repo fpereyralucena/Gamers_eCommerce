@@ -3,7 +3,7 @@ const Users = require('../database/models/User');
 const path = require('path');
 const bcrypt = require('bcrypt');
 const { validationResult } = require('express-validator');
-
+let errors = [];
 
 function validatePassword(password, hash) {
     return bcrypt.compareSync(password, hash)
@@ -12,27 +12,35 @@ function validatePassword(password, hash) {
 const usersController = {
 
     login: (req, res) => {
-        res.render('login')
+        res.render('login', {errors})
     },
 
     loginValidation: async (req, res) => {
         let usuario = req.body.usuario
-        let contrasenia = req.body.passwordUsuario
+        let contrasenia = req.body.passwordUsuario;
+        
         const user = await db.Users.findOne({
             where: { email: req.body.usuario }
         });
-        Promise.all([user])
-            .then(([user]) => {
+        
+            
                 if (user === null) {
-                    res.send("usuario no encontrado")
-                } if (validatePassword(req.body.passwordUsuario, user.password)) {
-                    delete user.password
-                    req.session.user = user;
-                    req.session.isLoggedIn = true;
-                    res.render('userProfile', { user: user });
+                    return res.render('login', { errors: [{ msg: "Usuario No encontrado" }] })
                 }
-            })
+                console.log(user);
+                if (validatePassword(req.body.passwordUsuario, user.password)) {
+                    delete user.dataValues.password
+                    req.session.userLogged = user.dataValues;
+                    console.log("req.session.userLogged", req.session.userLogged)
+                    return res.render('userProfile', { user: req.session.userLogged });
+                }
+                else {
+                    return res.render('login', { errors: [{ msg: "Contraseña inválida" }] })
+                }
+        
     },
+
+
 
     recoverPass: (req, res) => {
         res.render('recover-pass')
@@ -49,24 +57,22 @@ const usersController = {
     processRegistration: async (req, res) => {
         const resultValidation = validationResult(req);
         let oldData = req.body
-        
-        
-        
-        function checkPasswords () {
-            if (req.body.password !== req.body.password2) 
-            return "Las contraseñas no coinciden"
+
+        function checkPasswords() {
+            if (req.body.password !== req.body.password2)
+                return "Las contraseñas no coinciden"
             else return null
         }
 
         let passwordMissmatch = checkPasswords()
-              
-        
+
+
         if (resultValidation.errors.length > 0 || passwordMissmatch) {
             return res.render('register', {
                 errors: resultValidation.mapped(), oldData, passwordMissmatch
             })
         }
-        
+
         let user = await db.Users.findOne({
             where: { email: req.body.email }
         });
@@ -76,46 +82,41 @@ const usersController = {
                     msg: "El correo ya habia sido registrado anteriormente"
                 }
             }
-            return res.render('register', { errors , oldData })
+            res.render('register', { errors, oldData })
         }
         else {
-             user = {
-                first_name: req.body.first_name,
-                last_name: req.body.last_name,
-                bday: req.body.bday,
-                email: req.body.email,
-                password: bcrypt.hashSync(req.body.password, 10),
-                userEspecify_id: [2],
-            }
-
-            await db.Users.create({
+            console.dir({req});
+            let user =  await db.Users.create({
                 firstName: req.body.first_name,
                 lastName: req.body.last_name,
                 // bday: req.body.bday,
                 email: req.body.email,
                 password: bcrypt.hashSync(req.body.password, 10),
-                userEspecify_id: [2],
+                userEspecify_id: 2,
+                image: req.body.image
             })
+
+           req.session.userLogged = user;
+           console.dir({user});
+           res.render('userProfile', { user: req.session.userLogged })
         }
-        
-        if (user) {
-            res.render('userProfile', { user: user })
-        }
-        
+
+
         ;
     },
 
     profile: (req, res) => {
         if (req.session.length > 0) {
             console.log("Estas en profile");
-            console.log(req.session)
+            console.log(req.session);
+            res.render('userProfile', { user: req.session.userLogged })
         }
-        return res.render('userProfile', { user: req.session.userLogged })
+        
     },
 
     logout: (req, res) => {
         delete req.session.userLogged;
-        return res.redirect('../')
+        res.redirect('../')
 
     }
 

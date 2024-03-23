@@ -9,14 +9,14 @@
 
   <main>
 
-    <form action="register" class="formRegister" method="post" enctype="application/x-www-form-urlencoded">
+    <form action="register" class="formRegister" method="post" enctype="multipart/form-data">
 
-      <h2 class="ingresaTitulo"> Registrate </h2>
+      <h2 class="ingresaTitulo"> Choose your player </h2>
 
       <label for="ingresarNombres">Nombres *</label>
       <input type="text" 
       inputmode="latin-name" 
-      placeholder="Gabriel Omar" 
+      placeholder="Luigi" 
       name="first_name" 
       id="ingresarNombres"
       value="<%= locals.oldData ? oldData.first_name : null %>" 
@@ -26,20 +26,20 @@
       <% } %>
 
       <label for="ingresarApellidos">Apellidos * </label>
-      <input type="text" inputmode="latin-name" placeholder="Batistuta" name="last_name" id="ingresarApellidos"  value="<%= locals.oldData ? oldData.last_name : null %>" required>
+      <input type="text" inputmode="latin-name" placeholder="Mario" name="last_name" id="ingresarApellidos"  value="<%= locals.oldData ? oldData.last_name : null %>" required>
       <% if (locals.errors && errors.last_name) { %>
       <li class="errors"><%= errors.last_name.msg %></li>
       <% } %>
       <label for="nacimiento">Fecha de nacimiento *</label>
-      <input type="date" placeholder="20/11/2001" id="bday" name="bday" autocomplete="bday" value="" required>
+      <input type="date"  id="bday" name="bday" autocomplete="bday" value="21/06/1983">
 
       <label for="ingresaEmail">Email *</label>
-      <input type="email" placeholder="elBati.Gol@mail.com" id="email" name="email" autocomplete="email" pattern=".+@*.com" size="30" value="<%= locals.oldData ? oldData.email : null %>" required>
+      <input type="email" placeholder="consumer@nintendo.com" id="email" name="email" autocomplete="email" pattern=".+@*.com" size="30" value="<%= locals.oldData ? oldData.email : null %>" required>
       <% if (locals.errors && errors.email) { %>
       <li class="errors"><%= errors.email.msg %></li>
       <% } %>
       <label for="password">Contraseña *</label>
-      <input type="password" autocomplete="new-password" name="password" id="password" minlength="8" title="Ingrese una clave alfanumérica de al menos 8 digitos" required value="<%= locals.oldData ? oldData.password : null %>">
+      <input type="password" autocomplete="new-password" name="password" id="password" minlength="8"   pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Debe contener almenos un número, una mayúscula y un minúscula con 8 o más caracteres" required value="<%= locals.oldData ? oldData.password : null %>">
       <% if (locals.errors && errors.password) { %>
       <li class="errors"><%= errors.password.msg %></li>
       <% } %>
@@ -49,8 +49,8 @@
       <li class="errors"><%= passwordMissmatch %></li>
       <% } %>
 
-      <!-- <label for="image">Subir imagen de perfil</label>
-            <input type="file" id="image" id="image" name="image" accept="image/png, image/jpeg"> -->
+      <label for="image">Subir imagen de perfil</label>
+      <input type="file" id="image" id="image" name="image" accept="image/png, image/jpeg">
 
       <div class="buttonsRegister">
         <button type="submit" class="botonSubmit">Aceptar</button>

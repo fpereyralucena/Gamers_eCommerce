@@ -9,17 +9,23 @@
 
 
     <main>
+        
         <ul>
-            <li>Nombre: <%= user.first_name %></li>
-            <li>Apellido: <%= user.last_name %></li>
+            <li>Nombre: <%= user.firstName %></li>
+            <li>Apellido: <%= user.lastName %></li>
             <li>Email: <%= user.email %></li>
+            <% if (user.userEspecify_id == 1) { %>
+                <li>Rol: Admin</li>
+            <% } %>
         </ul>
+        <img src="<%= user.image %>"/>
             
-            <a href="/users/logout"><button type="button" class="botonSubmit buttonLogin">Cerrar Sesión</button></a>
+            <a href="/users/logout"><button type="button" class="botonSubmit buttonLogin">GAME OVER</button></a>
 
         
     </main>
     <%- include ('partials/footer')%>
+    
 </body>
 </html>
 
