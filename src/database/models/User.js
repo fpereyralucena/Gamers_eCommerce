@@ -33,6 +33,9 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: true,
             type: DataTypes.INTEGER,
             allowNull: false
+        },
+        image: {
+            type: DataTypes.STRING(255)
         }
     };
 

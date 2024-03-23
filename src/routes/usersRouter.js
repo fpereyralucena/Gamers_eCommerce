@@ -15,7 +15,7 @@ const validations = [
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        let folder = path.join(__dirname, '../../public/img/uploads')
+        let folder = path.join(__dirname, '../../public/img/uploads/users/')
       cb(null, folder)
     },
     filename: function (req, file, cb) {
@@ -29,14 +29,13 @@ const storage = multer.diskStorage({
 router.get('/login',guestMiddleware, usersController.login);
 router.post('/login', usersController.loginValidation);
 
-router.get('/recover-pass', usersController.recoverPass);
-
+router.get('/recover-pass',guestMiddleware, usersController.recoverPass);
 router.post('/recuperar-contrasena', usersController.recoverMessage);
 
 router.get('/register',guestMiddleware, usersController.register);
 router.post('/register', upload.single('image'),validations, usersController.processRegistration);
 
-router.get('/profile', usersController.profile);
+router.get('/profile',authMiddleware, usersController.profile);
 router.get('/logout', usersController.logout)
 
 module.exports = router;

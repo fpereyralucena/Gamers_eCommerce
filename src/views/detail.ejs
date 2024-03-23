@@ -20,15 +20,15 @@
                 </ul>
                 <section class="general-product-page">
                     <section class="card-detail">
-
+                        
                         <div class="container-image-detail">
-                            <img src="/img/uploads/<%= product.image %>"
-                                alt="<%= product.name %>">
+                            <img src="/img/uploads/<%= product.image %>" alt="<%= product.name %>">
                         </div>
 
-                        <div class="division-card" ></div>
+                        <div class="division-card"></div>
 
                         <div class="product-description-detail">
+                            
                             <h2 class="product-name">
                                 <%= product.name %>
                             </h2>
@@ -36,16 +36,17 @@
                             <h3 class="product-price">$ <%= product.price %>
                             </h3>
 
-                            <p class="offer-text">
+                            <p id="discount" name="discount" class="offer-text">
                                 <%= product.discount %>% de Descuento
                             </p>
-
+                        <form>
+                            <input type="hidden" name="productId" value="<%= product.id %>">
                             <button class="btn-agregar-carrito" type="submit">Agregar al carrito</button>
-                        
+                        </form>
                         </div>
 
                     </section>
-                    
+
                 </section>
 
                 </section>
@@ -119,6 +120,7 @@
             </main>
 
             <%- include ('partials/footer')%>
+                <script type="text-code" src="../shoppingCart.js"></script>
     </body>
 
 </html>

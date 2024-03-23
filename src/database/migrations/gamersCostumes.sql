@@ -2,13 +2,14 @@ DROP DATABASE IF EXISTS gamersCostumes;
 CREATE DATABASE gamersCostumes;
 USE gamersCostumes;
 
-CREATE TABLE `users` (
+CREATE TABLE gamersCostumes.`users` (
    `id` INT NOT NULL AUTO_INCREMENT,
    `firstName` VARCHAR(255) NOT NULL,
    `lastName` VARCHAR(255) NOT NULL,
    `password` VARCHAR(255) NOT NULL,
    `email` VARCHAR(255) not null,
    `userEspecify_id` INT NOT NULL,
+   `image` VARCHAR(255) ,
    PRIMARY KEY (`id`)
 );
 

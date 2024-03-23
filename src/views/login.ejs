@@ -11,23 +11,26 @@
     <main>
 
         <form action="./login" class="formLogin" method="post">
-            <h2 class="ingresaTitulo"> Ingresá a tu cuenta </h2>
+            <h2 class="ingresaTitulo"> Player One Ready </h2>
 
-            <label for="usuario">Usuario o email</label>
+            <label for="usuario">Email</label>
             <input type="email" placeholder="minombre@dominio.com" id="usuario" name="usuario" autocomplete="email">
 
-            <label for="passwordUsuario">Ingresa la clave</label>
+            <label for="passwordUsuario">Password</label>
             <input type="password" id="passwordUsuario" name="passwordUsuario" autocomplete="current-password">
-
-            <input class="botonSubmit buttonLogin" type="submit">
+            <% if (errors.length > 0) { %>
+                <ul><li class="errors"><%= errors[0].msg %></li></ul> 
+            <% } %>
+            <input class="botonSubmit buttonLogin" type="submit" value="START">
 
             <div>
                 <a href="recover-pass">Olvidé mi contraseña</a>
             </div>
         </form>
-
+        
+        
         <div class="crearCuentaDiv">
-            No estoy registrado:
+            A new player ?
              <a class=" crearCuenta" href = "register"> crear una nueva cuenta </a>
         </div>
 
