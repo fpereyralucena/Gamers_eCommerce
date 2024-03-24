@@ -27,11 +27,10 @@ const usersController = {
                 if (user === null) {
                     return res.render('login', { errors: [{ msg: "Usuario No encontrado" }] })
                 }
-                console.log(user);
                 if (validatePassword(req.body.passwordUsuario, user.password)) {
                     delete user.dataValues.password
                     req.session.userLogged = user.dataValues;
-                    console.log("req.session.userLogged", req.session.userLogged)
+                    /* console.log("req.session.userLogged", req.session.userLogged) */
                     return res.render('userProfile', { user: req.session.userLogged });
                 }
                 else {
@@ -85,7 +84,6 @@ const usersController = {
             res.render('register', { errors, oldData })
         }
         else {
-            console.dir({req});
             let user =  await db.Users.create({
                 firstName: req.body.first_name,
                 lastName: req.body.last_name,
@@ -97,7 +95,6 @@ const usersController = {
             })
 
            req.session.userLogged = user;
-           console.dir({user});
            res.render('userProfile', { user: req.session.userLogged })
         }
 
@@ -108,7 +105,7 @@ const usersController = {
     profile: (req, res) => {
         if (req.session.length > 0) {
             console.log("Estas en profile");
-            console.log(req.session);
+
             res.render('userProfile', { user: req.session.userLogged })
         }
         

@@ -7,12 +7,14 @@ const db = require('./database/models');
 const mainRouter = require('./routes/mainRouter');
 const productsRouter = require('./routes/productsRouter');
 const usersRouter = require('./routes/usersRouter');
+const cookieParser = require('cookie-parser');
 
 app.use(session({
   secret : "Esto es un secreto, secretísimo",
   resave: false,
-  saveUninitialized: false
+  saveUninitialized: true
 }));
+app.use(cookieParser())
 app.use(express.static("public"));
 app.set('view engine', 'ejs'); // set up ejs for templating
 app.set('views', path.resolve(__dirname, "views"));
