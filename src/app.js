@@ -8,13 +8,15 @@ const mainRouter = require('./routes/mainRouter');
 const productsRouter = require('./routes/productsRouter');
 const usersRouter = require('./routes/usersRouter');
 const cookieParser = require('cookie-parser');
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware')
 
 app.use(session({
   secret : "Esto es un secreto, secretísimo",
   resave: false,
   saveUninitialized: true
 }));
-app.use(cookieParser())
+app.use(userLoggedMiddleware);
+app.use(cookieParser());
 app.use(express.static("public"));
 app.set('view engine', 'ejs'); // set up ejs for templating
 app.set('views', path.resolve(__dirname, "views"));

@@ -94,7 +94,7 @@ const usersController = {
                 image: req.body.image
             })
 
-           req.session.userLogged = user;
+           req.session.userLogged = user.dataValues;
            res.render('userProfile', { user: req.session.userLogged })
         }
 
