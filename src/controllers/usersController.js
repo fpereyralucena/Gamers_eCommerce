@@ -12,31 +12,31 @@ function validatePassword(password, hash) {
 const usersController = {
 
     login: (req, res) => {
-        res.render('login', {errors})
+        res.render('login', { errors })
     },
 
     loginValidation: async (req, res) => {
         let usuario = req.body.usuario
         let contrasenia = req.body.passwordUsuario;
-        
+
         const user = await db.Users.findOne({
             where: { email: req.body.usuario }
         });
-        
-            
-                if (user === null) {
-                    return res.render('login', { errors: [{ msg: "Usuario No encontrado" }] })
-                }
-                if (validatePassword(req.body.passwordUsuario, user.password)) {
-                    delete user.dataValues.password
-                    req.session.userLogged = user.dataValues;
-                    /* console.log("req.session.userLogged", req.session.userLogged) */
-                    return res.render('userProfile', { user: req.session.userLogged });
-                }
-                else {
-                    return res.render('login', { errors: [{ msg: "Contraseña inválida" }] })
-                }
-        
+
+
+        if (user === null) {
+            return res.render('login', { errors: [{ msg: "Usuario No encontrado" }] })
+        }
+        if (validatePassword(req.body.passwordUsuario, user.password)) {
+            delete user.dataValues.password
+            req.session.userLogged = user.dataValues;
+            /* console.log("req.session.userLogged", req.session.userLogged) */
+            return res.render('userProfile', { user: req.session.userLogged });
+        }
+        else {
+            return res.render('login', { errors: [{ msg: "Contraseña inválida" }] })
+        }
+
     },
 
 
@@ -84,18 +84,22 @@ const usersController = {
             res.render('register', { errors, oldData })
         }
         else {
-            let user =  await db.Users.create({
+            let user = await db.Users.create({
                 firstName: req.body.first_name,
                 lastName: req.body.last_name,
                 // bday: req.body.bday,
                 email: req.body.email,
                 password: bcrypt.hashSync(req.body.password, 10),
                 userEspecify_id: 2,
-                image: req.body.image
-            })
+                image: req.body.imagen
+            }, 
+            )
 
-           req.session.userLogged = user.dataValues;
-           res.render('userProfile', { user: req.session.userLogged })
+            user = JSON.parse(JSON.stringify(user));
+            console.log(user);
+            req.session.user = user;
+            
+            res.redirect('/users/profile')
         }
 
 
@@ -103,16 +107,16 @@ const usersController = {
     },
 
     profile: (req, res) => {
-        if (req.session.length > 0) {
-            console.log("Estas en profile");
-
-            res.render('userProfile', { user: req.session.userLogged })
-        }
-        
+       let user = req.flash('user')
+       console.log("user.firstname es :", user)
+       console.log("req.locals.user es:" , req.locals)
+        res.render('userProfile', { user: req.flash('user')})
     },
 
+
+
     logout: (req, res) => {
-        delete req.session.userLogged;
+        req.session.destroy();
         res.redirect('../')
 
     }

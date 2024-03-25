@@ -6,7 +6,7 @@ const path = require('path');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
 const {body} = require('express-validator');
-const userLoggedMiddleware = require('../middlewares/userLoggedMiddleware');
+
 const validations = [
   body('first_name').notEmpty().withMessage("Ingrese un nombre"),
   body('last_name').notEmpty().withMessage("Ingrese un apellido"),
@@ -27,16 +27,16 @@ const storage = multer.diskStorage({
 
   const upload = multer({ storage: storage })
 
-router.get('/login',guestMiddleware, userLoggedMiddleware, usersController.login);
-router.post('/login', userLoggedMiddleware, usersController.loginValidation);
+router.get('/login',guestMiddleware,  usersController.login);
+router.post('/login',  usersController.loginValidation);
 
-router.get('/recover-pass',guestMiddleware, userLoggedMiddleware,usersController.recoverPass);
-router.post('/recuperar-contrasena', userLoggedMiddleware, usersController.recoverMessage);
+router.get('/recover-pass',guestMiddleware, usersController.recoverPass);
+router.post('/recuperar-contrasena',  usersController.recoverMessage);
 
-router.get('/register',guestMiddleware, userLoggedMiddleware, usersController.register);
+router.get('/register',guestMiddleware,  usersController.register);
 router.post('/register', upload.single('image'),validations, usersController.processRegistration);
 
-router.get('/profile',authMiddleware, userLoggedMiddleware, usersController.profile);
+router.get('/profile',authMiddleware,  usersController.profile);
 router.get('/logout', usersController.logout)
 
 module.exports = router;

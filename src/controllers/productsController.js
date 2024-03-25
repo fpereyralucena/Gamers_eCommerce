@@ -1,3 +1,4 @@
+// const { Where } = require('sequelize/types/utils');
 const db  = require('../database/models');
 const Product = require('../database/models/Product');
 const path = require('path');
@@ -27,10 +28,15 @@ const productsController = {
 			discount: req.body.discount,
 			image: req.file.filename,
 			})
-		.then(() => {
-		return res.send("Producto creado con exito!!!");
-	})
-	.catch(error => res.send(error))
+		
+		let last_id = await db.Product.findOne(
+			{order: [ [ 'id', 'DESC' ]],
+			attributes: ['id'],
+			raw: true
+			})
+		res.redirect(`/products/detail/${last_id.id}`)
+
+		
 
 	},
 
