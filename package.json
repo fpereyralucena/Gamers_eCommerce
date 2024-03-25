@@ -4,7 +4,8 @@
   "description": "Indumentaria para gamers",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon  ./src/app.js"
+    "start": "nodemon  ./src/app.js",
+    "debug": "set DEBUG=express-session & npm start"
   },
   "repository": {
     "type": "git",

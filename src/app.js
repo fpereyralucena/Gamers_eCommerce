@@ -24,13 +24,19 @@ app.use(cookieSession({
 app.use(session({
   secret : "Esto es un secreto, secretísimo",
   resave: false,
-  saveUninitialized: true,
+  saveUninitialized: false,
   cookie : {
     secure: false,
     maxAge: 60000 * 60, // 1 hour in milliseconds
   }
 }));
 
+app.use((req, res, next)=> {
+  if (req.session.user != undefined) {
+    res.locals.user = req.session.user}
+    next();
+  }
+)
 
 app.use(express.static("public"));
 app.set('view engine', 'ejs'); // set up ejs for templating
@@ -44,6 +50,6 @@ app.use('/users', usersRouter);
 app.use('/products', productsRouter);
 
 app.listen(port, () => {
-  console.log(`Example app listening on port http://localhost:${port}`)
+  console.log(`App listening on port http://localhost:${port}`)
 })
 
