@@ -20,7 +20,7 @@ const usersController = {
     loginValidation: async (req, res) => {
         
         let user = await db.Users.findOne({
-            where: { email: req.body.email }
+            where: { email: req.body.user }
         });
 
         if (user === null) {
