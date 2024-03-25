@@ -51,6 +51,9 @@ editProduct:async (req, res) => {
 		return res.render(path.resolve(__dirname, '..', 'views', 'edit-product'), {product:Product})
 	})
 },
+
+
+
 shoppingCart: (req,res) => {
 	res.render('shopping-cart', {shoppingList: req.session.shoppingList})
 },

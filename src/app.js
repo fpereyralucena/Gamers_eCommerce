@@ -6,28 +6,31 @@ var session = require('express-session');
 const mainRouter = require('./routes/mainRouter');
 const productsRouter = require('./routes/productsRouter');
 const usersRouter = require('./routes/usersRouter');
+const apiRouter = require('./routes/apiRouter');
 var cookieSession = require('cookie-session');
 var cookieParser = require('cookie-parser');
+var store = new session.MemoryStore();
 
 app.use(cookieParser());
 
 app.use(cookieSession({
   name: 'session',
   keys: ["secret keys"],
-
   // Cookie Options
   maxAge: 24 * 60 * 60 * 1000 // 24 hours
 }))
 
 app.use(session({
-  secret : "Esto es un secreto, secretísimo",
-  resave: false,
-  saveUninitialized: false,
-  cookie : {
-    secure: false,
-    maxAge: 60000 * 60, // 1 hour in milliseconds
-  }
-}));
+    secret : "Esto es un secreto, secretísimo",
+    resave: false,
+    saveUninitialized: false,
+    cookie : {
+      secure: false,
+      maxAge: 60000 * 60, // 1 hour in milliseconds
+    },
+    store,
+  })
+);
 
 app.use((req, res, next)=> {
   if (req.session.user != undefined) {
@@ -46,6 +49,7 @@ app.use('/www.facebook.com', mainRouter);
 app.use("/www.instagram.com", mainRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
+app.use('/api/v1', apiRouter)
 
 app.listen(port, () => {
   console.log(`App listening on port http://localhost:${port}`)

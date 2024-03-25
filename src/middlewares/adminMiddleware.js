@@ -2,9 +2,9 @@
 function adminMiddleware ( req, res, next) {
     if (req.session.user.userEspecify_id == 1) {
         res.locals.user = req.session.user;
-        next();
+      return  next();
     }
-      return  res.send('El usuario no cuenta con los permisos necesarios');
+      else return  res.send('El usuario no cuenta con los permisos necesarios');
     }
     
 

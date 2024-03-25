@@ -94,7 +94,7 @@ const usersController = {
     },
 
     profile: (req, res) => {
-        console.log("llegue a profile")
+        
         res.render('userProfile', { user: req.session.user })
     },
 
