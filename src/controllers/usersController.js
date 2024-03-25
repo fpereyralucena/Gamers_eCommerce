@@ -3,6 +3,7 @@ const Users = require('../database/models/User');
 const path = require('path');
 const bcrypt = require('bcrypt');
 const { validationResult } = require('express-validator');
+const session = require('express-session');
 let errors = [];
 
 function validatePassword(password, hash) {
@@ -12,31 +13,29 @@ function validatePassword(password, hash) {
 const usersController = {
 
     login: (req, res) => {
-        res.render('login', {errors})
+        if (req.session.user != undefined) req.session.destroy();
+        res.render('login', { errors })
     },
 
     loginValidation: async (req, res) => {
-        let usuario = req.body.usuario
-        let contrasenia = req.body.passwordUsuario;
         
-        const user = await db.Users.findOne({
-            where: { email: req.body.usuario }
+        let user = await db.Users.findOne({
+            where: { email: req.body.email }
         });
-        
-            
-                if (user === null) {
-                    return res.render('login', { errors: [{ msg: "Usuario No encontrado" }] })
-                }
-                if (validatePassword(req.body.passwordUsuario, user.password)) {
-                    delete user.dataValues.password
-                    req.session.userLogged = user.dataValues;
-                    /* console.log("req.session.userLogged", req.session.userLogged) */
-                    return res.render('userProfile', { user: req.session.userLogged });
-                }
-                else {
-                    return res.render('login', { errors: [{ msg: "Contraseña inválida" }] })
-                }
-        
+
+        if (user === null) {
+            return res.render('login', { errors: [{ msg: "Usuario No encontrado" }] })
+        }
+        if (validatePassword(req.body.passwordUsuario, user.password)) {
+            delete user.dataValues.password
+            user = JSON.parse(JSON.stringify(user));
+            req.session.user = user;
+            return res.redirect('/user/profile');
+        }
+        else {
+            return res.render('login', { errors: [{ msg: "Contraseña inválida" }] })
+        }
+
     },
 
 
@@ -54,6 +53,7 @@ const usersController = {
     },
 
     processRegistration: async (req, res) => {
+        req.session.destroy;
         const resultValidation = validationResult(req);
         let oldData = req.body
 
@@ -84,18 +84,22 @@ const usersController = {
             res.render('register', { errors, oldData })
         }
         else {
-            let user =  await db.Users.create({
+            let user = await db.Users.create({
                 firstName: req.body.first_name,
                 lastName: req.body.last_name,
                 // bday: req.body.bday,
                 email: req.body.email,
                 password: bcrypt.hashSync(req.body.password, 10),
                 userEspecify_id: 2,
-                image: req.body.image
-            })
+                image: req.body.imagen
+            }, 
+            )
 
-           req.session.userLogged = user;
-           res.render('userProfile', { user: req.session.userLogged })
+            user = JSON.parse(JSON.stringify(user));
+            
+            req.session.user = user;
+            
+            res.redirect('/users/profile')
         }
 
 
@@ -103,17 +107,16 @@ const usersController = {
     },
 
     profile: (req, res) => {
-        if (req.session.length > 0) {
-            console.log("Estas en profile");
-
-            res.render('userProfile', { user: req.session.userLogged })
-        }
-        
+        console.log("llegue a profile")
+        res.render('userProfile', { user: req.session.user})
     },
 
+
+
     logout: (req, res) => {
-        delete req.session.userLogged;
-        res.redirect('../')
+        req.session.user = {};
+        delete req.session.user;
+        res.redirect('/')
 
     }
 

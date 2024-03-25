@@ -15,7 +15,8 @@
         <section class="tercerElemento">
             <nav>
                 <ul class="ul-header">
-
+                    
+                    
                     <% if(locals.user != undefined)  { if (locals.user.userEspecify_id === 1){ %>
                     <li>
                         <button id="admin" class="boton-header">
@@ -25,20 +26,38 @@
                         </button>
                     </li>
                     <% }} %>
-                    <li>
-                        <button class="boton-header">
-                            <a class="text-link" href="/users/login">
-                                👤 Mi cuenta
-                            </a>
-                        </button>
-                    </li>
-                    <li>
-                        <button class="boton-header">
-                            <a class="text-link" href="/users/register">
-                                Registrate
-                            </a>
-                        </button>
-                    </li>
+                    <% if(locals.user != undefined) { %>
+                        <li>
+                            <button id="admin" class="boton-header">
+                                <a class="text-link" href="/users/profile">
+                                    Mi perfil
+                                </a>
+                            </button>
+                        </li>
+                        <li>
+                            <button id="admin" class="boton-header">
+                                <a class="text-link" href="/users/logout">
+                                    GAME OVER 
+                                </a>
+                            </button>
+                        </li>
+                        <% } %>
+                        <% if(locals.user == undefined) { %>
+                            <li>
+                                <button id="admin" class="boton-header">
+                                    <a class="text-link" href="/users/login">
+                                        Log In
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="boton-header">
+                                    <a class="text-link" href="/users/register">
+                                        Registrate
+                                    </a>
+                                </button>
+                            </li>
+                            <% } %>
                     <li>
                         <button class="boton-header">
                             <a class="text-link" href="/products/shopping-cart">
@@ -48,18 +67,7 @@
                     </li>
                 </ul>
 
-                <ul class="hidden">
-                    <li>
-
-                        👩🏻‍🦱 Milagros
-
-                    </li>
-                    <li>
-
-                        Log out
-
-                    </li>
-                </ul>
+                
             </nav>
         </section>
     </article>

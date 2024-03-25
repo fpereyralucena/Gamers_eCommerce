@@ -4,7 +4,8 @@
   "description": "Indumentaria para gamers",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon  ./src/app.js"
+    "start": "nodemon  ./src/app.js",
+    "debug": "set DEBUG=express-session & npm start"
   },
   "repository": {
     "type": "git",
@@ -15,7 +16,9 @@
   "dependencies": {
     "bcrypt": "^5.1.1",
     "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
     "cookie-parser": "^1.4.6",
+    "cookie-session": "^2.1.0",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
     "express-session": "^1.18.0",

@@ -39,10 +39,13 @@
                             <p id="discount" name="discount" class="offer-text">
                                 <%= product.discount %>% de Descuento
                             </p>
-                        <form>
-                            <input type="hidden" name="productId" value="<%= product.id %>">
+                        <div class="divBtnAgregarCarrito">
                             <button class="btn-agregar-carrito" type="submit">Agregar al carrito</button>
-                        </form>
+                        </div>
+                        <div class="divBotonesAdmin">
+                            <button class="btnEditProduct">Editar Producto</button>
+                            <button class="btnEliminarProduct">Eliminar Producto</button>
+                        </div>
                         </div>
 
                     </section>
