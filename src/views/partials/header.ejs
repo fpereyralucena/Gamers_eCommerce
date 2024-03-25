@@ -8,6 +8,10 @@
 
     <article class="centrar-header">
 
+        <% if(locals.user != undefined) { %>
+            <h1>Bienvenido <%= locals.user.firstName %> </h1>
+        <%}%>
+    
     </article>
 
     <article class="centrar-header">

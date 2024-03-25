@@ -40,14 +40,14 @@ main {
 }
 
 form {
+    width: 30%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     box-shadow: 0 4px 8px rgba(35, 23, 81, 0.1);
-    /* Adjust the values based on your preference */
     padding: 20px;
-    /* Add padding to make the shadow more visible */
     background-color: white;
     border-radius: 15px;
 }
@@ -143,17 +143,9 @@ footer {
     padding: 1%;
 }
 
-/* .ul-header {
-    list-style: none;
-    font-size: small;
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-} */
-
 a {
-    color: #AFA8BA;
+    color: white;
+    text-decoration: none;
 }
 
 h1 a {

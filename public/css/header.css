@@ -9,13 +9,13 @@ header {
 }
 
 .centrar-header {
-    width: 25%;
+    width: 100%;
 }
 
 .ul-header {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     list-style: none;
 }
 
@@ -24,12 +24,11 @@ header {
 }
 
 .boton-header{
-    width: 100%;
+    width: 80%;
     padding: 0 5%;
-    /* height: 120%; */
     border-radius: 5px;
     border-color: transparent;
-    background-color: rgb(24, 112, 228);
+    background-color: rgb(93, 151, 226);
     animation-name: brillo;
     animation-duration: .8s;
     animation-iteration-count: infinite;
