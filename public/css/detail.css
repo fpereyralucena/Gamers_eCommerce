@@ -56,12 +56,43 @@ main {
   margin: 1px 0px 10px 0px;
 }
 
+.divBtnAgregarCarrito {
+  width: 80%;
+  margin: 10px 0;
+}
+
 .btn-agregar-carrito {
-  border-radius: 10px;
+  border-radius: 5px;
   background-color: #0275d8;
   color: #fff;
   padding: 1vh 1vw;
-  margin: 0 auto;
+  margin: 0;
+}
+
+.divBotonesAdmin {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 20px 0;
+}
+
+.btnEditProduct {
+  width: 40%;
+  background-color: #099f24;
+  color: #fff;
+  padding: 1vh 1vw;
+  margin: 0;
+  border-radius: 5px;
+}
+
+.btnEliminarProduct {
+  width: 40%;
+  background-color: #d71c1c;
+  padding: 1vh 1vw;
+  color: #fff;
+  margin: 0;
+  border-radius: 5px;
 }
 
 /* Style the list */
