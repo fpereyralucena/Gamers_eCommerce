@@ -3,13 +3,11 @@ var app = express()
 const path = require('path');
 const port = process.env.port || 3000;
 var session = require('express-session');
-const db = require('./database/models');
 const mainRouter = require('./routes/mainRouter');
 const productsRouter = require('./routes/productsRouter');
 const usersRouter = require('./routes/usersRouter');
 var cookieSession = require('cookie-session');
 var cookieParser = require('cookie-parser');
-
 
 app.use(cookieParser());
 

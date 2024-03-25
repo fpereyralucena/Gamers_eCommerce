@@ -1,9 +1,6 @@
 const db = require('../database/models');
-const Users = require('../database/models/User');
-const path = require('path');
 const bcrypt = require('bcrypt');
 const { validationResult } = require('express-validator');
-const session = require('express-session');
 let errors = [];
 
 function validatePassword(password, hash) {
@@ -18,9 +15,9 @@ const usersController = {
     },
 
     loginValidation: async (req, res) => {
-        
+
         let user = await db.Users.findOne({
-            where: { email: req.body.user }
+            where: { email: req.body.email }
         });
 
         if (user === null) {
@@ -30,15 +27,12 @@ const usersController = {
             delete user.dataValues.password
             user = JSON.parse(JSON.stringify(user));
             req.session.user = user;
-            return res.redirect('/user/profile');
+            return res.render('userProfile', {user});
         }
         else {
             return res.render('login', { errors: [{ msg: "Contraseña inválida" }] })
         }
-
     },
-
-
 
     recoverPass: (req, res) => {
         res.render('recover-pass')
@@ -64,7 +58,6 @@ const usersController = {
         }
 
         let passwordMissmatch = checkPasswords()
-
 
         if (resultValidation.errors.length > 0 || passwordMissmatch) {
             return res.render('register', {
@@ -92,23 +85,17 @@ const usersController = {
                 password: bcrypt.hashSync(req.body.password, 10),
                 userEspecify_id: 2,
                 image: req.body.imagen
-            }, 
+            },
             )
-
             user = JSON.parse(JSON.stringify(user));
-            
             req.session.user = user;
-            
             res.redirect('/users/profile')
         }
-
-
-        ;
     },
 
     profile: (req, res) => {
         console.log("llegue a profile")
-        res.render('userProfile', { user: req.session.user})
+        res.render('userProfile', { user: req.session.user })
     },
 
 
@@ -117,8 +104,7 @@ const usersController = {
         req.session.user = {};
         delete req.session.user;
         res.redirect('/')
-
-    }
+   }
 
 };
 
