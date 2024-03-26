@@ -1,3 +1,3 @@
-id,firstName,lastName,password,email,userEspecify_id
-1,Admin,Admin,QWERTY,admin@gamerscostumes.com,1
-2,Lucas,Herbon,PATO123,lucas@gmail.com,2
+id,firstName,lastName,password,email,userEspecify_id,image
+1,admin,admin,$2b$10$3MI0iDbhIKOPeYuUNtZzIuk1Dc02FiVTpN1ejEKaSOYPLQAJmPrDG,admin@gamerscostumes.com,1,NULL
+2,Lucas,Herbon,$2b$10$t/BJiD.DiP1AiWlFWQRdHu2CS5eIhFUQqA3tPvO9uJ1xgKJ3B6kGG,asdasd@asd.com,2,NULL
