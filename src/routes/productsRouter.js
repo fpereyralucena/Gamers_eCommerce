@@ -32,7 +32,7 @@ router.post("/create-product", upload.single('image'), productsController.proces
 
 router.get("/edit-product/:id",  adminMiddleware, upload.single('image') , productsController.editProduct);
 
-router.get("/delete/:id", adminMiddleware, productsController.deleteProduct)
-router.post("/delete/:id", adminMiddleware, productsController.deleteProduct)
+
+router.post("/delete-product/:id", adminMiddleware, productsController.deleteProduct)
 
 module.exports = router;

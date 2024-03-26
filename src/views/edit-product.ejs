@@ -48,6 +48,12 @@
 						<button type="submit" class="save-buttom">Guardar producto</button>
 					</div>
 			</form>
+			<form action="/../products/delete-product/<%= product.id %>" method="post" enctype="multipart/form-data">
+				<div class="divBotonesAdmin">
+					<input type="hidden" name="productId" value="<%= product.id %>">
+					<button class="btnEliminarProduct" onclick="return confirm('¿Está seguro que desea eliminar este producto?')">Eliminar Producto</button>
+				</div>
+			</form>
 
 </main>
 

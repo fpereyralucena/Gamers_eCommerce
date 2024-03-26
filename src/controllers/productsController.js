@@ -9,12 +9,13 @@ const productsController = {
 			.then((data)=> res.render((data)))
 	},
 
-	detail: (req, res) => {
-		let guardar = []
-		db.Product.findAll()
-			.then((data)=> guardar = ((data)))
-		db.Product.findByPk(req.params.id)
-			.then((data)=>res.render('detail', {product: data, allProducts: guardar}))
+	detail: async(req, res) => {
+		let guardar = null;
+		let data = null;
+		guardar = await db.Product.findAll()
+		data = await db.Product.findByPk(req.params.id)
+		if (data == null) res.sendStatus(404);
+		res.render('detail', {product: data, allProducts: guardar})
 	},
 
 	create: (req, res) => {
@@ -45,11 +46,9 @@ editProduct:async (req, res) => {
 	
 	let product_id = parseInt(req.params.id);
 	let promProduct =await db.Product.findByPk(product_id);
-
-	Promise.all([promProduct])
-	.then(([Product]) => {
-		return res.render(path.resolve(__dirname, '..', 'views', 'edit-product'), {product:Product})
-	})
+	if (promProduct == null) return res.sendStatus(404);
+	return res.render( 'edit-product', {product:promProduct})
+	
 },
 
 deleteProduct: async(req, res) => {
@@ -58,7 +57,7 @@ deleteProduct: async(req, res) => {
 		let promProduct =await db.Product.destroy({ where: {id: product_id}});
 		res.send("Producto borrado con exito")
 	} catch (error) {
-		console.log("Error al eliminar el producto" + error)
+		res.send("Error al eliminar el producto "+req.params.id + "/n" + error)
 	}
 },
 
