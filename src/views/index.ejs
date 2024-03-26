@@ -10,144 +10,215 @@
             <main>
                 <%- include('partials/publicidad') %>
 
-                <%
-                    var randomIndex = Math.floor(Math.random() * products.length);
-                    var randomProduct = products[randomIndex];
-                %>
+                    <% var randomIndex=Math.floor(Math.random() * products.length); var
+                        randomProduct=products[randomIndex]; %>
 
-                    <h1>Destacados</h1>
 
-                    <section class="contenedor-ofertas2">
+                    
 
-                        <article class="product-card2">
-                            <a href="/products/detail/<%= randomProduct.id %>">
-                                <img src="/img/uploads/<%= randomProduct.image %>" alt="Imagen destacada de <%= randomProduct.name %>" class="outstanding2">
-                              </a>
-                              <div>
-                                <h3 class="outstanding-text"><%= randomProduct.name %></h3>
-                              </div>
-                            </article>
-                        </section>
+                          
 
-                    <h2>Novedades</h2>
+                                <h1>Destacados</h1>
 
-                    <section class="contenedor-ofertas">
+                                <section class="contenedor-ofertas2">
 
-                        <article class="product-card">
-                            <a href="/products/detail/<%= (products)[0].id %>"><img src="/img/uploads/<%= (products)[0].image %>"
-                                    alt="Mario y honguitos"></a>
-                            <div>
-                                <h3><%= (products)[0].name %></h3>
-                                <p class="offer-text"><%= (products)[0].discount %>% de Descuento</p>
-                            </div>
-                        </article>
-                        
-                        <article class="product-card">
-                            <a href="/products/detail/<%= (products)[2].id %>"><img src="/img/uploads/<%= (products)[2].image %>"
-                                    alt="Remera Street Fighter II"></a>
-                            <div>
-                                <h3><%= (products)[2].name %></h3>
-                                <p class="offer-text"><%= (products)[2].discount %>% de Descuento</p>
-                            </div>
-                        </article>
+                                    <article class="product-card2">
+                                        <a href="/products/detail/<%= randomProduct.id %>">
+                                            <img src="/img/uploads/<%= randomProduct.image %>"
+                                                alt="Imagen destacada de <%= randomProduct.name %>"
+                                                class="outstanding2">
+                                        </a>
+                                        <div>
+                                            <h3 class="outstanding-text">
+                                                <%= randomProduct.name %>
+                                            </h3>
+                                        </div>
+                                    </article>
+                                </section>
 
-                        <article class="product-card">
-                            <a href="/products/detail/<%= (products)[3].id %>"><img src="/img/uploads/<%= (products)[3].image %>"
-                                    alt="Remera character select Street Fighter"></a>
-                            <div>
-                                <h3><%= (products)[3].name %></h3>
-                                <p class="offer-text"><%= (products)[3].discount %>%  Descuento</p>
-                            </div>
-                        </article>
+                                <h2>Novedades</h2>
 
-                        <article class="product-card">
-                            <a href="/products/detail/<%= (products)[4].id %>"><img src="/img/uploads/<%= (products)[4].image %>"
-                                    alt="Remera Street Fighter II"></a>
-                            <div>
-                                <h3><%= (products)[4].name %></h3>
-                                <p class="offer-text"><%= (products)[4].discount %>% de Descuento</p>
-                            </div>
-                        </article>
+                                <section class="contenedor-ofertas">
 
-                    </section>
 
-                    <h2>Ofertas Especiales</h2>
+                              
 
-                    <section class="contenedor-ofertas">
 
-                        <article class="product-card">
-                            <a href="/products/detail/<%= (products)[6].id %>"><img src="/img/uploads/<%= (products)[6].image %>"
-                                    alt="Remera Street Fighter II"></a>
-                            <div>
-                                <h3><%= (products)[6].name %></h3>
-                                <p class="offer-text"><%= (products)[6].discount %>% de Descuento</p>
-                            </div>
-                        </article>
+                                    <article class="product-card">
+                                        <a href="/products/detail/<%= (products)[0].id %>"><img
+                                                src="/img/uploads/<%= (products)[0].image %>"
+                                                alt="<%= (products)[0].name %>"></a>
+                                        <div>
+                                            <h3>
+                                                <%= (products)[0].name %>
+                                            </h3>
+                                            <p class="offer-text">
+                                                <%= (products)[0].discount %>% de Descuento
+                                            </p>
+                                        </div>
+                                    </article>
 
-                        <article class="product-card">
-                            <a href="/products/detail/<%= (products)[7].id %>"><img src="/img/uploads/<%= (products)[7].image %>"
-                                    alt="Remera Street Fighter II"></a>
-                            <div>
-                                <h3><%= (products)[7].name %></h3>
-                                <p class="offer-text"><%= (products)[7].discount %>% de Descuento</p>
-                            </div>
-                        </article>
+                                    <article class="product-card">
+                                        <a href="/products/detail/<%= (products)[2].id %>"><img
+                                                src="/img/uploads/<%= (products)[2].image %>"
+                                                alt="Remera Street Fighter II"></a>
+                                        <div>
+                                            <h3>
+                                                <%= (products)[2].name %>
+                                            </h3>
+                                            <p class="offer-text">
+                                                <%= (products)[2].discount %>% de Descuento
+                                            </p>
+                                        </div>
+                                    </article>
 
-                        <article class="product-card">
-                            <a href="/products/detail/<%= (products)[6].id %>"><img src="/img/uploads/<%= (products)[6].image %>"
-                                    alt="Remera Street Fighter II"></a>
-                            <div>
-                                <h3><%= (products)[6].name %></h3>
-                                <p class="offer-text"><%= (products)[6].discount %>% de Descuento</p>
-                            </div>
-                        </article>
+                                    <article class="product-card">
+                                        <a href="/products/detail/<%= (products)[3].id %>"><img
+                                                src="/img/uploads/<%= (products)[3].image %>"
+                                                alt="Remera character select Street Fighter"></a>
+                                        <div>
+                                            <h3>
+                                                <%= (products)[3].name %>
+                                            </h3>
+                                            <p class="offer-text">
+                                                <%= (products)[3].discount %>% Descuento
+                                            </p>
+                                        </div>
+                                    </article>
 
-                        <article class="product-card">
-                            <a href="/products/detail/<%= (products)[7].id %>"><img src="/img/uploads/<%= (products)[7].image %>"
-                                    alt="Remera Street Fighter II"></a>
-                            <div>
-                                <h3><%= (products)[7].name %></h3>
-                                <p class="offer-text"><%= (products)[7].discount %>% de Descuento</p>
-                            </div>
-                        </article>
+                                    <article class="product-card">
+                                        <a href="/products/detail/<%= (products)[4].id %>"><img
+                                                src="/img/uploads/<%= (products)[4].image %>"
+                                                alt="Remera Street Fighter II"></a>
+                                        <div>
+                                            <h3>
+                                                <%= (products)[4].name %>
+                                            </h3>
+                                            <p class="offer-text">
+                                                <%= (products)[4].discount %>% de Descuento
+                                            </p>
+                                        </div>
+                                    </article>
 
-                        <article class="product-card">
-                            <a href="/products/detail/<%= (products)[7].id %>"><img src="/img/uploads/<%= (products)[7].image %>"
-                                    alt="Remera Street Fighter II"></a>
-                            <div>
-                                <h3><%= (products)[7].name %></h3>
-                                <p class="offer-text"><%= (products)[7].discount %>% de Descuento</p>
-                            </div>
-                        </article>
+                                </section>
 
-                        <article class="product-card">
-                            <a href="/products/detail/<%= (products)[6].id %>"><img src="/img/uploads/<%= (products)[6].image %>"
-                                    alt="Remera Street Fighter II"></a>
-                            <div>
-                                <h3><%= (products)[6].name %></h3>
-                                <p class="offer-text"><%= (products)[6].discount %>% de Descuento</p>
-                            </div>
-                        </article>
+                                <h2>Ofertas Especiales</h2>
 
-                        <article class="product-card">
-                            <a href="/products/detail/<%= (products)[7].id %>"><img src="/img/uploads/<%= (products)[7].image %>"
-                                    alt="Remera Street Fighter II"></a>
-                            <div>
-                                <h3><%= (products)[7].name %></h3>
-                                <p class="offer-text"><%= (products)[7].discount %>% de Descuento</p>
-                            </div>
-                        </article>
+                                <section class="contenedor-ofertas">
 
-                        <article class="product-card">
-                            <a href="/products/detail/<%= (products)[6].id %>"><img src="/img/uploads/<%= (products)[6].image %>"
-                                    alt="Remera Street Fighter II"></a>
-                            <div>
-                                <h3><%= (products)[6].name %></h3>
-                                <p class="offer-text"><%= (products)[6].discount %>% de Descuento</p>
-                            </div>
-                        </article>
+                                    <article class="product-card">
+                                        <a href="/products/detail/<%= (products)[6].id %>"><img
+                                                src="/img/uploads/<%= (products)[6].image %>"
+                                                alt="Remera Street Fighter II"></a>
+                                        <div>
+                                            <h3>
+                                                <%= (products)[6].name %>
+                                            </h3>
+                                            <p class="offer-text">
+                                                <%= (products)[6].discount %>% de Descuento
+                                            </p>
+                                        </div>
+                                    </article>
 
-                    </section>
+                                    <article class="product-card">
+                                        <a href="/products/detail/<%= (products)[7].id %>"><img
+                                                src="/img/uploads/<%= (products)[7].image %>"
+                                                alt="Remera Street Fighter II"></a>
+                                        <div>
+                                            <h3>
+                                                <%= (products)[7].name %>
+                                            </h3>
+                                            <p class="offer-text">
+                                                <%= (products)[7].discount %>% de Descuento
+                                            </p>
+                                        </div>
+                                    </article>
+
+                                    <article class="product-card">
+                                        <a href="/products/detail/<%= (products)[6].id %>"><img
+                                                src="/img/uploads/<%= (products)[6].image %>"
+                                                alt="Remera Street Fighter II"></a>
+                                        <div>
+                                            <h3>
+                                                <%= (products)[6].name %>
+                                            </h3>
+                                            <p class="offer-text">
+                                                <%= (products)[6].discount %>% de Descuento
+                                            </p>
+                                        </div>
+                                    </article>
+
+                                    <article class="product-card">
+                                        <a href="/products/detail/<%= (products)[7].id %>"><img
+                                                src="/img/uploads/<%= (products)[7].image %>"
+                                                alt="Remera Street Fighter II"></a>
+                                        <div>
+                                            <h3>
+                                                <%= (products)[7].name %>
+                                            </h3>
+                                            <p class="offer-text">
+                                                <%= (products)[7].discount %>% de Descuento
+                                            </p>
+                                        </div>
+                                    </article>
+
+                                    <article class="product-card">
+                                        <a href="/products/detail/<%= (products)[7].id %>"><img
+                                                src="/img/uploads/<%= (products)[7].image %>"
+                                                alt="Remera Street Fighter II"></a>
+                                        <div>
+                                            <h3>
+                                                <%= (products)[7].name %>
+                                            </h3>
+                                            <p class="offer-text">
+                                                <%= (products)[7].discount %>% de Descuento
+                                            </p>
+                                        </div>
+                                    </article>
+
+                                    <article class="product-card">
+                                        <a href="/products/detail/<%= (products)[6].id %>"><img
+                                                src="/img/uploads/<%= (products)[6].image %>"
+                                                alt="Remera Street Fighter II"></a>
+                                        <div>
+                                            <h3>
+                                                <%= (products)[6].name %>
+                                            </h3>
+                                            <p class="offer-text">
+                                                <%= (products)[6].discount %>% de Descuento
+                                            </p>
+                                        </div>
+                                    </article>
+
+                                    <article class="product-card">
+                                        <a href="/products/detail/<%= (products)[7].id %>"><img
+                                                src="/img/uploads/<%= (products)[7].image %>"
+                                                alt="Remera Street Fighter II"></a>
+                                        <div>
+                                            <h3>
+                                                <%= (products)[7].name %>
+                                            </h3>
+                                            <p class="offer-text">
+                                                <%= (products)[7].discount %>% de Descuento
+                                            </p>
+                                        </div>
+                                    </article>
+
+                                    <article class="product-card">
+                                        <a href="/products/detail/<%= (products)[6].id %>"><img
+                                                src="/img/uploads/<%= (products)[6].image %>"
+                                                alt="Remera Street Fighter II"></a>
+                                        <div>
+                                            <h3>
+                                                <%= (products)[6].name %>
+                                            </h3>
+                                            <p class="offer-text">
+                                                <%= (products)[6].discount %>% de Descuento
+                                            </p>
+                                        </div>
+                                    </article>
+
+                                </section>
 
             </main>
 

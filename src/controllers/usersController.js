@@ -84,7 +84,7 @@ const usersController = {
                 email: req.body.email,
                 password: bcrypt.hashSync(req.body.password, 10),
                 userEspecify_id: 2,
-                image: req.body.imagen
+                image: req.file.filename
             },
             )
             user = JSON.parse(JSON.stringify(user));

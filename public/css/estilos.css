@@ -85,6 +85,12 @@ input {
 
 }
 
+.press-start  {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
 .botonSubmit {
     width: 45%;
     background-color: #231751;
@@ -114,8 +120,8 @@ input {
     margin: 10px 0;
 }
 
-.errors{
-    color:#b50a0a;
+.errors {
+    color: #b50a0a;
     font-weight: bold;
     font-style: italic;
 }
@@ -176,7 +182,7 @@ h1 {
 
 .outstanding-text {
     margin: 10px;
-    
+
 }
 
 .product-card2 {

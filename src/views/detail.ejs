@@ -9,15 +9,7 @@
 
 
             <main>
-                <ul class="bread-crumb">
-                    <li><a href="/">inicio</a></li>
-                    <li><a href="#">ropa</a></li>
-                    <li><a href="#">remeras</a></li>
-                    <li><a href="#">manga corta</a></li>
-                    <li>
-                        <%= product.title %>
-                    </li>
-                </ul>
+                
                 <section class="general-product-page">
                     <section class="card-detail">
                         
@@ -29,24 +21,34 @@
 
                         <div class="product-description-detail">
                             
-                            <h2 class="product-name">
+                            <h2 class="product-name ">
                                 <%= product.name %>
                             </h2>
 
-                            <h3 class="product-price">$ <%= product.price %>
+                            <h3 class="product-price press-start">$ <%= product.price %>
                             </h3>
 
                             <p id="discount" name="discount" class="offer-text">
                                 <%= product.discount %>% de Descuento
                             </p>
-                        <div class="divBtnAgregarCarrito">
-                            <button class="btn-agregar-carrito" type="submit">Agregar al carrito</button>
-                        </div>
+                        <form enctype="application/x-www-form-urlencoded" action="/products/shopping-cart">
+                            <input type="hidden" name="productAddedId" value="<%= product.id %>">
+                            <div class="divBtnAgregarCarrito">
+                                <button class="btn-agregar-carrito" type="post"> Agregar <i class="bi bi-bag-plus-fill"></i></button>
+                            </div>
+                        </form>
+                           
+                        
                         <% if(locals.user != undefined)  { if (locals.user.userEspecify_id === 1){ %>
-                        <div class="divBotonesAdmin">
-                            <button class="btnEditProduct">Editar Producto</button>
-                            <button class="btnEliminarProduct" action="post"><a href="/products/delete/<%= product.id %>">Eliminar Producto</a></button>
-                        </div>
+                            <button class="btnEditProduct"><a href="/products/edit-product/<%= product.id %>" ><i class="bi bi-pencil-square"></i> </a> </button>
+                        <form action="/../products/delete-product/<%= product.id %>" method="post" enctype="multipart/form-data">
+                            <div class="divBotonesAdmin">
+                                <input type="hidden" name="productId" value="<%= product.id %>">
+                                
+                                <button class="btnEliminarProduct" onclick="return confirm('¿Está seguro que desea eliminar este producto?')"><i class="bi bi-trash"></i></button>
+                            </div>
+                        </form>
+                           
                         <% }} %>
                         </div>
                     </section>
@@ -56,7 +58,7 @@
                 </section>
 
                 <section class="relatedProducts">
-                    <h2 class="titulo-recomendados">Recomendado para vos:</h2>
+                    <h2 class="titulo-recomendados press-start 2p-regular">Recomendado para vos:</h2>
                     <% function getRandomIndex() { return Math.floor(Math.random() * allProducts.length); } var
                         randomIndex1=getRandomIndex(); var randomIndex2=getRandomIndex(); var
                         randomIndex3=getRandomIndex(); var randomIndex4=getRandomIndex(); var
@@ -67,7 +69,7 @@
 
                             <div class="gallery">
                                 <div class="gallery-item">
-                                    <img src="\img\uploads/<%= randomProduct1.image %>" alt="Product 1">
+                                    <img src="\img\uploads\<%= randomProduct1.image %>" alt="Product 1">
                                     <div class="item-overlay">
                                         <h2>
                                             <%= randomProduct1.name %>
@@ -77,7 +79,7 @@
                                     </div>
                                 </div>
                                 <div class="gallery-item">
-                                    <img src="\img\uploads/<%= randomProduct2.image %>" alt="Product 1">
+                                    <img src="\img\uploads\<%= randomProduct2.image %>" alt="Product 1">
                                     <div class="item-overlay">
                                         <h2>
                                             <%= randomProduct2.name %>
@@ -87,7 +89,7 @@
                                     </div>
                                 </div>
                                 <div class="gallery-item">
-                                    <img src="\img\uploads/<%= randomProduct3.image %>" alt="Product 1">
+                                    <img src="\img\uploads\<%= randomProduct3.image %>" alt="Product 1">
                                     <div class="item-overlay">
                                         <h2>
                                             <%= randomProduct3.name %>
@@ -97,7 +99,7 @@
                                     </div>
                                 </div>
                                 <div class="gallery-item">
-                                    <img src="\img\uploads/<%= randomProduct4.image %>" alt="Product 1">
+                                    <img src="\img\uploads\<%= randomProduct4.image %>" alt="Product 1">
                                     <div class="item-overlay">
                                         <h2>
                                             <%= randomProduct4.name %>
@@ -107,7 +109,7 @@
                                     </div>
                                 </div>
                                 <div class="gallery-item">
-                                    <img src="\img\uploads/<%= randomProduct5.image %>" alt="Product 1">
+                                    <img src="\img\uploads\<%= randomProduct5.image %>" alt="Product 1">
                                     <div class="item-overlay">
                                         <h2>
                                             <%= randomProduct5.name %>
