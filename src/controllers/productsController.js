@@ -52,7 +52,15 @@ editProduct:async (req, res) => {
 	})
 },
 
-
+deleteProduct: async(req, res) => {
+	try {
+		let product_id = req.params.id
+		let promProduct =await db.Product.destroy({ where: {id: product_id}});
+		res.send("Producto borrado con exito")
+	} catch (error) {
+		console.log("Error al eliminar el producto" + error)
+	}
+},
 
 shoppingCart: (req,res) => {
 	res.render('shopping-cart', {shoppingList: req.session.shoppingList})

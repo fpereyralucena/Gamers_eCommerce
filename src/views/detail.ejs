@@ -45,7 +45,7 @@
                         <% if(locals.user != undefined)  { if (locals.user.userEspecify_id === 1){ %>
                         <div class="divBotonesAdmin">
                             <button class="btnEditProduct">Editar Producto</button>
-                            <button class="btnEliminarProduct">Eliminar Producto</button>
+                            <button class="btnEliminarProduct" action="post"><a href="/products/delete/<%= product.id %>">Eliminar Producto</a></button>
                         </div>
                         <% }} %>
                         </div>

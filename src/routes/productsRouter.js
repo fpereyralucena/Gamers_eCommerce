@@ -4,6 +4,8 @@ const productsController = require('../controllers/productsController.js')
 const multer  = require('multer')
 const path = require('path')
 const adminMiddleware = require("../middlewares/adminMiddleware.js")
+const { get } = require('http')
+const { appendFile } = require('fs')
 
 
 const storage = multer.diskStorage({
@@ -30,5 +32,7 @@ router.post("/create-product", upload.single('image'), productsController.proces
 
 router.get("/edit-product/:id",  adminMiddleware, upload.single('image') , productsController.editProduct);
 
+router.get("/delete/:id", adminMiddleware, productsController.deleteProduct)
+router.post("/delete/:id", adminMiddleware, productsController.deleteProduct)
 
 module.exports = router;
