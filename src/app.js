@@ -51,7 +51,9 @@ app.use('/users', usersRouter);
 app.use('/products', productsRouter);
 app.use('/api/v1', apiRouter)
 
-app.all('*', mainRouter);
+app.all('*', (req, res) => {
+  res.status(404).render('error404')
+})
 
 app.listen(port, () => {
   console.log(`App listening on port http://localhost:${port}`)
