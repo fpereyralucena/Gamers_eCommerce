@@ -55,3 +55,41 @@ header {
     width: 100%;
     height: 35px;
 }
+
+@media (max-width: 599px) {
+    .tercerElemento {
+        display: none;
+    }
+    .centrar-header h1{
+        display: none;
+    }
+    .centrar-header a{
+        display: flex;
+        justify-content:center;
+    }
+    .centrar-header img{
+        display: flex;
+        justify-content:center;
+        height: 100px;
+        width: 100px;
+    }
+}
+
+@media (max-width: 1100px) and (min-width: 600px) {
+    .tercerElemento {
+        display: none;
+    }
+    .centrar-header h1{
+        display: none;
+    }
+    .centrar-header a{
+        display: flex;
+        justify-content:center;
+    }
+    .centrar-header img{
+        display: flex;
+        justify-content:center;
+        height: 100px;
+        width: 100px;
+    }
+}

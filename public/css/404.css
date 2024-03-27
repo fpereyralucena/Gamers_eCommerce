@@ -1,0 +1,14 @@
+html{
+    background-color: black;
+    background-image: url("/img/dino.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+h1 {
+    position: relative;
+    top: 100px;
+    font-size: 100px;
+    color: white;
+}
