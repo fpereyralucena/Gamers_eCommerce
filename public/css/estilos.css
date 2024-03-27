@@ -39,17 +39,18 @@ main {
     font-size: 20px;
 }
 
-form {
+.generic-form {
     width: 30%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     box-shadow: 0 4px 8px rgba(35, 23, 81, 0.1);
     padding: 20px;
     background-color: white;
     border-radius: 15px;
+    text-align: start;
+    gap: 10px;
 }
 
 .crearCuenta {
@@ -92,6 +93,21 @@ input {
 }
 
 .botonSubmit {
+    background-color: #231751;
+    color: aliceblue;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.botonSubmitRegister {
+    width: 45%;
+    background-color: #231751;
+    color: aliceblue;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.botonProfile {
     width: 45%;
     background-color: #231751;
     color: aliceblue;

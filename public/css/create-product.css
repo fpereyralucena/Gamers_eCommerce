@@ -56,3 +56,29 @@ img {
     color: #231751;
     border-color: #231751;
 }
+
+.form-create-product {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(35, 23, 81, 0.1);
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.form-edit-product {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(35, 23, 81, 0.1);
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+}

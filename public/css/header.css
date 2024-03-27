@@ -32,7 +32,8 @@ header {
     animation-name: brillo;
     animation-duration: .8s;
     animation-iteration-count: infinite;
-}
+    color: white;
+    }
 
 @keyframes brillo {
     from {

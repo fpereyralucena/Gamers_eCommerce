@@ -31,23 +31,22 @@
                             <p id="discount" name="discount" class="offer-text">
                                 <%= product.discount %>% de Descuento
                             </p>
-                        <form enctype="application/x-www-form-urlencoded" action="/products/shopping-cart">
+                        
                             <input type="hidden" name="productAddedId" value="<%= product.id %>">
                             <div class="divBtnAgregarCarrito">
                                 <button class="btn-agregar-carrito" type="post"> Agregar <i class="bi bi-bag-plus-fill"></i></button>
                             </div>
-                        </form>
+                        
                            
                         
                         <% if(locals.user != undefined)  { if (locals.user.userEspecify_id === 1){ %>
                             <button class="btnEditProduct"><a href="/products/edit-product/<%= product.id %>" ><i class="bi bi-pencil-square">Editar</i> </a> </button>
-                        <form action="/../products/delete-product/<%= product.id %>" method="post" enctype="multipart/form-data">
-                            <div class="divBotonesAdmin">
-                                <input type="hidden" name="productId" value="<%= product.id %>">
-                                
-                                <button class="btnEliminarProduct" onclick="return confirm('¿Está seguro que desea eliminar este producto?')"><i class="bi bi-trash">Eliminar</i></button>
-                            </div>
-                        </form>
+                        
+                            <form action="/../products/delete-product/<%= product.id %>" method="post" enctype="multipart/form-data" class="form-delete">
+                                <div class="divBotonesAdmin">
+                                    <input type="hidden" name="productId" value="<%= product.id %>">
+                                    <button class="btnEliminarProduct" onclick="return confirm('¿Está seguro que desea eliminar este producto?')"><i class="bi bi-trash">Eliminar Producto</i></button>
+                                </div>
                            
                         <% }} %>
                         </div>

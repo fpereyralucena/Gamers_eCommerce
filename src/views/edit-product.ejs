@@ -11,7 +11,7 @@
 
 				<h2 class="products-title">Editar producto</h2>
 			
-			<form action="./<%= product.id %>" method="POST" class="form" enctype="multipart/form-data">
+			<form action="./<%= product.id %>" method="POST" enctype="multipart/form-data" class="form-edit-product">
 				<div class="product-detail">
 					
 					<div class="title-detail">
@@ -47,6 +47,7 @@
 					<div class="save-product">
 						<button type="submit" class="save-buttom">Guardar producto</button>
 					</div>
+					
 			</form>
 			<form action="/../products/delete-product/<%= product.id %>" method="post" enctype="multipart/form-data">
 				<div class="divBotonesAdmin">
