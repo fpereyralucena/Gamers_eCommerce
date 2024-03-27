@@ -17,8 +17,11 @@ let mainController = {
 
     terms: (req, res) => {
         res.render('terms-and-conditions');
+    },
+    stores: (req, res) => {
+        res.render('stores');
+
     }
-    
 };
 
 module.exports = mainController;

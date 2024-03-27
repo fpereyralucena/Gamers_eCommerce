@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <%- include('partials/head', {customCSS: "stores.css" }) %>
+
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="">
+            </script>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+            integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+            crossorigin="">
+
+</head>
+
+
+<body>
+
+    <%- include('partials/header') %>
+
+        <main>
+            <section>
+
+                <h2 class="ingresaTitulo"> Nuestros Locales </h2>
+                <div id="map"></div>
+            </section>
+
+        </main>
+
+        <%- include ('partials/footer')%>
+</body>
+<script>
+    var map = L.map('map').setView([-34.603, -58.38], 16);
+
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+    L.marker([-34.604, -58.385]).addTo(map)
+        .bindPopup('Sede Central: Av. Corrientes 1300, Buenos Aires')
+        .openPopup();
+    L.marker([-34.6, -58.375]).addTo(map)
+    .bindPopup('Sede Microcentro: Viamonte 600, Buenos Aires')
+    
+    
+</script>
+
+</html>
