@@ -9,10 +9,10 @@
 
 
             <main>
-                
+
                 <section class="general-product-page">
                     <section class="card-detail">
-                        
+
                         <div class="container-image-detail">
                             <img src="/img/uploads/<%= product.image %>" alt="<%= product.name %>">
                         </div>
@@ -20,35 +20,47 @@
                         <div class="division-card"></div>
 
                         <div class="product-description-detail">
-                            
+
                             <h2 class="product-name ">
                                 <%= product.name %>
                             </h2>
+                            <% let pesos=Intl.NumberFormat('es-AR', { style: 'currency' , currency: 'ARS' ,
+                                maximumSignificantDigits: 4, }); %>
+                                <h3 class="product-price press-start"><%= pesos.format(product.price) %>
+                                </h3>
 
-                            <h3 class="product-price press-start">$<%= product.price %>
-                            </h3>
+                                <p id="discount" name="discount" class="offer-text">
+                                    <%= product.discount %>% de Descuento
+                                </p>
 
-                            <p id="discount" name="discount" class="offer-text">
-                                <%= product.discount %>% de Descuento
-                            </p>
-                        
-                            <input type="hidden" name="productAddedId" value="<%= product.id %>">
-                            <div class="divBtnAgregarCarrito">
-                                <button class="btn-agregar-carrito" type="post"><i class="bi bi-bag-plus-fill" id="addIcon"></i><p>Agregar</p></button>
-                            </div>
-                        
-                           
-                        
-                        <% if(locals.user != undefined)  { if (locals.user.userEspecify_id === 1){ %>
-                            <button class="btnEditProduct"><a href="/products/edit-product/<%= product.id %>" ><i class="bi bi-pencil-square" id="editProduct"></i></a><p>Editar</p></button>
-                        
-                            <form action="/../products/delete-product/<%= product.id %>" method="post" enctype="multipart/form-data" class="form-delete">
-                                <div class="divBotonesAdmin">
-                                    <input type="hidden" name="productId" value="<%= product.id %>">
-                                    <button class="btnEliminarProduct" onclick="return confirm('¿Está seguro que desea eliminar este producto?')"><i class="bi bi-trash" id="deleteProduct"></i><p>Eliminar</p></button>
+                                <input type="hidden" name="productAddedId" value="<%= product.id %>">
+                                <div class="divBtnAgregarCarrito">
+                                    <button class="btn-agregar-carrito" type="post"><i class="bi bi-bag-plus-fill"
+                                            id="addIcon"></i>
+                                        <p>Agregar</p>
+                                    </button>
                                 </div>
-                           
-                        <% }} %>
+
+
+
+                                <% if(locals.user !=undefined) { if (locals.user.userEspecify_id===1){ %>
+                                    <button class="btnEditProduct"><a href="/products/edit-product/<%= product.id %>"><i
+                                                class="bi bi-pencil-square" id="editProduct"></i></a>
+                                        <p>Editar</p>
+                                    </button>
+
+                                    <form action="/../products/delete-product/<%= product.id %>" method="post"
+                                        enctype="multipart/form-data" class="form-delete">
+                                        <div class="divBotonesAdmin">
+                                            <input type="hidden" name="productId" value="<%= product.id %>">
+                                            <button class="btnEliminarProduct"
+                                                onclick="return confirm('¿Está seguro que desea eliminar este producto?')"><i
+                                                    class="bi bi-trash" id="deleteProduct"></i>
+                                                <p>Eliminar</p>
+                                            </button>
+                                        </div>
+
+                                        <% }} %>
                         </div>
                     </section>
 
