@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head', {customCSS: "404.css" }) %>
+
+    <body>
+        <%- include('partials/header') %>
+            <html lang="en">
+
+            <head>
+                <meta charset="UTF-8">
+                <title></title>
+                <link href='https://fonts.googleapis.com/css?family=Ceviche+One' rel='stylesheet' type='text/css'>
+                <style>
+                    body {
+                        background-color: black;
+                    }
+
+                    .main {
+                        background-color: white;
+                        margin-top: 110px;
+                        padding-left: 100px;
+                        min-width: 1200px;
+                        height: 500px;
+                    }
+
+                    .ryu {
+                        float: left;
+                    }
+
+                    .ryu-ready,
+                    .ryu-still,
+                    .ryu-throwing,
+                    .ryu-cool,
+                    .easteregg {
+                        width: 659px;
+                        height: 494px;
+                    }
+
+                    .ryu-ready,
+                    .ryu-throwing,
+                    .ryu-cool,
+                    .easteregg {
+                        display: none;
+                    }
+
+                    .ryu-ready {
+                        background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/145077/ryu-ready-position.gif');
+                    }
+
+                    .ryu-still {
+                        background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/145077/ryu-standing-still.png');
+                    }
+
+                    .ryu-throwing {
+                        background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/145077/ryu-throwing-hadouken.png');
+                    }
+
+                    .ryu-cool {
+                        background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/145077/ryu-cool.gif');
+                    }
+
+                    .easteregg {
+                        margin-left: 80%;
+                        margin-top: -78%;
+                        background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/145077/easteregg.gif');
+                    }
+
+                    .hadouken,
+                    .ryu-ready,
+                    .ryu-still,
+                    .ryu-throwing,
+                    .ryu-cool,
+                    .easteregg {
+                        background-repeat: no-repeat;
+                    }
+
+                    .hadouken {
+                        background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/145077/hadouken.gif');
+                        width: 156px;
+                        height: 90px;
+                        display: none;
+                        position: relative;
+                        top: 167px;
+                        left: -212px;
+                        float: left;
+                    }
+
+                    .instructions {
+                        font-family: 'Ceviche One', cursive;
+                        font-size: 45px;
+                        color: lightgray;
+                        text-align: right;
+                        margin-top: 2%;
+                        margin-right: 5%;
+                        margin-bottom: 2%;
+                    }
+                </style>
+                <script src="https://code.jquery.com/jquery.min.js"></script>
+                <script defer>$(document).ready(function () {
+                        $('.ryu').mouseenter(function () {
+                            $('.ryu-still').hide();
+                            $('.ryu-ready').show();
+                        })
+                            .mouseleave(function () {
+                                $('.ryu-ready').hide();
+                                $('.ryu-still').show();
+                            })
+                            .mousedown(function () {
+                                playHadouken();
+                                $('.ryu-ready').hide();
+                                $('.ryu-still').hide();
+                                $('.ryu-cool').hide();
+                                $('.ryu-throwing').show();
+                                $('.hadouken').show();
+                                $('.hadouken').finish().show()
+                                    .animate(
+                                        { 'left': '300px' },
+                                        500,
+                                        function () {
+                                            $(this).hide();
+                                            $(this).css('left', '-212px');
+                                        }
+                                    );
+                            })
+                            .mouseup(function () {
+                                $('.ryu-throwing').hide();
+                                $('.ryu-ready').show();
+                            })
+
+                        $('body').keydown(function (e) {
+                            if (e.which == 88) {
+                                $('.ryu-still').hide();
+                                $('.ryu-ready').hide();
+                                $('.ryu-throwing').hide();
+                                $('.ryu-cool').show();
+                                $('.hadouken').hide();
+                            }
+                        })
+                        $('body').keyup(function (e) {
+                            if (e.which == 88) {
+                                $('.ryu-still').show();
+                                $('.ryu-ready').hide();
+                                $('.ryu-cool').hide();
+                                $('.ryu-throwing').hide();
+                                $('.hadouken').hide();
+
+                            }
+                        })
+
+                        $('body').keydown(function (e) {
+                            if (e.which == 75) {
+                                $('.ryu-still').hide();
+                                $('.ryu-ready').show();
+                                $('.ryu-cool').hide();
+                                $('.easteregg').show();
+                                $('.hadouken').hide();
+                                $('.main').css({ 'background-color': 'black' });
+                            }
+                        })
+                        $('body').keyup(function (e) {
+                            if (e.which == 75) {
+                                $('.ryu-still').show();
+                                $('.ryu-ready').hide();
+                                $('.ryu-cool').hide();
+                                $('.easteregg').hide();
+                                $('.hadouken').hide();
+                                $('.main').css({ 'background-color': 'white' });
+                            }
+                        })
+                        playFight();
+                    });
+
+                    function playHadouken() {
+                        $('#hadouken-sound')[0].volume = 0.5;
+                        $('#hadouken-sound')[0].load();
+                        $('#hadouken-sound')[0].play();
+                    }
+
+                    function playFight() {
+                        $('#fight-sound')[0].volume = 0.1;
+                        $('#fight-sound')[0].load();
+                        $('#fight-sound')[0].play();
+                    }</script>
+            </head>
+
+            <body>
+                <div class="main">
+                    <div class="ryu">
+                        <div class="ryu-still"></div>
+                        <div class="ryu-ready"></div>
+                        <div class="ryu-throwing"></div>
+                        <div class="ryu-cool"></div>
+                        <div class="easteregg"></div>
+                    </div>
+                    <div class="hadouken"></div>
+                </div>
+               
+                <audio id="hadouken-sound" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/145077/hadouken.mp3">
+                    <audio id="fight-sound" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/145077/fight.mp3">
+                        <%- include('partials/footer') %>
+            </body>
+
+            </html>
+
+    </body>
+
+</html>

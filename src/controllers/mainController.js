@@ -24,6 +24,9 @@ let mainController = {
     },
     about: (req, res) => {
         res.render('about');
+    },
+    streetfighter: (req, res) => {
+        res.render('streetfigther');
     }
 };
 
