@@ -3,3 +3,14 @@
     list-style: none;
     margin: 0 1vw;
 }
+
+ul{
+    display:flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+li {
+    list-style: none;
+}
+

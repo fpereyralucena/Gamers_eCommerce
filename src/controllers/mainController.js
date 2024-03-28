@@ -21,6 +21,9 @@ let mainController = {
     stores: (req, res) => {
         res.render('stores');
 
+    },
+    about: (req, res) => {
+        res.render('about');
     }
 };
 
