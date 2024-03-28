@@ -36,4 +36,6 @@ router.get("/edit-product/:id",  adminMiddleware, upload.single('image') , produ
 
 router.post("/delete-product/:id", adminMiddleware, productsController.deleteProduct)
 
+router.get("/product-list",adminMiddleware,  productsController.productList);
+
 module.exports = router;

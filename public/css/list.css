@@ -1,0 +1,26 @@
+td a {
+    color:black;
+}
+
+td {
+    text-align: center;
+    border-bottom: 1px solid gray;
+    table-layout: auto;
+    
+}
+
+a{
+    color:white
+}
+
+table {
+    padding: 1%;
+    margin: 5%;
+    gap: 1%;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+main {
+    height: 50vh;
+}

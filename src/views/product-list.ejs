@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head', {customCSS: 'list.css'}) %>
+<body>
+    <%- include('partials/header') %>
+    <table>
+        <tr>
+        <th>Id</th>
+        <th>Producto</th>
+        <th>Precio</th>
+        <th>Descuento</th>
+        <th>Editar</th>
+        <th>Borrar</th>
+
+        </tr>
+        
+        
+        <% productList.forEach(function(product) { %>
+    <tr>            
+              <td><%= product.id %></td>
+              <td><%= product.name %></td>
+              <td>$ <%= product.price %></td>
+              <td><%= product.discount %> %</td>
+              <td><a href="/products/edit-product/<%= product.id %>"><i class="bi bi-pencil-square"></i></a></td>
+              <td>
+                <form action="/../products/delete-product/<%= product.id %>" method="post"
+                    enctype="multipart/form-data" class="form-delete">
+                    <div class="divBotonesAdmin">
+                        <input type="hidden" name="productId" value="<%= product.id %>">
+                        <button class="btnEliminarProduct"
+                            onclick="return confirm('¿Está seguro que desea eliminar este producto?')"><i
+                                class="bi bi-trash" id="deleteProduct"></i>
+                            
+                        </button>
+                    </div>
+                </form>
+
+              </td>
+
+            </tr>
+          <% }); %>
+</table>
+    <%- include('partials/footer') %>
+</body>
+</html>
