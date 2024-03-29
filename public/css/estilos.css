@@ -286,16 +286,6 @@ h1 {
         display: none;
     }
 
-    #list {
-        display: flex;
-        font-size: 50px;
-        cursor: pointer;
-        justify-content: center;
-    }
-
-    #list section:hover > nav{
-        display: block;
-    }
     .generic-form {
         width: 70%;
         height: 100%;
@@ -333,15 +323,7 @@ h1 {
         display: none;
     }
 
-    #list {
-        display: flex;
-        font-size: 50px;
-        cursor: pointer;
-        justify-content: center;
-    }
-    #list:hover > .tercerElemento{
-        display: block;
-    }
+    
 
     .generic-form {
         width: 70%;

@@ -17,10 +17,69 @@
 
     <article class="centrar-header">
 
-        <div id="list">
-            <i class="bi bi-list"></i>
-        </div>
         <section class="tercerElemento">
+            <div id="list">
+                <i class="bi bi-list"></i>
+                <nav>
+                    <ul class="ul-header">
+                        <% if(locals.user !=undefined) { if (locals.user.userEspecify_id===1){ %>
+                            <li>
+                                <button id="admin" class="boton-header">
+                                    <a class="" href="/products/create-product">
+                                        <i class="bi bi-plus-circle-dotted"> CREAR</i>
+                                    </a>
+                                </button>
+                            </li>
+                            <% }} %>
+                                <% if(locals.user !=undefined) { %>
+                                    <li>
+                                        <button id="admin" class="boton-header">
+                                            <a class="" href="/users/profile">
+                                                <i class="bi bi-controller"> JUGADOR</i>
+                                            </a>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button id="admin" class="boton-header">
+                                            <a class="" href="/users/logout">
+                                                <i class="bi bi-x-circle"> GAME OVER</i>
+                                            </a>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="carrito boton-header">
+                                            <a class="" href="/products/shopping-cart">
+                                                <i class="bi bi-cart"> CARRITO</i>
+                                            </a>
+                                        </button>
+                                    </li>
+                                    <% } %>
+                                        <% if(locals.user==undefined) { %>
+                                            <li>
+
+                                                <a class="" href="/users/login">
+                                                    <button id="admin" class="boton-header">
+                                                        <i class="bi bi-dpad"> ENTER</i>
+                                                    </button>
+                                                </a>
+
+
+                                            </li>
+                                            <li>
+
+                                                <a class="" href="/users/register">
+                                                    <button class="boton-header">
+                                                        <i class="bi bi-plus-circle"></i>
+                                                        REGISTER
+                                                    </button>
+                                                </a>
+
+                                            </li>
+                                            <% } %>
+            </div>
+            </ul>
+            </nav>
+            <!--------------------------------------------------------------------------------------->
             <nav>
                 <ul class="ul-header">
                     <% if(locals.user !=undefined) { if (locals.user.userEspecify_id===1){ %>
@@ -47,41 +106,32 @@
                                         </a>
                                     </button>
                                 </li>
+                                <li>
+                                    <button class="carrito boton-header">
+                                        <a class="" href="/products/shopping-cart">
+                                            <i class="bi bi-cart">CARRITO</i>
+                                        </a>
+                                    </button>
+                                </li>
                                 <% } %>
                                     <% if(locals.user==undefined) { %>
                                         <li>
-
                                             <a class="" href="/users/login">
                                                 <button id="admin" class="boton-header">
                                                     <i class="bi bi-dpad"> ENTER</i>
                                                 </button>
                                             </a>
-
-
                                         </li>
                                         <li>
-
                                             <a class="" href="/users/register">
                                                 <button class="boton-header">
                                                     <i class="bi bi-plus-circle"></i>
                                                     REGISTER
                                                 </button>
                                             </a>
-
                                         </li>
                                         <% } %>
-                                            <li>
 
-                                                <a class="" href="/products/shopping-cart">
-                                                    <button class="boton-header">
-                                                        <i class="bi bi-cart"></i>
-                                                        CARRITO
-                                                    </button>
-                                                </a>
-
-
-                                            </li>
-                </ul>
             </nav>
         </section>
     </article>
