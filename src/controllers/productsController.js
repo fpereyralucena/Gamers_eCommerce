@@ -92,9 +92,16 @@ shoppingCartAdd: async(req, res) => {
 	console.log(req.session.shoppingList)
 
 	res.render('shopping-cart', {shoppingList: req.session.shoppingList})
+},
+productList: async (req, res) => {
+	let productList = await db.Product.findAll({raw:true});
+	console.log({productList})
+	res.render('product-list', {productList});
 }
 
 };
+
+
 
 
 
