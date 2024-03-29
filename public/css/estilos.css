@@ -159,14 +159,8 @@ footer {
     margin: auto;
 }
 
-.cosas-footer {
-    width: 100%;
-    margin: 1%;
-    padding: 1%;
-}
-
 a {
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
@@ -298,6 +292,10 @@ h1 {
         cursor: pointer;
         justify-content: center;
     }
+
+    #list section:hover > nav{
+        display: block;
+    }
     .generic-form {
         width: 70%;
         height: 100%;
@@ -341,6 +339,10 @@ h1 {
         cursor: pointer;
         justify-content: center;
     }
+    #list:hover > .tercerElemento{
+        display: block;
+    }
+
     .generic-form {
         width: 70%;
         height: 100%;

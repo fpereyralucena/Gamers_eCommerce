@@ -4,7 +4,7 @@
     margin: 0 1vw;
 }
 
-ul{
+.ul-footer{
     display:flex;
     flex-direction: row;
     align-items: baseline;
@@ -14,3 +14,8 @@ li {
     list-style: none;
 }
 
+.cosas-footer {
+    width: 100%;
+    margin: 1%;
+    padding: 1%;
+}

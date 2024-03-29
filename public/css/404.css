@@ -1,4 +1,4 @@
-html{
+html {
     background-color: black;
     background-image: url("/img/dino.gif");
     background-repeat: no-repeat;
@@ -6,10 +6,33 @@ html{
     background-size: cover;
 }
 
-h1 {
+.dino {
     position: relative;
     top: 100px;
     font-size: 100px;
     color: white;
     height: 60%;
+    text-align: center;
+}
+
+@media (max-width: 599px) {
+    .dino {
+        position: relative;
+        top: 100px;
+        font-size: 50px;
+        color: white;
+        height: 60%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 1100px) and (min-width: 600px) {
+    .dino {
+        position: relative;
+        top: 100px;
+        font-size: 80px;
+        color: white;
+        height: 60%;
+        text-align: center;
+    }
 }

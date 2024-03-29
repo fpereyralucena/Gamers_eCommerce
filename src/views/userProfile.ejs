@@ -17,8 +17,8 @@
             <% if (user.userEspecify_id == 1) { %>
                 <li>Rol: Admin</li>
             <% } %>
+            <img id="userProfileImg" src="/img/uploads/users/<%= user.image %>"/>
         </ul>
-        <img id="userProfileImg" src="/img/uploads/users/<%= user.image %>"/>
             
             <a href="/users/logout"><button type="button" class="botonProfile buttonLogin">GAME OVER</button></a>
 

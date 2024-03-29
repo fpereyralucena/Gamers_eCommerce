@@ -32,7 +32,7 @@ const productsController = {
 		let data = null;
 		guardar = await db.Product.findAll()
 		data = await db.Product.findByPk(req.params.id)
-		if (data == null) res.sendStatus(404);
+		if (data == null) res.render("error404");
 		res.render('detail', {product: data, allProducts: guardar})
 	},
 
