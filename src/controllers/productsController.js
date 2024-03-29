@@ -65,7 +65,7 @@ const productsController = {
 
 		let product_id = parseInt(req.params.id);
 		let promProduct = await db.Product.findByPk(product_id);
-		if (promProduct == null) res.status(404).send('La página a la que intenta acceder es inexistente');
+		if (promProduct == null) res.status(404).render('error404');
 		return res.render('edit-product', { product: promProduct })
 
 	},
