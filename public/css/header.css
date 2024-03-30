@@ -105,6 +105,7 @@ header {
         border-radius: 10px;
         border: 0.5px solid #231751;
         animation: left 1s ease-out forwards;
+        box-shadow: 0 4px 8px rgba(35, 23, 81, 1);
     }
     @keyframes left {
         0% {
@@ -157,8 +158,8 @@ header {
         background-color: aliceblue;
         position: fixed;
         bottom: 52%;
-        left: 78%;
-        width: 70%;
+        left: 76%;
+        width: 74%;
         height: 50%;
         flex-wrap: nowrap;
         flex-direction: column;
@@ -166,6 +167,7 @@ header {
         border-radius: 10px;
         border: 0.5px solid #231751;
         animation: left 1s ease-out forwards;
+        box-shadow: 0 4px 8px rgba(35, 23, 81, 1);
     }
 
     @keyframes left {

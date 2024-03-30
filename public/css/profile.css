@@ -1,0 +1,46 @@
+main {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.section-profile {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    background-color: rgba(240, 248, 255, 0.15);
+    border-radius: 50px;
+}
+img {
+    width: 100%;
+    height: 100%;
+}
+
+aside {
+    display: flex;
+}
+
+.div-profile {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ul-profile{
+    text-align: start;
+    text-decoration:underline;
+}
+
+.botonProfile {
+    height: 80%;
+    display: flex;
+    background-color: #231751;
+    color: aliceblue;
+    padding: 5px;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.buttonLogin {
+    margin: 10px 0;
+}

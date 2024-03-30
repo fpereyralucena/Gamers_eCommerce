@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include('partials/head', { customCSS:"detail.css" }) %>
+<%- include('partials/head', { customCSS:"profile.css" }) %>
 
 <body>
 
@@ -9,16 +9,32 @@
 
 
     <main>
-        
-        <ul>
-            <li>Nombre: <%= user.firstName %></li>
-            <li>Apellido: <%= user.lastName %></li>
-            <li>Email: <%= user.email %></li>
-            <% if (user.userEspecify_id == 1) { %>
-                <li>Rol: Admin</li>
-            <% } %>
-            <img id="userProfileImg" src="/img/uploads/users/<%= user.image %>"/>
-        </ul>
+        <section class="section-profile">
+            <div class="div-profile">
+                <ul class="ul-profile">
+                    <li>Nombre: <%= user.firstName %></li>
+                    <br>
+                    <li>Apellido: <%= user.lastName %></li>
+                    <br>
+                    <li>Email: <%= user.email %></li>
+                    <br>
+                    <% if (user.userEspecify_id == 1) { %>
+                    <li>Rol: Admin</li>
+                    <% } %>
+                </ul>
+            </div>
+            <div class="div-profile">
+                <aside>
+                    <% if (user.image == undefined) { %>
+                        <img src="/img/uploads/default-image.jpg"/>
+                    <% } %>
+                    
+                    <% if (user.image != undefined) { %>
+                        <img id="userProfileImg" src="/img/uploads/users/<%= user.image %>"/>  
+                    <% } %>
+                </aside>
+            </div>
+        </section>
             
             <a href="/users/logout"><button type="button" class="botonProfile buttonLogin">GAME OVER</button></a>
 

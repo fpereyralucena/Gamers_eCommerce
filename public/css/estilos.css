@@ -31,7 +31,6 @@ main {
     gap: 0.5rem;
     background-color: #AFA8BA;
     padding: 10px;
-
 }
 
 .ingresaTitulo {
@@ -100,14 +99,6 @@ input {
 }
 
 .botonSubmitRegister {
-    width: 45%;
-    background-color: #231751;
-    color: aliceblue;
-    padding: 5px;
-    border-radius: 5px;
-}
-
-.botonProfile {
     width: 45%;
     background-color: #231751;
     color: aliceblue;
