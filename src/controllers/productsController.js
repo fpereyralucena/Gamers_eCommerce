@@ -9,7 +9,7 @@ const productsController = {
 			let data = await db.Product.findAll()
 			var randomList = [];
 			var index = 0;
-			var randomIndex=Math.floor(Math.random() * data.length)
+			var randomIndex = Math.floor(Math.random() * data.length)
 			do {
 
 				randomIndex = Math.floor(Math.random() * 15)
@@ -20,20 +20,20 @@ const productsController = {
 			} while (index < 12);
 			console.log(randomList)
 
-			res.render('index', {products:data, listado: randomList})
+			res.render('index', { products: data, listado: randomList })
 		}
 		catch (error) {
 			res.send(error)
 		}
 	},
 
-	detail: async(req, res) => {
+	detail: async (req, res) => {
 		let guardar = null;
 		let data = null;
 		guardar = await db.Product.findAll()
 		data = await db.Product.findByPk(req.params.id)
 		if (data == null) res.render("error404");
-		res.render('detail', {product: data, allProducts: guardar})
+		res.render('detail', { product: data, allProducts: guardar })
 	},
 
 	create: (req, res) => {
@@ -56,8 +56,6 @@ const productsController = {
 			})
 		res.redirect(`/products/detail/${last_id.id}`)
 
-
-
 	},
 
 
@@ -70,39 +68,40 @@ const productsController = {
 
 	},
 
-deleteProduct: async(req, res) => {
-	try {
-		let product_id = req.params.id
-		let promProduct =await db.Product.destroy({ where: {id: product_id}});
-		res.send("Producto borrado con exito")
-	} catch (error) {
-		res.send("Error al eliminar el producto "+req.params.id + "/n" + error)
+	deleteProduct: async (req, res) => {
+		try {
+			let product_id = req.params.id
+			let promProduct = await db.Product.destroy({ where: { id: product_id } });
+			res.send("Producto borrado con exito")
+		} catch (error) {
+			res.send("Error al eliminar el producto " + req.params.id + "/n" + error)
+		}
+	},
+
+	shoppingCart: (req, res) => {
+		res.render('shopping-cart', { shoppingList: req.session.shoppingList })
+	},
+
+	shoppingCartAdd: async (req, res) => {
+		let product_id = parseInt(req.params.id)
+		let promProduct = await db.Product.findByPk(product_id, { raw: true });
+		let productsInCart = [];
+		if (req.session.shoppingList && req.session.shoppingList.length > 0) {
+			productsInCart.push(req.session.shoppingList)
+			
+		} 
+		productsInCart.push(promProduct);
+		console.log(productsInCart)
+		req.session.shoppingList.push(promProduct)
+		res.render('shopping-cart', { shoppingList: req.session.shoppingList })
+	},
+
+	productList: async (req, res) => {
+		let productList = await db.Product.findAll({ raw: true });
+		res.render('product-list', { productList });
 	}
-},
-
-shoppingCart: (req,res) => {
-	res.render('shopping-cart', {shoppingList: req.session.shoppingList})
-},
-
-shoppingCartAdd: async(req, res) => {
-	let product_id = parseInt(req.body.productId)
-	let promProduct = await db.Product.findByPk(product_id);
-	console.log("shopping cart")
-	req.session.shoppingList= [req.session.shoppingList, ...promProduct]
-	console.log(req.session.shoppingList)
-
-	res.render('shopping-cart', {shoppingList: req.session.shoppingList})
-},
-productList: async (req, res) => {
-	let productList = await db.Product.findAll({raw:true});
-	console.log({productList})
-	res.render('product-list', {productList});
-}
 
 };
-
-
-
 
 
 module.exports = productsController;

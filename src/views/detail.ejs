@@ -1,144 +1,154 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include('partials/head', { customCSS:"detail.css" }) %>
-
-    <body>
-
-        <%- include('partials/header') %>
+<head>
+    <%- include('partials/head', { customCSS:"detail.css" }) %>
+</head>
 
 
-            <main>
+<body>
 
-                <section class="general-product-page">
-                    <section class="card-detail">
 
-                        <div class="container-image-detail">
-                            <img src="/img/uploads/<%= product.image %>" alt="<%= product.name %>">
-                        </div>
+    <%- include('partials/header') %>
 
-                        <div class="division-card"></div>
 
-                        <div class="product-description-detail">
+        <main>
 
-                            <h2 class="product-name ">
-                                <%= product.name %>
-                            </h2>
-                            <% let pesos=Intl.NumberFormat('es-AR', { style: 'currency' , currency: 'ARS' ,
-                                maximumSignificantDigits: 4, }); %>
-                                <h3 class="product-price press-start"><%= pesos.format(product.price) %>
-                                </h3>
+            <section class="general-product-page">
+                <section class="card-detail">
 
-                                <p id="discount" name="discount" class="offer-text">
-                                    <%= product.discount %>% de Descuento
-                                </p>
+                    <div class="container-image-detail">
+                        <img src="/img/uploads/<%= product.image %>" alt="<%= product.name %>">
+                    </div>
 
-                                <input type="hidden" name="productAddedId" value="<%= product.id %>">
+                    <div class="division-card"></div>
+
+                    <div class="product-description-detail">
+
+                        <h2 class="product-name ">
+                            <%= product.name %>
+                        </h2>
+                        <% let pesos=Intl.NumberFormat('es-AR', { style: 'currency' , currency: 'ARS' ,
+                            maximumSignificantDigits: 4, }); %>
+                            <h3 class="product-price press-start">
+                                <%= pesos.format(product.price) %>
+                            </h3>
+
+                            <p id="discount" name="discount" class="offer-text">
+                                <%= product.discount %>% de Descuento
+                            </p>
+
+                            <input type="hidden" name="productAddedId" value="<%= product.id %>">
+                            <form action="/../products/shopping-cart-add/<%=product.id%>" method="post">
                                 <div class="divBtnAgregarCarrito">
-                                    <button class="btn-agregar-carrito" type="post"><i class="bi bi-bag-plus-fill"
-                                            id="addIcon"></i>
+                                    <input class="hidden" value="<%= product.id %>" name="productId">
+                                    <button class="btn-agregar-carrito" onclick="addToCart(<%= product.id%>)"><i
+                                            class="bi bi-bag-plus-fill" id="addIcon"></i>
                                         <p>Agregar</p>
                                     </button>
                                 </div>
+                            </form>
+                            
 
 
 
-                                <% if(locals.user !=undefined) { if (locals.user.userEspecify_id===1){ %>
-                                    <button class="btnEditProduct"><a href="/products/edit-product/<%= product.id %>"><i
-                                                class="bi bi-pencil-square" id="editProduct"></i></a>
-                                        <p>Editar</p>
-                                    </button>
+                            <% if(locals.user !=undefined) { if (locals.user.userEspecify_id===1){ %>
+                                <button class="btnEditProduct"><a href="/products/edit-product/<%= product.id %>"><i
+                                            class="bi bi-pencil-square" id="editProduct"></i></a>
+                                    <p>Editar</p>
+                                </button>
 
-                                    <form action="/../products/delete-product/<%= product.id %>" method="post"
-                                        enctype="multipart/form-data" class="form-delete">
-                                        <div class="divBotonesAdmin">
-                                            <input type="hidden" name="productId" value="<%= product.id %>">
-                                            <button class="btnEliminarProduct"
-                                                onclick="return confirm('¿Está seguro que desea eliminar este producto?')"><i
-                                                    class="bi bi-trash" id="deleteProduct"></i>
-                                                <p>Eliminar</p>
-                                            </button>
-                                        </div>
+                                <form action="/../products/delete-product/<%= product.id %>" method="post"
+                                    enctype="multipart/form-data" class="form-delete">
+                                    <div class="divBotonesAdmin">
+                                        <input type="hidden" name="productId" value="<%= product.id %>">
+                                        <button class="btnEliminarProduct"
+                                            onclick="return confirm('¿Está seguro que desea eliminar este producto?')"><i
+                                                class="bi bi-trash" id="deleteProduct"></i>
+                                            <p>Eliminar</p>
+                                        </button>
+                                    </div>
 
-                                        <% }} %>
-                                        </form>
-                        </div>
-                    </section>
-
+                                    <% }} %>
+                                </form>
+                    </div>
                 </section>
 
-                </section>
+            </section>
 
-                <section class="relatedProducts">
-                    <h2 class="titulo-recomendados press-start 2p-regular">Recomendado para vos:</h2>
-                    <% function getRandomIndex() { return Math.floor(Math.random() * allProducts.length); } var
-                        randomIndex1=getRandomIndex(); var randomIndex2=getRandomIndex(); var
-                        randomIndex3=getRandomIndex(); var randomIndex4=getRandomIndex(); var
-                        randomIndex5=getRandomIndex(); var randomProduct1=allProducts[randomIndex1]; var
-                        randomProduct2=allProducts[randomIndex2]; var randomProduct3=allProducts[randomIndex3]; var
-                        randomProduct4=allProducts[randomIndex4]; var randomProduct5=allProducts[randomIndex5]; %>
-                        <div class="related-products-container">
+            </section>
 
-                            <div class="gallery">
-                                <div class="gallery-item">
-                                    <img src="\img\uploads\<%= randomProduct1.image %>" alt="Product 1">
-                                    <div class="item-overlay">
-                                        <h2>
-                                            <%= randomProduct1.name %>
-                                        </h2>
-                                        <a href='/products/detail/<%= randomProduct1.id %>'><button
-                                                type="button">Ver</button></a>
-                                    </div>
+            <section class="relatedProducts">
+                <h2 class="titulo-recomendados press-start 2p-regular">Recomendado para vos:</h2>
+                <% function getRandomIndex() { return Math.floor(Math.random() * allProducts.length); } var
+                    randomIndex1=getRandomIndex(); var randomIndex2=getRandomIndex(); var randomIndex3=getRandomIndex();
+                    var randomIndex4=getRandomIndex(); var randomIndex5=getRandomIndex(); var
+                    randomProduct1=allProducts[randomIndex1]; var randomProduct2=allProducts[randomIndex2]; var
+                    randomProduct3=allProducts[randomIndex3]; var randomProduct4=allProducts[randomIndex4]; var
+                    randomProduct5=allProducts[randomIndex5]; %>
+                    <div class="related-products-container">
+
+                        <div class="gallery">
+                            <div class="gallery-item">
+                                <img src="\img\uploads\<%= randomProduct1.image %>" alt="Product 1">
+                                <div class="item-overlay">
+                                    <h2>
+                                        <%= randomProduct1.name %>
+                                    </h2>
+                                    <a href='/products/detail/<%= randomProduct1.id %>'><button
+                                            type="button">Ver</button></a>
                                 </div>
-                                <div class="gallery-item">
-                                    <img src="\img\uploads\<%= randomProduct2.image %>" alt="Product 1">
-                                    <div class="item-overlay">
-                                        <h2>
-                                            <%= randomProduct2.name %>
-                                        </h2>
-                                        <a href='/products/detail/<%= randomProduct2.id %>'><button
-                                                type="button">Ver</button></a>
-                                    </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="\img\uploads\<%= randomProduct2.image %>" alt="Product 1">
+                                <div class="item-overlay">
+                                    <h2>
+                                        <%= randomProduct2.name %>
+                                    </h2>
+                                    <a href='/products/detail/<%= randomProduct2.id %>'><button
+                                            type="button">Ver</button></a>
                                 </div>
-                                <div class="gallery-item">
-                                    <img src="\img\uploads\<%= randomProduct3.image %>" alt="Product 1">
-                                    <div class="item-overlay">
-                                        <h2>
-                                            <%= randomProduct3.name %>
-                                        </h2>
-                                        <a href='/products/detail/<%= randomProduct3.id %>'><button
-                                                type="button">Ver</button></a>
-                                    </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="\img\uploads\<%= randomProduct3.image %>" alt="Product 1">
+                                <div class="item-overlay">
+                                    <h2>
+                                        <%= randomProduct3.name %>
+                                    </h2>
+                                    <a href='/products/detail/<%= randomProduct3.id %>'><button
+                                            type="button">Ver</button></a>
                                 </div>
-                                <div class="gallery-item">
-                                    <img src="\img\uploads\<%= randomProduct4.image %>" alt="Product 1">
-                                    <div class="item-overlay">
-                                        <h2>
-                                            <%= randomProduct4.name %>
-                                        </h2>
-                                        <a href='/products/detail/<%= randomProduct4.id %>'><button
-                                                type="button">Ver</button></a>
-                                    </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="\img\uploads\<%= randomProduct4.image %>" alt="Product 1">
+                                <div class="item-overlay">
+                                    <h2>
+                                        <%= randomProduct4.name %>
+                                    </h2>
+                                    <a href='/products/detail/<%= randomProduct4.id %>'><button
+                                            type="button">Ver</button></a>
                                 </div>
-                                <div class="gallery-item">
-                                    <img src="\img\uploads\<%= randomProduct5.image %>" alt="Product 1">
-                                    <div class="item-overlay">
-                                        <h2>
-                                            <%= randomProduct5.name %>
-                                        </h2>
-                                        <a href='/products/detail/<%= randomProduct5.id %>'><button
-                                                type="button">Ver</button></a>
-                                    </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="\img\uploads\<%= randomProduct5.image %>" alt="Product 1">
+                                <div class="item-overlay">
+                                    <h2>
+                                        <%= randomProduct5.name %>
+                                    </h2>
+                                    <a href='/products/detail/<%= randomProduct5.id %>'><button
+                                            type="button">Ver</button></a>
                                 </div>
                             </div>
                         </div>
-                </section>
+                    </div>
+            </section>
 
 
-            </main>
+        </main>
 
-            <%- include ('partials/footer')%>
-                <script type="text-code" src="../shoppingCart.js"></script>
-    </body>
+        <%- include ('partials/footer')%>
+            <script defer async type="text-code" src="../scripts/shopping-cart.js"></script>
+          
+</body>
 
 </html>

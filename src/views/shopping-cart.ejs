@@ -6,7 +6,7 @@
 <body>
 
     <%- include('partials/header') %>
-
+    <script defer async src="/scripts/shopping-cart.js"></script>
 
     <main>
 
@@ -17,20 +17,23 @@
             <section class="general-product-page">
                 <section class="product-image-container">
     
-                    <%= shoppingList %>
+                    
+                    <% shoppingList.forEach(element => { %>
+                        <section class="product-description-2">
+                            <div class="product-image"><img src="\img\uploads/<%= element.image %>"
+                                    alt="<%= element.name %>">
+                            <div>Remera manga corta estampada 100% algodón</div>
+                            <div class="product-price"><%= element.price %></div>
+                            <form>
+                                
+                                </select><br>
+                                <button class="boton-personalizado remover-carrito" type="submit"> X </button>
+                            </form>
+                        </section>
+                    <% }) %>
     
                 </section>
-                <section class="product-description-2">
-                    <div class="product-image"><img src="\img\uploads/remeraMdeMario.webp"
-                            alt="buzo mario bros">
-                    <div>Remera manga corta estampada 100% algodón</div>
-                    <div class="product-price">$5000.00</div>
-                    <form>
-                        
-                        </select><br>
-                        <button class="boton-personalizado remover-carrito" type="submit"> X </button>
-                    </form>
-                </section>
+               
             </section>
             <section class="product-description-3">
                 <div>Codigo de descuento</div>
@@ -60,55 +63,7 @@
         </article>
         
 
-        <section class="relatedProducts">
-            <h2>Recomendado para vos:</h2>
-            <div class="related-products-container">
-
-                <h1></h1>
-                <div class="gallery">
-                    <div class="gallery-item">
-                        <img src="\img\uploads/remeraMdeMario.webp" alt="Product 1">
-                        <div class="item-overlay">
-                            <h2>Remera Mario Bros</h2>
-                            <p>Manga corta 100% algodón estampada</p>
-                            <a href='/detail'><button type="button">Ver</button></a>
-                        </div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="\img\uploads/remeraMdeMario.webp" alt="Product 1">
-                        <div class="item-overlay">
-                            <h2>Remera Mario Bros</h2>
-                            <p>Manga corta 100% algodón estampada</p>
-                            <a href='/detail'><button type="button">Ver</button></a>
-                        </div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="\img\uploads/remeraMdeMario.webp" alt="Product 1">
-                        <div class="item-overlay">
-                            <h2>Remera Mario Bros</h2>
-                            <p>Manga corta 100% algodón estampada</p>
-                            <a href='/detail'><button type="button">Ver</button></a>
-                        </div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="\img\uploads/remeraMdeMario.webp" alt="Product 1">
-                        <div class="item-overlay">
-                            <h2>Remera Mario Bros</h2>
-                            <p>Manga corta 100% algodón estampada</p>
-                            <a href='/detail'><button type="button">Ver</button></a>
-                        </div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="\img\uploads/remeraMdeMario.webp" alt="Product 1">
-                        <div class="item-overlay">
-                            <h2>Remera Mario Bros</h2>
-                            <p>Manga corta 100% algodón estampada</p>
-                            <a href='/detail'><button type="button">Ver</button></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+       
 
 
     </main>
