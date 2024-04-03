@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const userApiController = require("../controllers/API/userApiController");
 const productsApiController = require('../controllers/API/productsApiController');
-//http://localhost:3000/restfulservices/v1/user/{id}
+//http://localhost:3000/api/v1/user/{id}
 
 router.get('/user/:id', userApiController.getUser);
 router.get('/user/', userApiController.getAllUsers);
