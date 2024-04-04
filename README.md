@@ -36,9 +36,6 @@
 
 ### Colaboradores
 
-* **Mili**
 * **Fran**
 * **Lucas Duck**
-* **Wendy**
-* **Max**
 * **Lucas**
