@@ -9,7 +9,10 @@ const usersRouter = require('./routes/usersRouter');
 const apiRouter = require('./routes/apiRouter');
 var cookieSession = require('cookie-session');
 var cookieParser = require('cookie-parser');
+var cors = require('cors');
 var store = new session.MemoryStore();
+
+app.use(cors());
 
 app.use(cookieParser());
 
