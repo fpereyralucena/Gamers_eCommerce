@@ -18,16 +18,24 @@
                 <section class="product-image-container">
     
                     
-                    <% shoppingList.forEach(element => { %>
+                    <% if (shoppingList ) shoppingList.forEach(element => { %>
                         <section class="product-description-2">
                             <div class="product-image"><img src="\img\uploads/<%= element.image %>"
                                     alt="<%= element.name %>">
-                            <div>Remera manga corta estampada 100% algodón</div>
-                            <div class="product-price"><%= element.price %></div>
+                            <div><%= element.name %> </div>
+                            <% let pesos=Intl.NumberFormat('es-AR', { style: 'currency' , currency: 'ARS' ,
+                            maximumSignificantDigits: 4, }); %>
+                            <h3 class="product-price press-start">
+                                <%= pesos.format(element.price) %>
+                            </h3>
                             <form>
                                 
                                 </select><br>
-                                <button class="boton-personalizado remover-carrito" type="submit"> X </button>
+                                <form action="/shopping-cart-remove/<%= element.id %>" method="post">
+                                    <input class="hidden" value="<%= element.id %>" name="remove-product">
+                                    <button class="boton-personalizado remover-carrito" type="submit"> <i class="bi bi-x-circle"></i></button>
+                                </form>
+                               
                             </form>
                         </section>
                     <% }) %>

@@ -78,6 +78,7 @@ const productsController = {
 		}
 	},
 
+	
 	shoppingCart: (req, res) => {
 		res.render('shopping-cart', { shoppingList: req.session.shoppingList })
 	},
@@ -92,7 +93,20 @@ const productsController = {
 		} 
 		productsInCart.push(promProduct);
 		console.log(productsInCart)
+		req.session.shoppingList = req.session.shoppingList ?? [];
 		req.session.shoppingList.push(promProduct)
+		res.render('shopping-cart', { shoppingList: req.session.shoppingList })
+	},
+
+	shoppingCartRemove: (req, res) => {
+		let product_id = parseInt(req.params.id);
+		console.log(product_id)
+		let productsInCart = [];
+		if (req.session.shoppingList.length >= 0) {
+			productsInCart = req.session.shoppingList;
+			productsInCart.filter((item) => item.id != product_id )
+		}
+		req.session.shoppingList = productsInCart ?? []; 
 		res.render('shopping-cart', { shoppingList: req.session.shoppingList })
 	},
 
