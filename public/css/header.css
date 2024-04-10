@@ -28,7 +28,7 @@ header {
     padding: 0 5%;
     border-radius: 5px;
     border-color: transparent;
-    background-color: rgb(93, 151, 226);
+    background-color: #000 ;
     animation-name: brillo;
     animation-duration: .8s;
     animation-iteration-count: infinite;

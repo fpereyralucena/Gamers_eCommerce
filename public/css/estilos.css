@@ -229,7 +229,7 @@ h1 {
 }
 
 .offer-text {
-    color: rgb(58, 225, 43);
+    color: rgb(13, 54, 9);
 }
 
 .product-card {
@@ -256,6 +256,10 @@ h1 {
 
 .product-card img {
     width: 100%;
+}
+
+p.offer-text {
+    color:#231751
 }
 
 @media (max-width: 599px) {
