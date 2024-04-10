@@ -1,9 +1,14 @@
 id,name,price,discount,image
-1,"Remera Mario Hongos",10000,10,marioHongos.png
+1,"Remera Mario Bros",10000,10,mario1.png
 2,"Remera Sonic",10000,10,sonicShirt.jpg
-3,"Remera Street Fighter II",10000,10,street2.jpg
-4,"Remera Street Fighter characters ",10000,10,characterStreet.jpeg
-5,"Mortal Kombat",10000,10,mortalKombat.jpg
-6,"Mortal Kombat 2",10000,10,mortalKombat.jpg
-7,"Remera Trifuerza Zelda",5000,25,zelda.jpg
-8,"Remera M de Mario",5000,25,remeraMdeMario.webp
+3,"Remera Sonic 2",10000,10,sonic2.png
+4,"Remera Sonic 3",10000,10,sonic3.webp
+5,"Remera Street Fighter 3",10000,10,sf3.jpg
+6,"Remera Street Fighter 4",10000,10,sf4.jpeg
+7,"Remera Street Fighter5",10000,10,sf5.jpg
+8,"Remera Street Figther 6",10000,10,sf6.webp
+9,"Remera MK",10000,10,mk1.jpg
+10,"Remera MK2",10000,10,mk2.webp
+11,"Remera MK3",10000,10,mk3.jpg
+12,"Remera MK4",10000,10,mk4.jpg
+13,"Remera MK5",10000,10,mk5.jpg
