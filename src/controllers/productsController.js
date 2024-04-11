@@ -97,16 +97,18 @@ const productsController = {
 		req.session.shoppingList.push(promProduct)
 		res.render('shopping-cart', { shoppingList: req.session.shoppingList })
 	},
+	shoppingCartRemove:(req, res) => {
+		res.render('shopping-cart', { shoppingList: req.session.shoppingList })
+	},
 
-	shoppingCartRemove: (req, res) => {
+	shoppingCartRemoveProcess: (req, res) => {
 		let product_id = parseInt(req.params.id);
-		console.log(product_id)
 		let productsInCart = [];
 		if (req.session.shoppingList.length >= 0) {
 			productsInCart = req.session.shoppingList;
-			productsInCart.filter((item) => item.id != product_id )
+			productsInCart = productsInCart.filter((item) => item.id != product_id )
 		}
-		req.session.shoppingList = productsInCart ?? []; 
+		if (productsInCart.length > 0 ) req.session.shoppingList = productsInCart;
 		res.render('shopping-cart', { shoppingList: req.session.shoppingList })
 	},
 

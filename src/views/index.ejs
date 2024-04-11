@@ -16,12 +16,12 @@
 
                     
 
-                          
+                          <br>
 
-                                <h1>Destacados</h1>
+                        <h2>Destacados</h2>
 
-                                <section class="contenedor-ofertas2">
-
+                                <div class="contenedor-ofertas2">
+                                    
                                     <article class="product-card2">
                                         <a href="/products/detail/<%= randomProduct.id %>">
                                             <img src="/img/uploads/<%= randomProduct.image %>"
@@ -29,18 +29,18 @@
                                                 class="outstanding2">
                                         </a>
                                         <div>
-                                            <h3 class="outstanding-text">
+                                            <h2 class="outstanding-text">
                                                 <%= randomProduct.name %>
-                                            </h3>
+                                            </h2>
                                         </div>
                                     </article>
-                                </section>
+                                </div>
 
+                                
                                 <h2>Novedades</h2>
-
                                 <section class="contenedor-ofertas">
 
-
+                                  
                               
 
 
@@ -102,10 +102,10 @@
 
                                 </section>
 
+                                
                                 <h2>Ofertas Especiales</h2>
-
-                                <section class="contenedor-ofertas">
-
+                                <div class="contenedor-ofertas">
+                                    
                                     <article class="product-card">
                                         <a href="/products/detail/<%= (products)[4].id %>"><img
                                                 src="/img/uploads/<%= (products)[4].image %>"
@@ -218,7 +218,7 @@
                                         </div>
                                     </article>
 
-                                </section>
+                                </div>
 
             </main>
 

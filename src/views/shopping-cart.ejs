@@ -17,8 +17,12 @@
             <section class="general-product-page">
                 <section class="product-image-container">
     
-                    
+                    <% let total = 0, subtotal = 0, envio = 3000 %>
                     <% if (shoppingList ) shoppingList.forEach(element => { %>
+                        <% subtotal += parseInt(element.price)
+                        total = subtotal + envio
+
+                         %>
                         <section class="product-description-2">
                             <div class="product-image"><img src="\img\uploads/<%= element.image %>"
                                     alt="<%= element.name %>">
@@ -28,18 +32,21 @@
                             <h3 class="product-price press-start">
                                 <%= pesos.format(element.price) %>
                             </h3>
-                            <form>
+                            
                                 
                                 </select><br>
-                                <form action="/shopping-cart-remove/<%= element.id %>" method="post">
-                                    <input class="hidden" value="<%= element.id %>" name="remove-product">
-                                    <button class="boton-personalizado remover-carrito" type="submit"> <i class="bi bi-x-circle"></i></button>
+                                <form action="/../products/shopping-cart-remove/<%= element.id %>" method="post">
+                                   
+             
+                                        <button class="boton-personalizado remover-carrito" > <i class="bi bi-x-circle"></i></button>
+                                    
+                                    
                                 </form>
                                
-                            </form>
+                           
                         </section>
-                    <% }) %>
-    
+                    
+                        <% }) %>
                 </section>
                
             </section>
@@ -54,20 +61,21 @@
 
                 <article class="text-code">
                     <div>Subtotal</div>
-                    <div> 5000$</div>
+                    <div> <%= subtotal %>$</div>
                 </article>
 
                 <article class="text-code">
                     <div>Envio</div>
-                    <div> 500$</div>
+                    <div> <%= envio %>$</div>
                 </article>
 
                 <article class="text-code">
                     <div>Total</div>
-                    <div> 5500$</div>
+                    <div> <%= total %>$</div>
                 </article>
                 <button class="boton-personalizado" type="submit">Comprar</button>
             </section>
+            
         </article>
         
 

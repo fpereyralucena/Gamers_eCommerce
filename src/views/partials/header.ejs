@@ -2,7 +2,7 @@
 
     <article class="centrar-header">
         <a href="/">
-            <img class="logo" src="\img\logo.png" alt="Logo" sizes="1em">
+            <img class="logo" src="/img/logo.webp" alt="Logo">
         </a>
     </article>
 
@@ -24,41 +24,49 @@
                     <ul class="ul-header">
                         <% if(locals.user !=undefined) { if (locals.user.userEspecify_id===1){ %>
                             <li>
-                                <button id="admin" class="boton-header">
+                               
                                     <a class="" href="/products/create-product">
+                                        <button id="admin" class="boton-header">
                                         <i class="bi bi-plus-circle-dotted"> CREAR</i>
+                                    </button>
                                     </a>
-                                </button>
+                               
                             </li>
                             <% }} %>
                                 <% if(locals.user !=undefined) { %>
                                     <li>
-                                        <button id="admin" class="boton-header">
+                                        
                                             <a class="" href="/users/profile">
+                                                <button id="admin1" class="boton-header"></button>
                                                 <i class="bi bi-controller"> JUGADOR</i>
+                                            </button>
                                             </a>
-                                        </button>
+                                        
                                     </li>
                                     <li>
-                                        <button id="admin" class="boton-header">
+                                       
                                             <a class="" href="/users/logout">
+                                                <button id="admin2" class="boton-header">
                                                 <i class="bi bi-x-circle"> GAME OVER</i>
+                                            </button>
                                             </a>
-                                        </button>
+                                        
                                     </li>
                                     <li>
-                                        <button class="carrito boton-header">
+                                       
                                             <a class="" href="/products/shopping-cart">
+                                                <button class="carrito boton-header">
                                                 <i class="bi bi-cart"> CARRITO</i>
+                                            </button>
                                             </a>
-                                        </button>
+                                        
                                     </li>
                                     <% } %>
                                         <% if(locals.user==undefined) { %>
                                             <li>
 
                                                 <a class="" href="/users/login">
-                                                    <button id="admin" class="boton-header">
+                                                    <button id="admin3" class="boton-header">
                                                         <i class="bi bi-dpad"> ENTER</i>
                                                     </button>
                                                 </a>
@@ -81,40 +89,48 @@
                 <ul class="ul-header">
                     <% if(locals.user !=undefined) { if (locals.user.userEspecify_id===1){ %>
                         <li>
-                            <button id="admin" class="boton-header">
+                            
                                 <a class="" href="/products/create-product">
+                                    <button id="admin1" class="boton-header"></button>
                                     <i class="bi bi-plus-circle-dotted"> CREAR</i>
+                                </button>
                                 </a>
-                            </button>
+                            
                         </li>
                         <% }} %>
                             <% if(locals.user !=undefined) { %>
                                 <li>
-                                    <button id="admin" class="boton-header">
+                                    
                                         <a class="" href="/users/profile">
+                                            <button id="admin2" class="boton-header"></button>
                                             <i class="bi bi-controller"> JUGADOR</i>
+                                        </button>
                                         </a>
-                                    </button>
+                                    
                                 </li>
                                 <li>
-                                    <button id="admin" class="boton-header">
+                                    
                                         <a class="" href="/users/logout">
+                                            <button id="admin3" class="boton-header"></button>
                                             <i class="bi bi-x-circle"> GAME OVER</i>
+                                        </button>
                                         </a>
-                                    </button>
+                                    
                                 </li>
                                 <li>
-                                    <button class="carrito boton-header">
+                                    
                                         <a class="" href="/products/shopping-cart">
+                                            <button class="carrito boton-header"></button>
                                             <i class="bi bi-cart">CARRITO</i>
+                                        </button>
                                         </a>
-                                    </button>
+                                   
                                 </li>
                                 <% } %>
                                     <% if(locals.user==undefined) { %>
                                         <li>
                                             <a class="" href="/users/login">
-                                                <button id="admin" class="boton-header">
+                                                <button id="admin4" class="boton-header">
                                                     <i class="bi bi-dpad"> ENTER</i>
                                                 </button>
                                             </a>

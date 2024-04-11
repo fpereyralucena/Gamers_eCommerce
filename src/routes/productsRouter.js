@@ -28,7 +28,8 @@ router.get('/',  productsController.index);
 router.get('/shopping-cart/', productsController.shoppingCart);
 router.get('/shopping-cart-add/:id', productsController.shoppingCart);
 router.post('/shopping-cart-add/:id', productsController.shoppingCartAdd);
-router.post('/shopping-cart-remove/:id', productsController.shoppingCartRemove)
+router.get('/shopping-cart-remove/:id', productsController.shoppingCartRemoveProcess)
+router.post('/shopping-cart-remove/:id', productsController.shoppingCartRemoveProcess)
 
 
 router.get("/create-product", adminMiddleware, productsController.create);
