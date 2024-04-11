@@ -1,7 +1,7 @@
 # Temas Presentación #
 
 ## Presentación del equipo: 
-Francisco Pereyra: Product Owner: Encargado de determinar la prioridad de las funcionalidades de la página.
+Francisco Pereyra: Tengo 38 años Product Owner: Encargado de determinar la prioridad de las funcionalidades de la página.
 Lucas Herbon: Scrum Master: Encargado de llevar a cabo las ceremonias de SCRUM y de mantener el tablero KANBAN en JIRA.
 Lucas Medina: Developer Full Stack: Encargado de desarrollar el front end y back end del ecommerce.
 
@@ -47,8 +47,13 @@ Lucas Medina: Developer Full Stack: Encargado de desarrollar el front end y back
     * La implementación del Github dependabot, asegura la actualización automática del repositorio.
 
 
-## Funcionalidades ##
-Lucas Herbon:
+## Funcionalidades 
+se puede  crear, eliminar y editar productos como administrador.
+Como usuario uno se puede registrar e ingrear en el sitio, donde se pueden agregar y quitar productos del carrito de compras.
+Y contamos con un dashboard que permite visualizar las estadisticas del sitio en formato de tablero de control.
+
+
+##Lucas Herbon:
  ** Mostrar vistas
  ** Mostrar Registro y Login de Usuarios.
  ** Mostrar vistas de footer.

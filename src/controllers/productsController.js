@@ -59,15 +59,28 @@ const productsController = {
 	},
 
 	editProduct: async (req, res) => {
-		res.render("edit-product")
+		let product_id = parseInt(req.params.id)
+		let promProduct = await db.Product.findByPk(product_id, { raw: true })
+
+		res.render("edit-product", {product: promProduct})
 	},
 
 	editProductProcess: async (req, res) => {
-		let product_id = parseInt(req.params.id);
-		let promProduct = await db.Product.findByPk(product_id);
-		if (promProduct === null) res.status(404).render('error404');
-		let createProduct = await db.Product.create({promProduct})
-		return res.render('edit-product', { product: promProduct })
+		let updated = {
+			name: req.body.name,
+			price: req.body.price,
+			discount: req.body.discount,
+		}
+		if (req.file) {
+			updated['image'] = req.file.filename
+		}
+
+		await db.Product.update(updated, {
+			where: {
+				id: req.params.id
+			}
+		});
+		res.redirect(`/products/detail/${req.params.id}`)
 	},
 
 	deleteProduct: async (req, res) => {
