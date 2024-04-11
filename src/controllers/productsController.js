@@ -58,21 +58,24 @@ const productsController = {
 
 	},
 
-
 	editProduct: async (req, res) => {
+		res.render("edit-product")
+	},
 
+	editProductProcess: async (req, res) => {
 		let product_id = parseInt(req.params.id);
 		let promProduct = await db.Product.findByPk(product_id);
-		if (promProduct == null) res.status(404).render('error404');
+		if (promProduct === null) res.status(404).render('error404');
+		let createProduct = await db.Product.create({promProduct})
 		return res.render('edit-product', { product: promProduct })
-
 	},
 
 	deleteProduct: async (req, res) => {
 		try {
 			let product_id = req.params.id
 			let promProduct = await db.Product.destroy({ where: { id: product_id } });
-			res.send("Producto borrado con exito")
+			/* res.render("index", { products: data, listado: randomList }) */
+			res.redirect("/")
 		} catch (error) {
 			res.send("Error al eliminar el producto " + req.params.id + "/n" + error)
 		}

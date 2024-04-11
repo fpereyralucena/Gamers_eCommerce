@@ -77,6 +77,12 @@ const usersController = {
             res.render('register', { errors, oldData })
         }
         else {
+            let imagen
+            if (req.file) {
+                imagen = req.file.filename
+            } else {
+                imagen = "default-Image.jpg"
+            }
             let user = await db.Users.create({
                 firstName: req.body.first_name,
                 lastName: req.body.last_name,
@@ -84,7 +90,7 @@ const usersController = {
                 email: req.body.email,
                 password: bcrypt.hashSync(req.body.password, 10),
                 userEspecify_id: 2,
-                image: req.file.filename
+                image: imagen
             },
             )
             user = JSON.parse(JSON.stringify(user));

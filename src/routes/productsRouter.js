@@ -35,7 +35,8 @@ router.post('/shopping-cart-remove/:id', productsController.shoppingCartRemovePr
 router.get("/create-product", adminMiddleware, productsController.create);
 router.post("/create-product", upload.single('image'), productsController.processCreate);
 
-router.get("/edit-product/:id",  adminMiddleware, upload.single('image') , productsController.editProduct);
+router.get("/edit-product/:id", adminMiddleware, productsController.editProduct);
+router.post("/edit-product/:id", upload.single('image') , productsController.editProductProcess);
 
 
 router.post("/delete-product/:id", adminMiddleware, productsController.deleteProduct)
