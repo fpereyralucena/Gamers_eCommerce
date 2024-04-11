@@ -1,6 +1,9 @@
 # Temas Presentación #
 
 ## Presentación del equipo: 
+Francisco Pereyra: Product Owner: Encargado de determinar la prioridad de las funcionalidades de la página.
+Lucas Herbon: Scrum Master: Encargado de llevar a cabo las ceremonias de SCRUM y de mantener el tablero KANBAN en JIRA.
+Lucas Medina: Developer Full Stack: Encargado de desarrollar el front end y back end del ecommerce.
 
 
 ## Marketing ##
@@ -25,13 +28,15 @@
     **Performance y tiempos de carga.
 
     Ofreciendo una paleta de colores que recuerda al control de SUPER NINTENDO, se apuesta
-    por brindar una experiencia de usuario basada en lo lúdico, invitando al usuario a divertirse y 
+    por brindar una experiencia de usuario basada en lo lúdico, invitando al cliente a divertirse y 
     jugar comprando en la plataforma.
 
     Se optó por la aplicación de dos fuentes provistas por Google Fonts: Roboto por su simplicidad,
     minimalismo y accesibilidad y 2P Press Start para apelar a la nostalgia de los 8-bits.
 
     El sitio se encuentra construido con Node JS 20.11 LTS, HTML5 sobre EJS con estructura sémantica que facilita la accesibilidad, CSS 3 que asegura su funcionamiento en una amplia varidad de navegadores y dispositivos.
+
+    Google Chrome LigthHouse asegurando las métricas de Performance, Best Practices, Accesibility y SEO. 
 
 ## Seguridad ##
 
@@ -43,8 +48,11 @@
 
 
 ## Funcionalidades ##
+Lucas Herbon:
+ ** Mostrar vistas
+ ** Mostrar Registro y Login de Usuarios.
+ ** Mostrar vistas de footer.
 
- **Mostrar Registro y Login de Usuarios.
- ** Mostrar CRUD de usuarios y Productos
- **Mostrar vistas de footer.
+ Lucas Medina:
+ ** Mostrar CRUD de Productos
  ** Dashboard: REST API Y REACT.
