@@ -39,7 +39,7 @@
                             </p>
 
                             <input type="hidden" name="productAddedId" value="<%= product.id %>">
-                            <form action="/../products/shopping-cart-add/<%=product.id%>" method="post">
+                            <form class="form-button-detail" action="/../products/shopping-cart-add/<%=product.id%>" method="post">
                                 <div class="divBtnAgregarCarrito">
                                     <input class="hidden" value="<%= product.id %>" name="productId">
                                     <button class="btn-agregar-carrito" onclick="addToCart(<%= product.id%>)"><i

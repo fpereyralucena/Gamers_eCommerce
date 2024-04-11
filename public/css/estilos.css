@@ -342,7 +342,7 @@ p.offer-text {
 
 @media (min-width: 1100px) {
     .product-card {
-        width: 300px;
+        /* width: 300px; */
     }
 
     .ingresaTitulo {
@@ -358,6 +358,8 @@ p.offer-text {
     .product-card {
         width: 20%;
     }
+
+article.product-card {}
 }
 
 

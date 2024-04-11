@@ -1,0 +1,11 @@
+.container-img {
+    min-height: 85%;
+}
+
+.container-data-prod {
+    min-height: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}

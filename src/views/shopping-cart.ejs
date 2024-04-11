@@ -8,7 +8,7 @@
     <%- include('partials/header') %>
     <script defer async src="/scripts/shopping-cart.js"></script>
 
-    <main>
+    <main class="main-shopping-cart">
 
         <h2>Mi carrito</h2>
 
@@ -19,10 +19,8 @@
     
                     <% let total = 0, subtotal = 0, envio = 3000 %>
                     <% if (shoppingList ) shoppingList.forEach(element => { %>
-                        <% subtotal += parseInt(element.price)
-                        total = subtotal + envio
-
-                         %>
+                        <% subtotal += parseInt(element.price) %>
+                       <% total = subtotal + envio%>
                         <section class="product-description-2">
                             <div class="product-image"><img src="\img\uploads/<%= element.image %>"
                                     alt="<%= element.name %>">
@@ -41,39 +39,40 @@
                                         <button class="boton-personalizado remover-carrito" > <i class="bi bi-x-circle"></i></button>
                                     
                                     
-                                </form>
-                               
-                           
+                                </form>              
                         </section>
-                    
                         <% }) %>
                 </section>
-               
             </section>
+
+            <div class="division-card"></div>
             <section class="product-description-3">
-                <div>Codigo de descuento</div>
-                <div class="product-price"></div>
-                <label for="codigo"></label>
-                <div class="codigo-descuento" >
-                    <input type="text" placeholder="Ingrese cupon de descuento">
+                <div class="container-detail-compra">
+                    <div>Codigo de descuento</div>
+                    <div class="product-price"></div>
+                    <label for="codigo"></label>
+                    <div class="codigo-descuento" >
+                        <input type="text" placeholder="Ingrese cupon de descuento">
+                    </div>
+                    <button class="boton-personalizado" type="submit"> Validar</button>
+    
+                    <article class="text-code">
+                        <div>Subtotal</div>
+                        <div> <%= subtotal %>$</div>
+                    </article>
+    
+                    <article class="text-code">
+                        <div>Envio</div>
+                        <div> <%= envio %>$</div>
+                    </article>
+    
+                    <article class="text-code">
+                        <div>Total</div>
+                        <div> <%= total %>$</div>
+                    </article>
+                    <button class="boton-personalizado" type="submit">Comprar</button>
                 </div>
-                <button class="boton-personalizado" type="submit"> Validar</button>
-
-                <article class="text-code">
-                    <div>Subtotal</div>
-                    <div> <%= subtotal %>$</div>
-                </article>
-
-                <article class="text-code">
-                    <div>Envio</div>
-                    <div> <%= envio %>$</div>
-                </article>
-
-                <article class="text-code">
-                    <div>Total</div>
-                    <div> <%= total %>$</div>
-                </article>
-                <button class="boton-personalizado" type="submit">Comprar</button>
+                
             </section>
             
         </article>
