@@ -1,7 +1,8 @@
 # Temas Presentación #
 
 ## Presentación del equipo: 
-Francisco Pereyra: Tengo 38 años Product Owner: Encargado de determinar la prioridad de las funcionalidades de la página.
+Soy Francisco Pereyra: Tengo 38 años soy el Product Owner: y el Encargado de determinar la prioridad de las funcionalidades de la página.
+Me acompañan hoy:
 Lucas Herbon: Scrum Master: Encargado de llevar a cabo las ceremonias de SCRUM y de mantener el tablero KANBAN en JIRA.
 Lucas Medina: Developer Full Stack: Encargado de desarrollar el front end y back end del ecommerce.
 
@@ -17,7 +18,7 @@ Lucas Medina: Developer Full Stack: Encargado de desarrollar el front end y back
     Apela a la nostalgia, brindado productos de grandes franquicias que surgieron en los 90' y 
     perduran hasta nuestros días como Mario Bros, La Leyenda de Zelda, Street Figther y Mortal Kombat.
     El compromiso de Gamers Costumes es llevar las ventas online al siguiente nivel ofreciendo
-    remeras de 100% algodón y estampados flexibles, durables y de alta resolución.
+    remeras de 100% algodón y estampados flexibles, durables e imagenes alta resolución.
 
 ## Diseño UX/UI ##
 
@@ -37,10 +38,14 @@ Lucas Medina: Developer Full Stack: Encargado de desarrollar el front end y back
     El sitio se encuentra construido con Node JS 20.11 LTS, HTML5 sobre EJS con estructura sémantica que facilita la accesibilidad, CSS 3 que asegura su funcionamiento en una amplia varidad de navegadores y dispositivos.
 
     Google Chrome LigthHouse asegurando las métricas de Performance, Best Practices, Accesibility y SEO. 
+    Performance: Asegura los tiempos de carga
+    Best Practices: Asegura la seguridad de la aplicación siguiendo el uso de las buenas practicas
+    Accesibilidad: Brinda suficiente contraste de color para personas con dificultades visuales
+    SEO: Permite que el crawler de los buscadores puedan entender el contenido de la página, facilitando así el correcto indexamiento en las busquedas. 
 
 ## Seguridad ##
 
-    * El uso de una base de datos MYSQL a traves de SEQUELIZE como ORM, minimiza el riesgo de Inyección de código SQL.
+    * El uso de una base de datos MYSQL a traves de SEQUELIZE como ORM, impide la Inyección de código SQL.
     * El reemplazo del ID de usuario por un UUID binario, dificulta la adivinación de usuarios por ID.
     * El hasheo del password de usuario utilizando BCRYPT, disminuya la posiblidad de una brecha y filtración de datos.
     * El uso de variables de entorno evita que los datos sensibles de nuestra aplicación puedan ser accedidos en el repositorio de GITHUB.

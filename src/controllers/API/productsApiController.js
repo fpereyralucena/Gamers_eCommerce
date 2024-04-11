@@ -22,11 +22,14 @@ const productsApiController = {
             {
                 order: [['id', 'DESC']],
             });
-        if (!product) return res.sendStatus(204);
+       
         if (product) {
-            product['image'] = path.join(__dirname, '../../../public/img/uploads/' + product.image)
-            return res.json((product))}
-        return res.json(("product"))
+            product['image'] = 'http://localhost:3000/img/uploads/' + product.image;
+            product.path = 'http://localhost:3000/products/'+ product.id;
+            product['path'] = 'http://localhost:3000/products/'+ product.id;
+        
+        return res.json(product)};
+        if (!product) return res.sendStatus(204);
     }
 }
 
