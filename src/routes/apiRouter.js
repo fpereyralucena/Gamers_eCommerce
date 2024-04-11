@@ -9,5 +9,6 @@ router.get('/user/', userApiController.getAllUsers);
 
 router.get("/product/", productsApiController.AllProducts)
 router.get("/product/:id", productsApiController.oneProduct)
+router.get("/last-product", productsApiController.lastProduct)
 
 module.exports = router
